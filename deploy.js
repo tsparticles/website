@@ -3,17 +3,17 @@ import path from "path";
 import ghpages from "gh-pages";
 import typedoc from "typedoc";
 import { simpleGit } from "simple-git";
-import pnpm from '@pnpm/exec';
+import pnpm from "@pnpm/exec";
+import pkgInfo from "./package.json" assert { type: "json" };
 
 (async () => {
-    if (!await fs.pathExists("./dist")) {
+    if (!(await fs.pathExists("./dist"))) {
         await fs.mkdir("./dist");
     }
 
     await fs.copy("./audio", "./dist/audio");
     await fs.copy("./configs", "./dist/configs");
     await fs.copy("./css", "./dist/css");
-    //await fs.copy("../../engine/docs", "./dist/docs");
     await fs.copy("./fonts", "./dist/fonts");
     await fs.copy("./images", "./dist/images");
     await fs.copy("./js", "./dist/js");
@@ -34,10 +34,14 @@ import pnpm from '@pnpm/exec';
 
     const remote = `https://github.com/matteobruni/tsparticles.git`;
 
-    await simpleGit()
-        .clone(remote, "tmp_tsparticles", [ "--depth", "1" ]);
+    await simpleGit().clone(remote, "tmp_tsparticles", [
+        "--depth",
+        "1",
+        "-b",
+        `tsparticles@${pkgInfo.dependencies["tsparticles"].replace("^", "")}`,
+    ]);
 
-    await pnpm.default(['install'], {
+    await pnpm.default(["install"], {
         cwd: path.resolve("./tmp_tsparticles"),
     });
 
@@ -48,7 +52,7 @@ import pnpm from '@pnpm/exec';
 
     typedocApp.bootstrap({
         options: "./tmp_tsparticles/engine/typedoc.json",
-        tsconfig: "./tmp_tsparticles/engine/tsconfig.json"
+        tsconfig: "./tmp_tsparticles/engine/tsconfig.json",
     });
 
     const project = typedocApp.convert();
