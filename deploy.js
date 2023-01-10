@@ -67,8 +67,8 @@ import pnpm from '@pnpm/exec';
         "./dist",
         {
             dotfiles: true,
-            message: "build: gh pages updated",
             history: false,
+            message: "build: gh pages updated",
             user: {
                 name: "Matteo Bruni",
                 email: "176620+matteobruni@users.noreply.github.com",
