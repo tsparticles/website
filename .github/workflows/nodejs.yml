@@ -9,6 +9,9 @@ on:
       - main
       - next
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
 
   main:
