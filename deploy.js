@@ -6,6 +6,14 @@ import { simpleGit } from "simple-git";
 import pnpm from "@pnpm/exec";
 import pkgInfo from "./package.json" assert { type: "json" };
 
+const ghToken = process.env.GITHUB_TOKEN, gitUser = ghToken ? {
+    name: "github-actions-bot",
+    email: "support+actions@github.com>"
+} : {
+    name: "Matteo Bruni",
+    email: "176620+matteobruni@users.noreply.github.com",
+};
+
 (async () => {
     if (!(await fs.pathExists("./dist"))) {
         await fs.mkdir("./dist");
@@ -41,7 +49,7 @@ import pkgInfo from "./package.json" assert { type: "json" };
         `tsparticles@${pkgInfo.dependencies["tsparticles"].replace("^", "")}`,
     ]);
 
-    await pnpm.default(["install"], {
+    await pnpm.default([ "install" ], {
         cwd: path.resolve("./tmp_tsparticles"),
     });
 
@@ -67,16 +75,15 @@ import pkgInfo from "./package.json" assert { type: "json" };
 
     await fs.remove("./tmp_tsparticles");
 
+    simpleGit().remote([ "set-url", "origin", `https://git:${ghToken}@github.com/tsparticles/website` ]);
+
     ghpages.publish(
         "./dist",
         {
             dotfiles: true,
             history: false,
             message: "build: gh pages updated",
-            user: {
-                name: "Matteo Bruni",
-                email: "176620+matteobruni@users.noreply.github.com",
-            },
+            user: gitUser,
         },
         function (publishErr) {
             if (!publishErr) {
