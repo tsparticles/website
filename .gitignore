@@ -352,3 +352,5 @@ MigrationBackup/
 
 dist/
 tmp_tsparticles/
+.idea
+.DS_Store
