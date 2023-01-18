@@ -8,13 +8,11 @@ import pkgInfo from "./package.json" assert { type: "json" };
 
 const ghToken = process.env.GITHUB_TOKEN, gitUser = ghToken ? {
     name: "github-actions-bot",
-    email: "support+actions@github.com>"
+    email: "support+actions@github.com"
 } : {
     name: "Matteo Bruni",
     email: "176620+matteobruni@users.noreply.github.com",
 };
-
-console.log("ghToken exists", !!ghToken);
 
 (async () => {
     if (!(await fs.pathExists("./dist"))) {
