@@ -75,11 +75,10 @@ const ghToken = process.env.GITHUB_TOKEN, gitUser = ghToken ? {
 
     await fs.remove("./tmp_tsparticles");
 
-    simpleGit().remote([ "set-url", "origin", `https://git:${ghToken}@github.com/tsparticles/website` ]);
-
     ghpages.publish(
         "./dist",
         {
+            repo: ghToken ? `https://git:${ghToken}@github.com/tsparticles/website.git` : `https://git:github.com/tsparticles/website.git`,
             dotfiles: true,
             history: false,
             message: "build: gh pages updated",
