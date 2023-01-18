@@ -14,6 +14,8 @@ const ghToken = process.env.GITHUB_TOKEN, gitUser = ghToken ? {
     email: "176620+matteobruni@users.noreply.github.com",
 };
 
+console.log("ghToken exists", !!ghToken);
+
 (async () => {
     if (!(await fs.pathExists("./dist"))) {
         await fs.mkdir("./dist");
