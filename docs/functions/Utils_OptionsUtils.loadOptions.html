@@ -1,0 +1,348 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta name="keyword" content="html css javascript typescript particles js ts jsx tsx canvas confetti fireworks animations react vue angular svelte libraries how to create add"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>loadOptions | tsParticles - v2.8.0</title><meta name="description" content="Documentation for tsParticles - v2.8.0"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script async src="../assets/search.js" id="search-script"></script><style>#carbonads * {
+  margin: initial;
+  padding: initial;
+}
+#carbonads {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+}
+#carbonads {
+  display: flex;
+  max-width: 330px;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
+  z-index: 100;
+  margin: 0 0 25px 0;
+}
+#carbonads a {
+  color: inherit;
+  text-decoration: none;
+}
+#carbonads a:hover {
+  color: inherit;
+}
+#carbonads span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+#carbonads .carbon-wrap {
+  display: flex;
+}
+#carbonads .carbon-img {
+  display: block;
+  margin: 0;
+  line-height: 1;
+}
+#carbonads .carbon-img img {
+  display: block;
+}
+#carbonads .carbon-text {
+  font-size: 13px;
+  padding: 10px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+#carbonads .carbon-poweredby {
+  display: block;
+  padding: 6px 8px;
+  background: #f1f1f2;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 1;
+  border-top-left-radius: 3px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}</style></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base="..">
+<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<div class="field">
+<div id="tsd-toolbar-links"></div></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">tsParticles - v2.8.0</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-8 col-content">
+<div class="tsd-page-title">
+<ul class="tsd-breadcrumb">
+<li><a href="../modules.html">tsParticles - v2.8.0</a></li>
+<li><a href="../modules/Utils_OptionsUtils.html">Utils/OptionsUtils</a></li>
+<li><a href="Utils_OptionsUtils.loadOptions.html">loadOptions</a></li></ul>
+<h1>Function loadOptions</h1></div>
+<section class="tsd-panel">
+<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+<li class="tsd-signature tsd-anchor-link" id="loadOptions">load<wbr/>Options<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/Options_Interfaces_IOptionLoader.IOptionLoader.html" class="tsd-signature-type" data-tsd-kind="Interface">IOptionLoader</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>sourceOptionsArr<span class="tsd-signature-symbol">: </span><a href="../types/Types_RecursivePartial.RecursivePartial.html" class="tsd-signature-type" data-tsd-kind="Type alias">RecursivePartial</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#loadOptions" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></li>
+<li class="tsd-description">
+<section class="tsd-panel tsd-type-parameters">
+<h4>Type Parameters</h4>
+<ul class="tsd-type-parameters">
+<li>
+<h4>T</h4></li></ul></section>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>options: <a href="../interfaces/Options_Interfaces_IOptionLoader.IOptionLoader.html" class="tsd-signature-type" data-tsd-kind="Interface">IOptionLoader</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span></h5></li>
+<li>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span>sourceOptionsArr: <a href="../types/Types_RecursivePartial.RecursivePartial.html" class="tsd-signature-type" data-tsd-kind="Type alias">RecursivePartial</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/5eece6e/engine/src/Utils/OptionsUtils.ts#L8">tmp_tsparticles/engine/src/Utils/OptionsUtils.ts:8</a></li></ul></aside></li></ul></section></div>
+<div class="col-4 col-menu menu-sticky-wrap menu-highlight"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI6KJL&placement=particlesjsorg" id="_carbonads_js"></script>
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<nav class="tsd-navigation primary">
+<details class="tsd-index-accordion" open><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Modules</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li class="current"><a href="../modules.html">ts<wbr/>Particles -<wbr/> v2.8.0</a>
+<ul>
+<li class="tsd-kind-module"><a href="../modules/Core_Canvas.html">Core/<wbr/>Canvas</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/Core_Canvas._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Container.html">Core/<wbr/>Container</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/Core_Container._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_Colors.html">Core/<wbr/>Interfaces/<wbr/>Colors</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IBounds.html">Core/<wbr/>Interfaces/IBounds</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IBubbleParticleData.html">Core/<wbr/>Interfaces/IBubble<wbr/>Particle<wbr/>Data</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_ICircleBouncer.html">Core/<wbr/>Interfaces/ICircle<wbr/>Bouncer</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IColorManager.html">Core/<wbr/>Interfaces/IColor<wbr/>Manager</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IContainerInteractivity.html">Core/<wbr/>Interfaces/IContainer<wbr/>Interactivity</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IContainerPlugin.html">Core/<wbr/>Interfaces/IContainer<wbr/>Plugin</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_ICoordinates.html">Core/<wbr/>Interfaces/ICoordinates</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IDelta.html">Core/<wbr/>Interfaces/IDelta</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IDimension.html">Core/<wbr/>Interfaces/IDimension</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IDistance.html">Core/<wbr/>Interfaces/IDistance</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IExternalInteractor.html">Core/<wbr/>Interfaces/IExternal<wbr/>Interactor</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IInteractor.html">Core/<wbr/>Interfaces/IInteractor</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IMouseData.html">Core/<wbr/>Interfaces/IMouse<wbr/>Data</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IMovePathGenerator.html">Core/<wbr/>Interfaces/IMove<wbr/>Path<wbr/>Generator</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticle.html">Core/<wbr/>Interfaces/IParticle</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticleColorStyle.html">Core/<wbr/>Interfaces/IParticle<wbr/>Color<wbr/>Style</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticleHslAnimation.html">Core/<wbr/>Interfaces/IParticle<wbr/>Hsl<wbr/>Animation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticleLife.html">Core/<wbr/>Interfaces/IParticle<wbr/>Life</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticleMover.html">Core/<wbr/>Interfaces/IParticle<wbr/>Mover</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticleRetinaProps.html">Core/<wbr/>Interfaces/IParticle<wbr/>Retina<wbr/>Props</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/Core_Interfaces_IParticleRetinaProps._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticleRoll.html">Core/<wbr/>Interfaces/IParticle<wbr/>Roll</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticleTransformValues.html">Core/<wbr/>Interfaces/IParticle<wbr/>Transform<wbr/>Values</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticleUpdater.html">Core/<wbr/>Interfaces/IParticle<wbr/>Updater</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticleValueAnimation.html">Core/<wbr/>Interfaces/IParticle<wbr/>Value<wbr/>Animation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticlesInteractor.html">Core/<wbr/>Interfaces/IParticles<wbr/>Interactor</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IParticlesMover.html">Core/<wbr/>Interfaces/IParticles<wbr/>Mover</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IPlugin.html">Core/<wbr/>Interfaces/IPlugin</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IPositionFromSizeParams.html">Core/<wbr/>Interfaces/IPosition<wbr/>From<wbr/>Size<wbr/>Params</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IRangeValue.html">Core/<wbr/>Interfaces/IRange<wbr/>Value</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IRectSideResult.html">Core/<wbr/>Interfaces/IRect<wbr/>Side<wbr/>Result</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IShapeDrawer.html">Core/<wbr/>Interfaces/IShape<wbr/>Drawer</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_IShapeValues.html">Core/<wbr/>Interfaces/IShape<wbr/>Values</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_ISlowParticleData.html">Core/<wbr/>Interfaces/ISlow<wbr/>Particle<wbr/>Data</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_ITrailFillData.html">Core/<wbr/>Interfaces/ITrail<wbr/>Fill<wbr/>Data</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Interfaces_LoaderParams.html">Core/<wbr/>Interfaces/<wbr/>Loader<wbr/>Params</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Loader.html">Core/<wbr/>Loader</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Particle.html">Core/<wbr/>Particle</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Particles.html">Core/<wbr/>Particles</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Retina.html">Core/<wbr/>Retina</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_Circle.html">Core/<wbr/>Utils/<wbr/>Circle</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_Constants.html">Core/<wbr/>Utils/<wbr/>Constants</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_EventListeners.html">Core/<wbr/>Utils/<wbr/>Event<wbr/>Listeners</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/Core_Utils_EventListeners._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_ExternalInteractorBase.html">Core/<wbr/>Utils/<wbr/>External<wbr/>Interactor<wbr/>Base</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_FrameManager.html">Core/<wbr/>Utils/<wbr/>Frame<wbr/>Manager</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_InteractionManager.html">Core/<wbr/>Utils/<wbr/>Interaction<wbr/>Manager</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_ParticlesInteractorBase.html">Core/<wbr/>Utils/<wbr/>Particles<wbr/>Interactor<wbr/>Base</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_Plugins.html">Core/<wbr/>Utils/<wbr/>Plugins</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/Core_Utils_Plugins._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_Point.html">Core/<wbr/>Utils/<wbr/>Point</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_QuadTree.html">Core/<wbr/>Utils/<wbr/>Quad<wbr/>Tree</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_Range.html">Core/<wbr/>Utils/<wbr/>Range</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_Rectangle.html">Core/<wbr/>Utils/<wbr/>Rectangle</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_Vector.html">Core/<wbr/>Utils/<wbr/>Vector</a></li>
+<li class="tsd-kind-module"><a href="../modules/Core_Utils_Vector3d.html">Core/<wbr/>Utils/<wbr/>Vector3d</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_AnimationStatus.html">Enums/<wbr/>Animation<wbr/>Status</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Directions_MoveDirection.html">Enums/<wbr/>Directions/<wbr/>Move<wbr/>Direction</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Directions_OutModeDirection.html">Enums/<wbr/>Directions/<wbr/>Out<wbr/>Mode<wbr/>Direction</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Directions_RotateDirection.html">Enums/<wbr/>Directions/<wbr/>Rotate<wbr/>Direction</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_InteractivityDetect.html">Enums/<wbr/>Interactivity<wbr/>Detect</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Modes_ClickMode.html">Enums/<wbr/>Modes/<wbr/>Click<wbr/>Mode</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Modes_CollisionMode.html">Enums/<wbr/>Modes/<wbr/>Collision<wbr/>Mode</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Modes_DivMode.html">Enums/<wbr/>Modes/<wbr/>Div<wbr/>Mode</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Modes_HoverMode.html">Enums/<wbr/>Modes/<wbr/>Hover<wbr/>Mode</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Modes_OutMode.html">Enums/<wbr/>Modes/<wbr/>Out<wbr/>Mode</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Modes_ResponsiveMode.html">Enums/<wbr/>Modes/<wbr/>Responsive<wbr/>Mode</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Modes_SizeMode.html">Enums/<wbr/>Modes/<wbr/>Size<wbr/>Mode</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Modes_ThemeMode.html">Enums/<wbr/>Modes/<wbr/>Theme<wbr/>Mode</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Types_AlterType.html">Enums/<wbr/>Types/<wbr/>Alter<wbr/>Type</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Types_DestroyType.html">Enums/<wbr/>Types/<wbr/>Destroy<wbr/>Type</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Types_DivType.html">Enums/<wbr/>Types/<wbr/>Div<wbr/>Type</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Types_EasingType.html">Enums/<wbr/>Types/<wbr/>Easing<wbr/>Type</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Types_EventType.html">Enums/<wbr/>Types/<wbr/>Event<wbr/>Type</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Types_GradientType.html">Enums/<wbr/>Types/<wbr/>Gradient<wbr/>Type</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Types_InteractorType.html">Enums/<wbr/>Types/<wbr/>Interactor<wbr/>Type</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Types_ParticleOutType.html">Enums/<wbr/>Types/<wbr/>Particle<wbr/>Out<wbr/>Type</a></li>
+<li class="tsd-kind-module"><a href="../modules/Enums_Types_StartValueType.html">Enums/<wbr/>Types/<wbr/>Start<wbr/>Value<wbr/>Type</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_AnimatableColor.html">Options/<wbr/>Classes/<wbr/>Animatable<wbr/>Color</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_AnimationOptions.html">Options/<wbr/>Classes/<wbr/>Animation<wbr/>Options</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Background_Background.html">Options/<wbr/>Classes/<wbr/>Background/<wbr/>Background</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_BackgroundMask_BackgroundMask.html">Options/<wbr/>Classes/<wbr/>Background<wbr/>Mask/<wbr/>Background<wbr/>Mask</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_BackgroundMask_BackgroundMaskCover.html">Options/<wbr/>Classes/<wbr/>Background<wbr/>Mask/<wbr/>Background<wbr/>Mask<wbr/>Cover</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_ColorAnimation.html">Options/<wbr/>Classes/<wbr/>Color<wbr/>Animation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_FullScreen_FullScreen.html">Options/<wbr/>Classes/<wbr/>Full<wbr/>Screen/<wbr/>Full<wbr/>Screen</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_HslAnimation.html">Options/<wbr/>Classes/<wbr/>Hsl<wbr/>Animation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Interactivity_Events_ClickEvent.html">Options/<wbr/>Classes/<wbr/>Interactivity/<wbr/>Events/<wbr/>Click<wbr/>Event</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Interactivity_Events_DivEvent.html">Options/<wbr/>Classes/<wbr/>Interactivity/<wbr/>Events/<wbr/>Div<wbr/>Event</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Interactivity_Events_Events.html">Options/<wbr/>Classes/<wbr/>Interactivity/<wbr/>Events/<wbr/>Events</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Interactivity_Events_HoverEvent.html">Options/<wbr/>Classes/<wbr/>Interactivity/<wbr/>Events/<wbr/>Hover<wbr/>Event</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Interactivity_Events_Parallax.html">Options/<wbr/>Classes/<wbr/>Interactivity/<wbr/>Events/<wbr/>Parallax</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Interactivity_Events_ResizeEvent.html">Options/<wbr/>Classes/<wbr/>Interactivity/<wbr/>Events/<wbr/>Resize<wbr/>Event</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Interactivity_Interactivity.html">Options/<wbr/>Classes/<wbr/>Interactivity/<wbr/>Interactivity</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Interactivity_Modes_Modes.html">Options/<wbr/>Classes/<wbr/>Interactivity/<wbr/>Modes/<wbr/>Modes</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_ManualParticle.html">Options/<wbr/>Classes/<wbr/>Manual<wbr/>Particle</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Options.html">Options/<wbr/>Classes/<wbr/>Options</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/Options_Classes_Options._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_OptionsColor.html">Options/<wbr/>Classes/<wbr/>Options<wbr/>Color</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Bounce_ParticlesBounce.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Bounce/<wbr/>Particles<wbr/>Bounce</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Bounce_ParticlesBounceFactor.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Bounce/<wbr/>Particles<wbr/>Bounce<wbr/>Factor</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Collisions_Collisions.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Collisions/<wbr/>Collisions</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Collisions_CollisionsAbsorb.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Collisions/<wbr/>Collisions<wbr/>Absorb</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Collisions_CollisionsOverlap.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Collisions/<wbr/>Collisions<wbr/>Overlap</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Move_Move.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Move/<wbr/>Move</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Move_MoveAngle.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Move/<wbr/>Move<wbr/>Angle</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Move_MoveAttract.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Move/<wbr/>Move<wbr/>Attract</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Move_MoveCenter.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Move/<wbr/>Move<wbr/>Center</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Move_MoveGravity.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Move/<wbr/>Move<wbr/>Gravity</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Move_MoveTrail.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Move/<wbr/>Move<wbr/>Trail</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Move_MoveTrailFill.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Move/<wbr/>Move<wbr/>Trail<wbr/>Fill</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Move_OutModes.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Move/<wbr/>Out<wbr/>Modes</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Move_Path_MovePath.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Move/<wbr/>Path/<wbr/>Move<wbr/>Path</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Move_Spin.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Move/<wbr/>Spin</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Number_ParticlesDensity.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Number/<wbr/>Particles<wbr/>Density</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Number_ParticlesNumber.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Number/<wbr/>Particles<wbr/>Number</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Opacity_Opacity.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Opacity/<wbr/>Opacity</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Opacity_OpacityAnimation.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Opacity/<wbr/>Opacity<wbr/>Animation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_ParticlesOptions.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Particles<wbr/>Options</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Shadow.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Shadow</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Shape_Shape.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Shape/<wbr/>Shape</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Size_Size.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Size/<wbr/>Size</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Size_SizeAnimation.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Size/<wbr/>Size<wbr/>Animation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_Stroke.html">Options/<wbr/>Classes/<wbr/>Particles/<wbr/>Stroke</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Particles_ZIndex_ZIndex.html">Options/<wbr/>Classes/<wbr/>Particles/ZIndex/ZIndex</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Random.html">Options/<wbr/>Classes/<wbr/>Random</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Responsive.html">Options/<wbr/>Classes/<wbr/>Responsive</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Theme_Theme.html">Options/<wbr/>Classes/<wbr/>Theme/<wbr/>Theme</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_Theme_ThemeDefault.html">Options/<wbr/>Classes/<wbr/>Theme/<wbr/>Theme<wbr/>Default</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Classes_ValueWithRandom.html">Options/<wbr/>Classes/<wbr/>Value<wbr/>With<wbr/>Random</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Background_IBackground.html">Options/<wbr/>Interfaces/<wbr/>Background/IBackground</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_BackgroundMask_IBackgroundMask.html">Options/<wbr/>Interfaces/<wbr/>Background<wbr/>Mask/IBackground<wbr/>Mask</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_BackgroundMask_IBackgroundMaskCover.html">Options/<wbr/>Interfaces/<wbr/>Background<wbr/>Mask/IBackground<wbr/>Mask<wbr/>Cover</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_FullScreen_IFullScreen.html">Options/<wbr/>Interfaces/<wbr/>Full<wbr/>Screen/IFull<wbr/>Screen</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IAnimatable.html">Options/<wbr/>Interfaces/IAnimatable</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IAnimatableColor.html">Options/<wbr/>Interfaces/IAnimatable<wbr/>Color</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IAnimation.html">Options/<wbr/>Interfaces/IAnimation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IColorAnimation.html">Options/<wbr/>Interfaces/IColor<wbr/>Animation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IHslAnimation.html">Options/<wbr/>Interfaces/IHsl<wbr/>Animation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IManualParticle.html">Options/<wbr/>Interfaces/IManual<wbr/>Particle</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IOptionLoader.html">Options/<wbr/>Interfaces/IOption<wbr/>Loader</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IOptions.html">Options/<wbr/>Interfaces/IOptions</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IOptionsColor.html">Options/<wbr/>Interfaces/IOptions<wbr/>Color</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IRandom.html">Options/<wbr/>Interfaces/IRandom</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IResponsive.html">Options/<wbr/>Interfaces/IResponsive</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_IValueWithRandom.html">Options/<wbr/>Interfaces/IValue<wbr/>With<wbr/>Random</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Interactivity_Events_IClickEvent.html">Options/<wbr/>Interfaces/<wbr/>Interactivity/<wbr/>Events/IClick<wbr/>Event</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Interactivity_Events_IDivEvent.html">Options/<wbr/>Interfaces/<wbr/>Interactivity/<wbr/>Events/IDiv<wbr/>Event</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Interactivity_Events_IEvents.html">Options/<wbr/>Interfaces/<wbr/>Interactivity/<wbr/>Events/IEvents</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Interactivity_Events_IHoverEvent.html">Options/<wbr/>Interfaces/<wbr/>Interactivity/<wbr/>Events/IHover<wbr/>Event</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Interactivity_Events_IParallax.html">Options/<wbr/>Interfaces/<wbr/>Interactivity/<wbr/>Events/IParallax</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Interactivity_Events_IResizeEvent.html">Options/<wbr/>Interfaces/<wbr/>Interactivity/<wbr/>Events/IResize<wbr/>Event</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Interactivity_IInteractivity.html">Options/<wbr/>Interfaces/<wbr/>Interactivity/IInteractivity</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Interactivity_Modes_IModeDiv.html">Options/<wbr/>Interfaces/<wbr/>Interactivity/<wbr/>Modes/IMode<wbr/>Div</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Interactivity_Modes_IModes.html">Options/<wbr/>Interfaces/<wbr/>Interactivity/<wbr/>Modes/IModes</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Bounce_IParticlesBounce.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Bounce/IParticles<wbr/>Bounce</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Collisions_ICollisions.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Collisions/ICollisions</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Collisions_ICollisionsAbsorb.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Collisions/ICollisions<wbr/>Absorb</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Collisions_ICollisionsOverlap.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Collisions/ICollisions<wbr/>Overlap</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_IParticlesOptions.html">Options/<wbr/>Interfaces/<wbr/>Particles/IParticles<wbr/>Options</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_IShadow.html">Options/<wbr/>Interfaces/<wbr/>Particles/IShadow</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_IStroke.html">Options/<wbr/>Interfaces/<wbr/>Particles/IStroke</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Move_IMove.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Move/IMove</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Move_IMoveAngle.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Move/IMove<wbr/>Angle</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Move_IMoveAttract.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Move/IMove<wbr/>Attract</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Move_IMoveCenter.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Move/IMove<wbr/>Center</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Move_IMoveGravity.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Move/IMove<wbr/>Gravity</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Move_IMoveTrail.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Move/IMove<wbr/>Trail</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Move_IMoveTrailFill.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Move/IMove<wbr/>Trail<wbr/>Fill</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Move_IOutModes.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Move/IOut<wbr/>Modes</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Move_ISpin.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Move/ISpin</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Move_Path_IMovePath.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Move/<wbr/>Path/IMove<wbr/>Path</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Number_IParticlesDensity.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Number/IParticles<wbr/>Density</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Number_IParticlesNumber.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Number/IParticles<wbr/>Number</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Opacity_IOpacity.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Opacity/IOpacity</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Opacity_IOpacityAnimation.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Opacity/IOpacity<wbr/>Animation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Shape_ICharacterShape.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Shape/ICharacter<wbr/>Shape</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Shape_IImageShape.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Shape/IImage<wbr/>Shape</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Shape_IPolygonShape.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Shape/IPolygon<wbr/>Shape</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Shape_IShape.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Shape/IShape</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Shape_IShapeValues.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Shape/IShape<wbr/>Values</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Shape_IStarShape.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Shape/IStar<wbr/>Shape</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Size_ISize.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Size/ISize</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_Size_ISizeAnimation.html">Options/<wbr/>Interfaces/<wbr/>Particles/<wbr/>Size/ISize<wbr/>Animation</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Particles_ZIndex_IZIndex.html">Options/<wbr/>Interfaces/<wbr/>Particles/ZIndex/IZIndex</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Theme_ITheme.html">Options/<wbr/>Interfaces/<wbr/>Theme/ITheme</a></li>
+<li class="tsd-kind-module"><a href="../modules/Options_Interfaces_Theme_IThemeDefault.html">Options/<wbr/>Interfaces/<wbr/>Theme/ITheme<wbr/>Default</a></li>
+<li class="tsd-kind-module"><a href="../modules/Types_CustomEventArgs.html">Types/<wbr/>Custom<wbr/>Event<wbr/>Args</a></li>
+<li class="tsd-kind-module"><a href="../modules/Types_CustomEventListener.html">Types/<wbr/>Custom<wbr/>Event<wbr/>Listener</a></li>
+<li class="tsd-kind-module"><a href="../modules/Types_ParticlesGroups.html">Types/<wbr/>Particles<wbr/>Groups</a></li>
+<li class="tsd-kind-module"><a href="../modules/Types_PathOptions.html">Types/<wbr/>Path<wbr/>Options</a></li>
+<li class="tsd-kind-module"><a href="../modules/Types_RangeValue.html">Types/<wbr/>Range<wbr/>Value</a></li>
+<li class="tsd-kind-module"><a href="../modules/Types_RecursivePartial.html">Types/<wbr/>Recursive<wbr/>Partial</a></li>
+<li class="tsd-kind-module"><a href="../modules/Types_ShapeData.html">Types/<wbr/>Shape<wbr/>Data</a></li>
+<li class="tsd-kind-module"><a href="../modules/Types_ShapeDrawerFunctions.html">Types/<wbr/>Shape<wbr/>Drawer<wbr/>Functions</a></li>
+<li class="tsd-kind-module"><a href="../modules/Types_SingleOrMultiple.html">Types/<wbr/>Single<wbr/>Or<wbr/>Multiple</a></li>
+<li class="tsd-kind-module"><a href="../modules/Utils_CanvasUtils.html">Utils/<wbr/>Canvas<wbr/>Utils</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/Utils_CanvasUtils._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="tsd-kind-module"><a href="../modules/Utils_ColorUtils.html">Utils/<wbr/>Color<wbr/>Utils</a></li>
+<li class="tsd-kind-module"><a href="../modules/Utils_EventDispatcher.html">Utils/<wbr/>Event<wbr/>Dispatcher</a></li>
+<li class="tsd-kind-module"><a href="../modules/Utils_HslColorManager.html">Utils/<wbr/>Hsl<wbr/>Color<wbr/>Manager</a></li>
+<li class="tsd-kind-module"><a href="../modules/Utils_NumberUtils.html">Utils/<wbr/>Number<wbr/>Utils</a>
+<ul>
+<li class="tsd-kind-module tsd-parent-kind-module"><a href="../modules/Utils_NumberUtils._internal_.html">&lt;internal&gt;</a></li></ul></li>
+<li class="current tsd-kind-module"><a href="../modules/Utils_OptionsUtils.html">Utils/<wbr/>Options<wbr/>Utils</a></li>
+<li class="tsd-kind-module"><a href="../modules/Utils_RgbColorManager.html">Utils/<wbr/>Rgb<wbr/>Color<wbr/>Manager</a></li>
+<li class="tsd-kind-module"><a href="../modules/Utils_Utils.html">Utils/<wbr/>Utils</a></li>
+<li class="tsd-kind-module"><a href="../modules/bundle.html">bundle</a></li>
+<li class="tsd-kind-module"><a href="../modules/engine.html">engine</a></li>
+<li class="tsd-kind-module"><a href="../modules/index.html">index</a></li></ul></li></ul></div></details></nav>
+<nav class="tsd-navigation secondary menu-sticky">
+<ul>
+<li class="current tsd-kind-function tsd-parent-kind-module"><a href="Utils_OptionsUtils.loadOptions.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg>load<wbr/>Options</a></li>
+<li class="tsd-kind-function tsd-parent-kind-module"><a href="Utils_OptionsUtils.loadParticlesOptions.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>load<wbr/>Particles<wbr/>Options</a></li></ul></nav></div></div>
+<div class="overlay"></div><script src="../assets/main.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-161253125-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-161253125-1');</script><script html="(function(c,l,a,r,i,t,y){\n                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\n                    t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;\n                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\n                })(window, document, \"clarity\", \"script\", \"8q4bxin4tm\");" type="text/javascript"></script></body></html>
