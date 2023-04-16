@@ -42,7 +42,7 @@
     "typedoc-plugin-clarity": "^1.1.0",
     "typedoc-plugin-coverage": "^2.0.0",
     "typedoc-plugin-keyword": "^1.1.0",
-    "typedoc-plugin-missing-exports": "^1.0.0",
+    "typedoc-plugin-missing-exports": "^2.0.0",
     "typescript": "^5.0.0",
     "tsparticles": "^2.8.0",
     "tsparticles-editor": "^2.8.0",
