@@ -66,13 +66,11 @@
             "color": "random",
             "enable": true
         },
-        "collisions": {
-            "enable": true
-        },
         "move": {
             "enable": true
         },
         "number": {
+            "value": 100,
             "density": {
                 "enable": true
             }

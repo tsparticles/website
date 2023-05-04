@@ -1,17 +1,14 @@
 import fs from "fs-extra";
 import path from "path";
 import ghpages from "gh-pages";
-import typedoc from "typedoc";
 import { simpleGit } from "simple-git";
-import pnpm from "@pnpm/exec";
+import pnpmExec from "@pnpm/exec";
 import pkgInfo from "./package.json" assert { type: "json" };
 
-const ghToken = process.env.GITHUB_TOKEN, gitUser = ghToken ? {
-    name: "github-actions-bot",
-    email: "support+actions@github.com"
+const pnpm = pnpmExec.default, ghToken = process.env.GITHUB_TOKEN, gitUser = ghToken ? {
+    name: "github-actions-bot", email: "support+actions@github.com"
 } : {
-    name: "Matteo Bruni",
-    email: "176620+matteobruni@users.noreply.github.com",
+    name: "Matteo Bruni", email: "176620+matteobruni@users.noreply.github.com"
 };
 
 (async () => {
@@ -42,56 +39,43 @@ const ghToken = process.env.GITHUB_TOKEN, gitUser = ghToken ? {
 
     const remote = `https://github.com/matteobruni/tsparticles.git`;
 
+    // TODO: remove comments when the new tsParticles version will be released
     await simpleGit().clone(remote, "tmp_tsparticles", [
         "--depth",
-        "1",
-        "-b",
-        `tsparticles@${pkgInfo.dependencies["tsparticles"].replace("^", "")}`,
+        "1"//,
+        //"-b",
+        //`tsparticles@${pkgInfo.dependencies["tsparticles"].replace("^", "")}`
     ]);
 
-    await pnpm.default([ "install" ], {
-        cwd: path.resolve("./tmp_tsparticles"),
+    await pnpm(["install"], {
+        cwd: path.resolve("./tmp_tsparticles")
     });
 
-    const typedocApp = new typedoc.Application();
-
-    typedocApp.options.addReader(new typedoc.TSConfigReader());
-    typedocApp.options.addReader(new typedoc.TypeDocReader());
-
-    typedocApp.bootstrap({
-        options: "./tmp_tsparticles/engine/typedoc.json",
-        tsconfig: "./tmp_tsparticles/engine/tsconfig.json",
+    await pnpm(["run", "build"], {
+        cwd: path.resolve("./tmp_tsparticles")
     });
 
-    const project = typedocApp.convert();
+    await pnpm(["run", "build:docs"], {
+        cwd: path.resolve("./tmp_tsparticles")
+    });
 
-    if (project) {
-        // Project may not have converted correctly
-        const outputDir = "./dist/docs";
-
-        // Rendered docs
-        await typedocApp.generateDocs(project, outputDir);
-    }
+    await fs.copy("./tmp_tsparticles/docs", "./dist/docs");
 
     await fs.remove("./tmp_tsparticles");
 
-    ghpages.publish(
-        "./dist",
-        {
-            repo: ghToken ? `https://git:${ghToken}@github.com/tsparticles/website.git` : `https://git:github.com/tsparticles/website.git`,
-            dotfiles: true,
-            history: false,
-            message: "build: gh pages updated",
-            user: gitUser,
-        },
-        function (publishErr) {
-            if (!publishErr) {
-                console.log("Website published successfully");
-            } else {
-                console.log(`Error publishing website: ${publishErr}`);
-            }
-
-            fs.rmSync("./dist", { recursive: true });
+    ghpages.publish("./dist", {
+        repo: ghToken ? `https://git:${ghToken}@github.com/tsparticles/website.git` : `https://git:github.com/tsparticles/website.git`,
+        dotfiles: true,
+        history: false,
+        message: "build: gh pages updated",
+        user: gitUser
+    }, function(publishErr) {
+        if (!publishErr) {
+            console.log("Website published successfully");
+        } else {
+            console.log(`Error publishing website: ${publishErr}`);
         }
-    );
+
+        fs.rmSync("./dist", { recursive: true });
+    });
 })();
