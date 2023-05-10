@@ -93,7 +93,7 @@ const pnpm = pnpmExec.default, ghToken = process.env.GITHUB_TOKEN, gitUser = ghT
 
     await fs.remove(tmpDocsGenPath);
 
-    ghpages.publish(paht.join(".", "dist"), {
+    ghpages.publish(path.join(".", "dist"), {
         repo: ghToken ? `https://git:${ghToken}@github.com/tsparticles/website.git` : `https://git:github.com/tsparticles/website.git`,
         dotfiles: true,
         history: false,
