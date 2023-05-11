@@ -1,4 +1,4 @@
-﻿(function () {
+﻿async function initDemo() {
     let objectDifference = (object, base) => {
         function changes(object, base) {
             return _.transform(object, function (result, value, key) {
@@ -503,4 +503,6 @@
         await loadRoundedRectShape(tsParticles);
         await loadSpiralShape(tsParticles);
     });
-})();
+}
+
+initDemo();
