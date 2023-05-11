@@ -51,45 +51,53 @@
     }
 
     let getValuesFromProp = function (prop, path, index) {
-        if (prop) {
-            if (prop.type) {
-                switch (prop.type) {
-                    case "boolean":
-                        return ["true", "false"];
-                    case "number":
-                        return prop.enum;
-                    case "string":
-                        return prop.enum;
-                    case "array":
-                        return getSchemaValuesFromProp(prop.items);
-                }
-            } else if (prop["$ref"]) {
-                const def = prop["$ref"].split("/");
-                const type = def[def.length - 1];
-                const typeDef = schema.definitions[type];
-                return getSchemaValuesFromPath(typeDef, path, index + (/I[A-Z]/.exec(type) ? 1 : 0));
-            } else if (prop.anyOf) {
-                let res = [];
+        if (!prop) {
+            return;
+        }
 
-                for (const type of prop.anyOf) {
-                    const values = getSchemaValuesFromProp(type, path, index);
-
-                    for (const value of values) {
-                        res.push(value);
-                    }
-                }
-
-                return res.filter(distinct);
+        if (prop.type) {
+            switch (prop.type) {
+                case "boolean":
+                    return ["true", "false"];
+                case "number":
+                    return prop.enum;
+                case "string":
+                    return prop.enum;
+                case "array":
+                    return getSchemaValuesFromProp(prop.items);
+                default:
+                    return;
             }
+        }
+
+        if (prop["$ref"]) {
+            const def = prop["$ref"].split("/"),
+                type = def[def.length - 1],
+                typeDef = schema.definitions[type];
+
+            return getSchemaValuesFromPath(typeDef, path, index + (/I[A-Z]/.exec(type) ? 1 : 0));
+        }
+
+        if (prop.anyOf) {
+            const res = [];
+
+            for (const type of prop.anyOf) {
+                const values = getSchemaValuesFromProp(type, path, index);
+
+                for (const value of values) {
+                    res.push(value);
+                }
+            }
+
+            return res.filter(distinct);
         }
     };
 
     let getSchemaValuesFromPath = function (obj, path, index) {
-        const key = path[index];
-        const prop = obj.properties ? obj.properties[key] : obj;
-        const values = getValuesFromProp(prop, path, index);
+        const key = path[index],
+            prop = obj.properties ? obj.properties[key] : obj;
 
-        return values;
+        return getValuesFromProp(prop, path, index);
     };
 
     let jsonEditorAutoComplete = function (text, path, input, editor) {
