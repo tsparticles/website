@@ -6,6 +6,12 @@
     "url": "https://github.com/matteobruni/tsparticles.git"
   },
   {
+    "buildCommand": "build:ci",
+    "folder": "tsparticles-pjs",
+    "package": "tsparticles-particles.js",
+    "url": "https://github.com/tsparticles/particles.js.git"
+  },
+  {
     "buildCommand": "build",
     "folder": "angular",
     "package": "ng-particles",
