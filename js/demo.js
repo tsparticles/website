@@ -523,7 +523,7 @@
         await loadPathShape(tsParticles);
         await loadRoundedRectShape(tsParticles);
         await loadSpiralShape(tsParticles);
-        await loadJSONExportPlugin(tsParticles);
+        await loadExportJSONPlugin(tsParticles);
     });
 }
 
