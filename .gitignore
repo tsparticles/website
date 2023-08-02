@@ -356,3 +356,5 @@ tmp_tsparticles/
 .DS_Store
 
 js/*.min.js
+css/*.css
+css/*.map
