@@ -566,7 +566,9 @@
         await loadPathShape(tsParticles);
         await loadRoundedRectShape(tsParticles);
         await loadSpiralShape(tsParticles);
+        await loadExportImagePlugin(tsParticles);
         await loadExportJSONPlugin(tsParticles);
+        await loadExportVideoPlugin(tsParticles);
     });
 }
 
