@@ -1,7 +1,7 @@
 ﻿async function initDemo() {
     let objectDifference = (object, base) => {
         function changes(object, base) {
-            return _.transform(object, function(result, value, key) {
+            return _.transform(object, function (result, value, key) {
                 if (!_.isEqual(value, base[key])) {
                     result[key] = _.isObject(value) && _.isObject(base[key]) ? changes(value, base[key]) : value;
                 }
@@ -34,8 +34,8 @@
     stats.dom.style.top = "3px";
     stats.dom.id = "stats-graph";
 
-    let initStats = function() {
-        const update = function() {
+    let initStats = function () {
+        const update = function () {
             stats.begin();
 
             stats.end();
@@ -50,7 +50,7 @@
         return self.indexOf(value) === index;
     }
 
-    let getValuesFromProp = function(prop, path, index) {
+    let getValuesFromProp = function (prop, path, index) {
         if (!prop) {
             return;
         }
@@ -93,30 +93,29 @@
         }
     };
 
-    let getSchemaValuesFromPath = function(obj, path, index) {
+    let getSchemaValuesFromPath = function (obj, path, index) {
         const key = path[index],
             prop = obj.properties ? obj.properties[key] : obj;
 
         return getValuesFromProp(prop, path, index);
     };
 
-    let jsonEditorAutoComplete = function(text, path, input, editor) {
+    let jsonEditorAutoComplete = function (text, path, input, editor) {
         try {
             switch (input) {
                 case "field":
                     break;
                 case "value":
-                    return getSchemaValuesFromPath(schema, path, 0).filter(function(v) {
+                    return getSchemaValuesFromPath(schema, path, 0).filter(function (v) {
                         return v.includes(text);
                     });
             }
-        } catch (e) {
-        }
+        } catch (e) {}
 
         return null;
     };
 
-    let updateParticles = function(editor) {
+    let updateParticles = function (editor) {
         const presetItems = document.body.querySelectorAll(".preset-item");
         const randomPreset = presetItems[Math.floor(Math.random() * presetItems.length)].dataset.preset;
         const presetId = localStorage.presetId || randomPreset;
@@ -138,7 +137,7 @@
             };
 
             const transform = (obj) => {
-                return _.transform(omit(obj), function(result, value, key) {
+                return _.transform(omit(obj), function (result, value, key) {
                     result[key] = _.isObject(value) ? transform(omit(value)) : value;
                 });
             };
@@ -149,7 +148,7 @@
         });
     };
 
-    let initSidebar = function() {
+    let initSidebar = function () {
         const rightCaret = document.body.querySelector(".caret-right");
         const leftCaret = document.body.querySelector(".caret-left");
         const sidebar = document.getElementById("sidebar");
@@ -164,7 +163,7 @@
         }
     };
 
-    let refreshParticles = function(callback) {
+    let refreshParticles = function (callback) {
         const container = tsParticles.domItem(0);
 
         /*gtag("event", "particles_refresh", {
@@ -181,7 +180,7 @@
         });
     };
 
-    let toggleSidebar = function() {
+    let toggleSidebar = function () {
         const rightCaret = document.body.querySelector(".caret-right");
         const leftCaret = document.body.querySelector(".caret-left");
         const sidebar = document.getElementById("sidebar");
@@ -209,7 +208,7 @@
         refreshParticles();
     };
 
-    let exportImage = async function() {
+    let exportImage = async function () {
         const container = tsParticles.domItem(0);
 
         if (container) {
@@ -247,7 +246,7 @@
         }
     };
 
-    let exportVideo = async function() {
+    let exportVideo = async function () {
         const container = tsParticles.domItem(0);
 
         if (container) {
@@ -287,7 +286,7 @@
         }
     };
 
-    let exportConfig = async function() {
+    let exportConfig = async function () {
         const container = tsParticles.domItem(0);
 
         if (container) {
@@ -300,7 +299,7 @@
             const copyBtn = document.querySelector("#exportConfigCopy");
             const downloadBtn = document.querySelector("#exportConfigDownload");
 
-            copyBtn.onclick = function() {
+            copyBtn.onclick = function () {
                 if (!navigator.clipboard) {
                     return;
                 }
@@ -308,7 +307,7 @@
                 navigator.clipboard.writeText(json);
             };
 
-            downloadBtn.onclick = function() {
+            downloadBtn.onclick = function () {
                 const contentType = "application/json";
                 const blob = new Blob([json], { type: contentType });
                 const url = URL.createObjectURL(blob);
@@ -337,7 +336,7 @@
         }
     };
 
-    let codepenExport = function() {
+    let codepenExport = function () {
         const container = tsParticles.domItem(0);
 
         if (container) {
@@ -375,7 +374,7 @@
         }
     };
 
-    let toggleStats = function() {
+    let toggleStats = function () {
         const statsEl = document.body.querySelector("#stats");
         const statsHidden = statsEl.hasAttribute("hidden");
 
@@ -393,14 +392,13 @@
         });*/
     };
 
-    let btnParticlesUpdate = function() {
+    let btnParticlesUpdate = function () {
         const particles = tsParticles.domItem(0);
         particles.options.load(editor.get());
-        refreshParticles(() => {
-        });
+        refreshParticles(() => {});
     };
 
-    let changeGenericPreset = function(presetId) {
+    let changeGenericPreset = function (presetId) {
         const oldPreset = localStorage.presetId;
 
         localStorage.presetId = presetId;
@@ -417,15 +415,15 @@
         updateParticles(editor);
     };
 
-    let changePreset = function() {
+    let changePreset = function () {
         changeGenericPreset(this.value);
     };
 
-    let changeNavPreset = function() {
+    let changeNavPreset = function () {
         changeGenericPreset(this.dataset.preset);
     };
 
-    window.addEventListener("hashchange", function() {
+    window.addEventListener("hashchange", function () {
         const presets = document.body.querySelectorAll(".preset-item");
 
         if (window.location.hash) {
@@ -451,7 +449,7 @@
                 trigger: "focus",
                 getOptions: jsonEditorAutoComplete,
             },
-            onError: function(err) {
+            onError: function (err) {
                 /*gtag("event", "editor_error", {
                     dimension_editor_error: "Editor error: " + err,
                     event_category: "Editor",
@@ -461,7 +459,7 @@
 
                 alert(err.toString());
             },
-            onModeChange: function(newMode, oldMode) {
+            onModeChange: function (newMode, oldMode) {
                 /*gtag("event", "editor_mode_change", {
                     dimension_editor_mode: "Editor changed from " + oldMode + " to " + newMode,
                     event_category: "Editor",
@@ -469,7 +467,7 @@
                     event_label: "Editor Mode Change",
                 });*/
             },
-            onChange: function() {
+            onChange: function () {
                 /*gtag("event", "editor_change", {
                     dimension_editor_data: JSON.stringify(editor.get()),
                     event_category: "Editor",
@@ -499,8 +497,8 @@
 
         changeGenericPreset(localStorage.presetId);
 
-        fetch("../schema/options.schema.json").then(function(response) {
-            response.json().then(function(data) {
+        fetch("../schema/options.schema.json").then(function (response) {
+            response.json().then(function (data) {
                 schema = data;
                 editor.setSchema(schema);
             });
