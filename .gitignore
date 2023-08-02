@@ -354,3 +354,5 @@ dist/
 tmp_tsparticles/
 .idea
 .DS_Store
+
+js/*.min.js
