@@ -340,26 +340,30 @@
         const container = tsParticles.domItem(0);
 
         if (container) {
-            const form = document.getElementById("code-pen-form");
-            const inputData = document.getElementById("code-pen-data");
-            const particlesContainer = document.getElementById("tsparticles");
-            const data = {
-                html: `<!-- tsParticles - https://particles.js.org - https://github.com/matteobruni/tsparticles -->
-<div id="tsparticles"></div>`,
-                css: ``,
-                js: `tsParticles.load("tsparticles", ${JSON.stringify(container.options, (key, value) => {
+            const form = document.getElementById("code-pen-form"),
+                inputData = document.getElementById("code-pen-data"),
+                particlesContainer = document.getElementById("tsparticles"),
+                jsonOptions = JSON.stringify(container.options, (key, value) => {
                     if (key === "_engine" || key === "_container") {
                         return;
                     }
                     return value;
-                })});`,
-                js_external: "https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js",
-                title: "tsParticles example",
-                description: "This pen was created with tsParticles from https://particles.js.org",
-                tags: "tsparticles, javascript, typescript, design, animation",
-                editors: "001",
-            };
-            const JSONstring = JSON.stringify(data).replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+                }),
+                data = {
+                    html: `<!-- tsParticles - https://particles.js.org - https://github.com/matteobruni/tsparticles -->
+<div id="tsparticles"></div>`,
+                    css: ``,
+                    js: `tsParticles.load({
+    id: "tsparticles",
+    options: ${jsonOptions}
+});`,
+                    js_external: "https://cdn.jsdelivr.net/npm/tsparticles-all@2.12.0/tsparticles.all.bundle.min.js",
+                    title: "tsParticles example",
+                    description: "This pen was created with tsParticles from https://particles.js.org",
+                    tags: "tsparticles, javascript, typescript, design, animation",
+                    editors: "001",
+                },
+                JSONstring = JSON.stringify(data).replace(/"/g, "&quot;").replace(/'/g, "&apos;");
 
             inputData.value = JSONstring;
 
@@ -533,42 +537,7 @@
         initSidebar();
         initStats();
 
-        await loadFull(tsParticles);
-
-        await loadCanvasMaskPlugin(tsParticles);
-        await loadEasingBackPlugin(tsParticles);
-        await loadEasingCircPlugin(tsParticles);
-        await loadEasingCubicPlugin(tsParticles);
-        await loadEasingExpoPlugin(tsParticles);
-        await loadEasingQuartPlugin(tsParticles);
-        await loadEasingQuintPlugin(tsParticles);
-        await loadEasingSinePlugin(tsParticles);
-        await loadHsvColorPlugin(tsParticles);
-        await loadInfectionPlugin(tsParticles);
-        await loadMotionPlugin(tsParticles);
-        await loadPolygonMaskPlugin(tsParticles);
-        await loadSoundsPlugin(tsParticles);
-        await loadLightInteraction(tsParticles);
-        await loadParticlesRepulseInteraction(tsParticles);
-        await loadGradientUpdater(tsParticles);
-        await loadOrbitUpdater(tsParticles);
-        await loadCurvesPath(tsParticles);
-        await loadPerlinNoisePath(tsParticles);
-        await loadPolygonPath(tsParticles);
-        await loadSimplexNoisePath(tsParticles);
-        await loadSVGPath(tsParticles);
-        await loadArrowShape(tsParticles);
-        await loadBubbleShape(tsParticles);
-        await loadCardsShape(tsParticles);
-        await loadCogShape(tsParticles);
-        await loadHeartShape(tsParticles);
-        await loadMultilineTextShape(tsParticles);
-        await loadPathShape(tsParticles);
-        await loadRoundedRectShape(tsParticles);
-        await loadSpiralShape(tsParticles);
-        await loadExportImagePlugin(tsParticles);
-        await loadExportJSONPlugin(tsParticles);
-        await loadExportVideoPlugin(tsParticles);
+        await loadAll(tsParticles);
     });
 }
 
