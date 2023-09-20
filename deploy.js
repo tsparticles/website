@@ -3,15 +3,21 @@ import path from "path";
 import ghpages from "gh-pages";
 import { simpleGit } from "simple-git";
 import pnpmExec from "@pnpm/exec";
-import typedoc from "typedoc";
+import typedoc, { Application } from "typedoc";
 import docsGenData from "./docs-gen/data.json" assert { type: "json" };
 import pkgInfo from "./package.json" assert { type: "json" };
 
-const pnpm = pnpmExec.default, ghToken = process.env.GITHUB_TOKEN, gitUser = ghToken ? {
-    name: "github-actions-bot", email: "support+actions@github.com"
-} : {
-    name: "Matteo Bruni", email: "176620+matteobruni@users.noreply.github.com"
-};
+const pnpm = pnpmExec.default,
+    ghToken = process.env.GITHUB_TOKEN,
+    gitUser = ghToken
+        ? {
+              name: "github-actions-bot",
+              email: "support+actions@github.com",
+          }
+        : {
+              name: "Matteo Bruni",
+              email: "176620+matteobruni@users.noreply.github.com",
+          };
 
 (async () => {
     if (!(await fs.pathExists("./dist"))) {
@@ -50,19 +56,14 @@ const pnpm = pnpmExec.default, ghToken = process.env.GITHUB_TOKEN, gitUser = ghT
         const branch = "main"; //remote.package && pkgInfo.devDependencies[remote.package] ? `${remote.package}@${pkgInfo.devDependencies[remote.package].replace("^", "")}` : "main";
 
         // TODO: remove comments when the new tsParticles version will be released
-        await simpleGit().clone(remote.url, path.join(tmpDocsGenPath, remote.folder), [
-            "--depth",
-            "1",
-            "-b",
-            branch
-        ]);
+        await simpleGit().clone(remote.url, path.join(tmpDocsGenPath, remote.folder), ["--depth", "1", "-b", branch]);
 
         await pnpm(["install"], {
-            cwd: path.resolve(path.join(tmpDocsGenPath, remote.folder))
+            cwd: path.resolve(path.join(tmpDocsGenPath, remote.folder)),
         });
 
         await pnpm(["run", remote.buildCommand], {
-            cwd: path.resolve(path.join(tmpDocsGenPath, remote.folder))
+            cwd: path.resolve(path.join(tmpDocsGenPath, remote.folder)),
         });
 
         //await pnpm(["run", "build:docs"], {
@@ -72,15 +73,13 @@ const pnpm = pnpmExec.default, ghToken = process.env.GITHUB_TOKEN, gitUser = ghT
         //await fs.copy(path.join(tmpDocsGenPath, remote.folder, "docs"), path.join(".", "dist", "docs"));
     }
 
-    const typedocApp = new typedoc.Application();
-
-    typedocApp.options.addReader(new typedoc.TSConfigReader());
-    typedocApp.options.addReader(new typedoc.TypeDocReader());
-
-    await typedocApp.bootstrapWithPlugins({
-        options: path.join(docsGenPath, "typedoc.json"),
-        tsconfig: path.join(docsGenPath, "tsconfig.json")
-    });
+    const typedocApp = await Application.bootstrapWithPlugins(
+        {
+            options: path.join(docsGenPath, "typedoc.json"),
+            tsconfig: path.join(docsGenPath, "tsconfig.json"),
+        },
+        [new typedoc.TSConfigReader(), new typedoc.TypeDocReader()],
+    );
 
     const project = typedocApp.convert();
 
@@ -93,19 +92,25 @@ const pnpm = pnpmExec.default, ghToken = process.env.GITHUB_TOKEN, gitUser = ghT
 
     await fs.remove(tmpDocsGenPath);
 
-    ghpages.publish(path.join(".", "dist"), {
-        repo: ghToken ? `https://git:${ghToken}@github.com/tsparticles/website.git` : `https://github.com/tsparticles/website.git`,
-        dotfiles: true,
-        history: false,
-        message: "build: gh pages updated",
-        user: gitUser
-    }, function(publishErr) {
-        if (!publishErr) {
-            console.log("Website published successfully");
-        } else {
-            console.log(`Error publishing website: ${publishErr}`);
-        }
+    ghpages.publish(
+        path.join(".", "dist"),
+        {
+            repo: ghToken
+                ? `https://git:${ghToken}@github.com/tsparticles/website.git`
+                : `https://github.com/tsparticles/website.git`,
+            dotfiles: true,
+            history: false,
+            message: "build: gh pages updated",
+            user: gitUser,
+        },
+        function (publishErr) {
+            if (!publishErr) {
+                console.log("Website published successfully");
+            } else {
+                console.log(`Error publishing website: ${publishErr}`);
+            }
 
-        fs.rmSync(path.join(".", "dist"), { recursive: true });
-    });
+            fs.rmSync(path.join(".", "dist"), { recursive: true });
+        },
+    );
 })();
