@@ -14,7 +14,8 @@
     "build": " pnpm run clear:cache && pnpm run lint && pnpm run build:css && pnpm run build:js",
     "build:ci": " pnpm run clear:cache && pnpm run lint:ci && pnpm run build:css && pnpm run build:js",
     "build:sitemap": "npx sitemap-generator-cli https://particles.js.org --max-concurrency 10 --change-freq monthly --priority-map \"1.0,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.0\" --last-mod",
-    "deploy": "pnpm run build && node deploy.js"
+    "build:docs": "node docs-gen.js",
+    "deploy": "pnpm run build && pnpm run build:docs && node deploy.js"
   },
   "repository": {
     "type": "git",
@@ -28,16 +29,16 @@
   "homepage": "https://particles.js.org",
   "dependencies": {
     "@pnpm/exec": "^2.0.0",
-    "@types/fs-extra": "^11.0.2",
-    "@types/node": "^20.6.3",
+    "@types/fs-extra": "^11.0.3",
+    "@types/node": "^20.8.7",
     "fs-extra": "^11.1.1",
     "gh-pages": "^6.0.0",
     "minify": "^10.5.2",
     "prettier": "^3.0.3",
-    "rimraf": "^5.0.1",
-    "sass": "^1.67.0",
-    "simple-git": "^3.19.1",
-    "typedoc": "^0.25.1",
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.4",
+    "simple-git": "^3.20.0",
+    "typedoc": "^0.25.2",
     "typedoc-plugin-carbon-ads": "^1.5.0",
     "typedoc-plugin-clarity": "^1.5.0",
     "typedoc-plugin-coverage": "^2.2.0",
