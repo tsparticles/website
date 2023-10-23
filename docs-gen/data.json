@@ -1,6 +1,6 @@
 [
   {
-    "buildCommand": "build:ci",
+    "buildCommand": "slimbuild:ci",
     "folder": "tsparticles",
     "package": "tsparticles",
     "url": "https://github.com/matteobruni/tsparticles.git"
