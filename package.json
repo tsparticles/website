@@ -15,6 +15,7 @@
     "build:ci": " pnpm run clear:cache && pnpm run lint:ci && pnpm run build:css && pnpm run build:js",
     "build:sitemap": "npx sitemap-generator-cli https://particles.js.org --max-concurrency 10 --change-freq monthly --priority-map \"1.0,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.0\" --last-mod",
     "build:docs": "node docs-gen.js",
+    "build:docs:cli": "node clone-packages.js && typedoc --options ./docs-gen/typedoc.json --tsconfig ./docs-gen/tsconfig.json && rimraf ./docs-gen/tmp",
     "deploy": "pnpm run build && pnpm run build:docs && node deploy.js"
   },
   "repository": {

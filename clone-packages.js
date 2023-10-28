@@ -1,11 +1,11 @@
+// @ts-check
 import fs from "fs-extra";
 import path from "path";
 import { simpleGit } from "simple-git";
 import pnpmExec from "@pnpm/exec";
-import typedoc, { Application } from "typedoc";
 import docsGenData from "./docs-gen/data.json" assert { type: "json" };
 
-const pnpm = pnpmExec.default;
+const pnpm = pnpmExec;
 
 (async () => {
     const docsGenPath = path.resolve(path.join(".", "docs-gen")),
@@ -39,31 +39,4 @@ const pnpm = pnpmExec.default;
 
         //await fs.copy(path.join(tmpDocsGenPath, remote.folder, "docs"), path.join(".", "dist", "docs"));
     }
-
-    try {
-        const typedocApp = await Application.bootstrapWithPlugins(
-            {
-                options: path.join(docsGenPath, "typedoc.json"),
-                tsconfig: path.join(docsGenPath, "tsconfig.json"),
-            },
-            [new typedoc.TSConfigReader(), new typedoc.TypeDocReader()],
-        );
-
-        const project = await typedocApp.convert();
-
-        if (project) {
-            if (!(await fs.pathExists("./dist"))) {
-                await fs.mkdir("./dist");
-            }
-
-            // Project may not have converted correctly
-            const outputDir = path.join(".", "dist", "docs");
-            // Rendered docs
-            await typedocApp.generateDocs(project, outputDir);
-        }
-    } catch (e) {
-        console.log("Error during docs generation", e);
-    }
-
-    await fs.remove(tmpDocsGenPath);
 })();
