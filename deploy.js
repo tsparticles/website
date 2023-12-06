@@ -24,7 +24,6 @@ const ghToken = process.env.GITHUB_TOKEN,
     await fs.copy("./fonts", "./dist/fonts");
     await fs.copy("./images", "./dist/images");
     await fs.copy("./js", "./dist/js");
-    await fs.copy("./presets", "./dist/presets");
     await fs.copy("./samples", "./dist/samples");
     await fs.copy("./schema", "./dist/schema");
     await fs.copy("./videos", "./dist/videos");
