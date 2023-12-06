@@ -49,8 +49,8 @@
   },
   "devDependencies": {
     "tsparticles": "^3.0.1",
-    "@tsparticles/editor": "^3.0.1",
+    "@tsparticles/editor": "^3.0.0",
     "@tsparticles/engine": "^3.0.1",
-    "@tsparticles/preset-links": "^3.0.1"
+    "@tsparticles/preset-links": "^3.0.0"
   }
 }
