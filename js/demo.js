@@ -120,13 +120,9 @@
         const randomPreset = presetItems[Math.floor(Math.random() * presetItems.length)].dataset.preset;
         const presetId = localStorage.presetId || randomPreset;
 
-        if (presetId === "divRepulse") {
-            document.getElementById("repulse-div").className = "d-block";
-        } else {
-            document.getElementById("repulse-div").className = "d-none";
-        }
+        console.log(presetId, tsParticles.configs);
 
-        tsParticles.loadJSON("tsparticles", `../presets/${presetId}.json`).then((particles) => {
+        tsParticles.load({ id: "tsparticles", options: tsParticles.configs[presetId] }).then((particles) => {
             localStorage.presetId = presetId;
             window.location.hash = presetId;
 
@@ -357,7 +353,7 @@
     id: "tsparticles",
     options: ${jsonOptions}
 });`,
-                    js_external: "https://cdn.jsdelivr.net/npm/tsparticles-all@2.12.0/tsparticles.all.bundle.min.js",
+                    js_external: "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.1/tsparticles.all.bundle.min.js",
                     title: "tsParticles example",
                     description: "This pen was created with tsParticles from https://particles.js.org",
                     tags: "tsparticles, javascript, typescript, design, animation",

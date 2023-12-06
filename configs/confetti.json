@@ -38,14 +38,7 @@
             "limit": 300
         },
         "opacity": {
-            "value": 1,
-            "animation": {
-                "enable": false,
-                "startValue": "max",
-                "destroy": "min",
-                "speed": 0.3,
-                "sync": true
-            }
+            "value": 1
         },
         "rotate": {
             "value": {

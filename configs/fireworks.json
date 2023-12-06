@@ -49,9 +49,6 @@
                     "number": {
                         "value": 0
                     },
-                    "collisions": {
-                        "enable": false
-                    },
                     "opacity": {
                         "value": {
                             "min": 0.1,
@@ -69,7 +66,10 @@
                         "type": "circle"
                     },
                     "size": {
-                        "value": { "min": 1, "max": 2 },
+                        "value": {
+                            "min": 1,
+                            "max": 2
+                        },
                         "animation": {
                             "enable": true,
                             "speed": 5,
@@ -96,7 +96,10 @@
                             "inverse": false,
                             "acceleration": 5
                         },
-                        "speed": { "min": 5, "max": 10 },
+                        "speed": {
+                            "min": 5,
+                            "max": 10
+                        },
                         "direction": "none",
                         "outModes": "destroy"
                     }
@@ -148,7 +151,9 @@
                 "top": "none"
             },
             "trail": {
-                "fillColor": "#000",
+                "fill": {
+                    "color": "#000"
+                },
                 "enable": true,
                 "length": 10
             }

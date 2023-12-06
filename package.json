@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "clear:cache": "rimraf ./node_modules/.cache",
-    "lint": "prettier --write ./configs && prettier --write ./css/*.scss && prettier --write ./js/404.js && prettier --write ./js/demo.js && prettier --write ./presets && prettier --write ./samples && prettier --write index.html && prettier --write privacy.html && prettier --write 404.html && prettier --write video.html",
+    "lint": "prettier --write ./configs && prettier --write ./css/*.scss && prettier --write ./js/404.js && prettier --write ./js/demo.js && prettier --write ./samples && prettier --write index.html && prettier --write privacy.html && prettier --write 404.html && prettier --write video.html",
     "lint:ci": "prettier --check ./configs && prettier --check ./css/*.scss && prettier --check ./js/404.js && prettier --check ./js/demo.js && prettier --check ./presets && prettier --check ./samples && prettier --check index.html && prettier --check privacy.html && prettier --check 404.html && prettier --check video.html",
     "build:js": "minify ./js/demo.js > ./js/demo.min.js && minify ./js/404.js > ./js/404.min.js",
     "build:css": "sass ./css/main.scss ./css/main.css && minify ./css/main.css > ./css/main.min.css && sass ./css/presets.scss ./css/presets.css && minify ./css/presets.css > ./css/presets.min.css && sass ./css/404.scss ./css/404.css && minify ./css/404.css > ./css/404.min.css",
@@ -30,27 +30,27 @@
   "homepage": "https://particles.js.org",
   "dependencies": {
     "@pnpm/exec": "^2.0.0",
-    "@types/fs-extra": "^11.0.3",
-    "@types/node": "^20.8.7",
-    "fs-extra": "^11.1.1",
-    "gh-pages": "^6.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.3",
+    "fs-extra": "^11.2.0",
+    "gh-pages": "^6.1.0",
     "minify": "^10.5.2",
-    "prettier": "^3.0.3",
+    "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
-    "sass": "^1.69.4",
-    "simple-git": "^3.20.0",
-    "typedoc": "^0.25.2",
-    "typedoc-plugin-carbon-ads": "^1.5.0",
-    "typedoc-plugin-clarity": "^1.5.0",
+    "sass": "^1.69.5",
+    "simple-git": "^3.21.0",
+    "typedoc": "^0.25.4",
+    "typedoc-plugin-carbon-ads": "^1.6.0",
+    "typedoc-plugin-clarity": "^1.6.0",
     "typedoc-plugin-coverage": "^2.2.0",
-    "typedoc-plugin-keywords": "^1.5.0",
+    "typedoc-plugin-keywords": "^1.6.0",
     "typedoc-plugin-missing-exports": "^2.1.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "devDependencies": {
-    "tsparticles": "^2.12.0",
-    "tsparticles-editor": "^2.12.0",
-    "tsparticles-engine": "^2.12.0",
-    "tsparticles-preset-links": "^2.12.0"
+    "tsparticles": "^3.0.1",
+    "@tsparticles/editor": "^3.0.1",
+    "@tsparticles/engine": "^3.0.1",
+    "@tsparticles/preset-links": "^3.0.1"
   }
 }

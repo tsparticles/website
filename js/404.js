@@ -1,4 +1,3 @@
 (async () => {
-    await loadFull(tsParticles);
-    await tsParticles.loadJSON("tsparticles", "/configs/404.json");
+    await tsParticles.load({ id: "tsparticles", url: "/configs/404.json" });
 })();

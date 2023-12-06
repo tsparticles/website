@@ -13,22 +13,19 @@
             "type": "circle"
         },
         "opacity": {
-            "value": 0.8,
-            "random": {
-                "enable": true,
-                "minimumValue": 0.4
+            "value": {
+                "min": 0.4,
+                "max": 0.8
             }
         },
         "size": {
-            "value": 400,
-            "random": {
-                "enable": true,
-                "minimumValue": 200
+            "value": {
+                "min": 200,
+                "max": 400
             },
             "animation": {
                 "enable": true,
                 "speed": 100,
-                "minimumValue": 200,
                 "sync": false
             }
         },
@@ -36,23 +33,10 @@
             "enable": true,
             "speed": 10,
             "direction": "top",
-            "random": false,
-            "straight": false,
-            "outMode": "out",
-            "attract": {
-                "enable": false,
-                "rotate": {
-                    "x": 600,
-                    "y": 1200
-                }
-            }
+            "outMode": "out"
         }
     },
     "background": {
-        "color": "#ffffff",
-        "image": "",
-        "position": "50% 50%",
-        "repeat": "no-repeat",
-        "size": "cover"
+        "color": "#ffffff"
     }
 }
