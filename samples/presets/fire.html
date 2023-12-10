@@ -150,7 +150,7 @@
             (async () => {
                 await loadFirePreset(tsParticles);
 
-                await tsParticles.load("tsparticles", { preset: "fire" });
+                await tsParticles.load({ id: "tsparticles", options: { preset: "fire" } });
             })();
         </script>
     </body>

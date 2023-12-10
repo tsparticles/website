@@ -152,7 +152,7 @@
             (async () => {
                 await loadSnowPreset(tsParticles);
 
-                await tsParticles.load("tsparticles", { preset: "snow" });
+                await tsParticles.load({ id: "tsparticles", options: { preset: "snow" } });
             })();
         </script>
     </body>

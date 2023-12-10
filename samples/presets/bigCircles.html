@@ -118,9 +118,11 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-922Z47NPS0"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
+
             function gtag() {
                 dataLayer.push(arguments);
             }
+
             gtag("js", new Date());
 
             gtag("config", "G-922Z47NPS0");
@@ -155,7 +157,12 @@
             (async () => {
                 await loadBigCirclesPreset(tsParticles);
 
-                await tsParticles.load("tsparticles", { preset: "bigCircles" });
+                await tsParticles.load({
+                    id: "tsparticles",
+                    options: {
+                        preset: "bigCircles",
+                    },
+                });
             })();
         </script>
     </body>

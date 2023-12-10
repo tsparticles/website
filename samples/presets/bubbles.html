@@ -150,7 +150,7 @@
             (async () => {
                 await loadBubblesPreset(tsParticles);
 
-                await tsParticles.load("tsparticles", { preset: "bubbles" });
+                await tsParticles.load({ id: "tsparticles", options: { preset: "bubbles" } });
             })();
         </script>
     </body>

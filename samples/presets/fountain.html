@@ -150,7 +150,7 @@
             (async () => {
                 await loadFountainPreset(tsParticles);
 
-                await tsParticles.load("tsparticles", { preset: "fountain" });
+                await tsParticles.load({ id: "tsparticles", options: { preset: "fountain" } });
             })();
         </script>
     </body>

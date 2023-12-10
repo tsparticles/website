@@ -150,7 +150,7 @@
             (async () => {
                 await loadFireflyPreset(tsParticles);
 
-                await tsParticles.load("tsparticles", { preset: "firefly" });
+                await tsParticles.load({ id: "tsparticles", options: { preset: "firefly" } });
             })();
         </script>
     </body>

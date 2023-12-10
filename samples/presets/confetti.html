@@ -114,9 +114,11 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-922Z47NPS0"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
+
             function gtag() {
                 dataLayer.push(arguments);
             }
+
             gtag("js", new Date());
 
             gtag("config", "G-922Z47NPS0");
@@ -153,8 +155,11 @@
             (async () => {
                 await loadConfettiPreset(tsParticles);
 
-                await tsParticles.load("tsparticles", {
-                    preset: "confetti",
+                await tsParticles.load({
+                    id: "tsparticles",
+                    options: {
+                        preset: "confetti",
+                    },
                 });
             })();
         </script>
