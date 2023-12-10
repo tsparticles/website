@@ -34,7 +34,7 @@
     "@types/node": "^20.10.3",
     "fs-extra": "^11.2.0",
     "gh-pages": "^6.1.0",
-    "minify": "^10.5.2",
+    "minify": "^11.0.0",
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
     "sass": "^1.69.5",
