@@ -21,8 +21,8 @@ dependencies:
     specifier: ^6.1.0
     version: 6.1.0
   minify:
-    specifier: ^10.5.2
-    version: 10.5.2
+    specifier: ^11.0.0
+    version: 11.0.0
   prettier:
     specifier: ^3.1.0
     version: 3.1.0
@@ -160,9 +160,9 @@ packages:
     hasBin: true
     dev: false
 
-  /@putout/minify@2.2.1:
-    resolution: {integrity: sha512-MdkJ16RVmtz4ULWxaGBcyIQ6SZZ3Fz8TzjvLt5ApGDhM4V0y7OEp2QUERfcP6xk0B9MlMNvTR5sA3GAqPfRCWQ==}
-    engines: {node: '>=16'}
+  /@putout/minify@3.0.0:
+    resolution: {integrity: sha512-3537K/ksaUkjiaGO5liQMxHIqzGXOBLZDk4tRlqkBUewxlXBtInuZqm/8JsZQ7IZVMb+JMWkskrkZYSaD6wi/g==}
+    engines: {node: '>=18'}
     dev: false
 
   /@tsparticles/basic@3.0.1:
@@ -906,12 +906,13 @@ packages:
       path-exists: 4.0.0
     dev: false
 
-  /find-up@6.3.0:
-    resolution: {integrity: sha512-v2ZsoEuVHYy8ZIlYqwPe/39Cy+cFDzp4dXPaxNvkEuouymu+2Jbz0PxpKarJHYJTmv2HWT3O382qY8l4jMWthw==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+  /find-up@7.0.0:
+    resolution: {integrity: sha512-YyZM99iHrqLKjmt4LJDj58KI+fYyufRLBSYcqycxf//KpBk9FoewoGX0450m9nB44qrZnovzC2oeP5hUibxc/g==}
+    engines: {node: '>=18'}
     dependencies:
       locate-path: 7.2.0
       path-exists: 5.0.0
+      unicorn-magic: 0.1.0
     dev: false
 
   /foreground-child@3.1.1:
@@ -1131,16 +1132,16 @@ packages:
     hasBin: true
     dev: false
 
-  /minify@10.5.2:
-    resolution: {integrity: sha512-/7aNrZ7kMe43o0NQUftL/H9QBi15FYEUo7tnw0Nrcc+XsmNS6nP4cIL4iqrNzSzv1rUaHLBxpmYbETKT9dKZiQ==}
+  /minify@11.0.0:
+    resolution: {integrity: sha512-7DDQtq1B+ZEeXz7m+OK+EVQwWHaErAD4w0/sAbhn6cfriO5uaNOVucRJDSCMpMCq+GVm33vQijAWjNqQhI2mcA==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
-      '@putout/minify': 2.2.1
+      '@putout/minify': 3.0.0
       clean-css: 5.3.2
       css-b64-images: 0.2.5
       debug: 4.3.4
-      find-up: 6.3.0
+      find-up: 7.0.0
       html-minifier-terser: 7.2.0
       readjson: 2.2.2
       simport: 1.2.0
@@ -1575,6 +1576,11 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: false
+
+  /unicorn-magic@0.1.0:
+    resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
+    engines: {node: '>=18'}
     dev: false
 
   /universalify@2.0.0:
