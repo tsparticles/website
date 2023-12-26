@@ -353,7 +353,7 @@
     id: "tsparticles",
     options: ${jsonOptions}
 });`,
-                    js_external: "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.2/tsparticles.all.bundle.min.js",
+                    js_external: "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/tsparticles.all.bundle.min.js",
                     title: "tsParticles example",
                     description: "This pen was created with tsParticles from https://particles.js.org",
                     tags: "tsparticles, javascript, typescript, design, animation",
