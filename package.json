@@ -51,6 +51,6 @@
     "tsparticles": "^3.0.3",
     "@tsparticles/editor": "^3.0.0",
     "@tsparticles/engine": "^3.0.3",
-    "@tsparticles/preset-links": "^3.0.0"
+    "@tsparticles/preset-links": "^3.0.2"
   }
 }

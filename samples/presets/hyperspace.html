@@ -114,9 +114,11 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-922Z47NPS0"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
+
             function gtag() {
                 dataLayer.push(arguments);
             }
+
             gtag("js", new Date());
 
             gtag("config", "G-922Z47NPS0");
@@ -145,11 +147,9 @@
             src="//cdn.carbonads.com/carbon.js?serve=CEAI6KJL&placement=particlesjsorg"
             id="_carbonads_js"
         ></script>
-        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-hyperspace@3.0.0/tsparticles.preset.hyperspace.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-hyperspace@3.0.2/tsparticles.preset.hyperspace.bundle.min.js"></script>
         <script type="text/javascript">
             (async () => {
-                await loadHyperspacePreset(tsParticles);
-
                 await tsParticles.load({ id: "tsparticles", options: { preset: "hyperspace" } });
             })();
         </script>
