@@ -678,34 +678,32 @@
                 y.parentNode.insertBefore(t, y);
             })(window, document, "clarity", "script", "8q4bxin4tm");
         </script>
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
         <script
+            defer
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
             crossorigin="anonymous"
         ></script>
         <script
+            defer
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
             integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
             crossorigin="anonymous"
         ></script>
         <script
+            defer
             src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/js/fontawesome.min.js"
             integrity="sha256-NP9NujdEzS5m4ZxvNqkcbxyHB0dTRy9hG13RwTVBGwo="
             crossorigin="anonymous"
         ></script>
         <script
+            defer
             src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"
             integrity="sha256-ur/YlHMU96MxHEsy3fHGszZHas7NzH4RQlD4tDVvFhw="
             crossorigin="anonymous"
         ></script>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/tsparticles.all.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/object-gui@2.0.2/dist/js/object-gui.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/editor@3.0.0/tsparticles.editor.js"></script>
-        <script type="text/javascript">
-            hljs.highlightAll();
-        </script>
         <script>
             window.twttr = (function (d, s, id) {
                 var js,
@@ -726,7 +724,7 @@
             })(document, "script", "twitter-wjs");
         </script>
         <div id="fb-root"></div>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <script
             async
             defer
@@ -734,73 +732,9 @@
             src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v10.0&appId=130672560341873&autoLogAppEvents=1"
             nonce="jC6Fjy00"
         ></script>
-        <script type="text/javascript">
-            (async () => {
-                await loadAll(tsParticles);
-
-                const configsUrl = "/configs";
-                const configs = [
-                    {
-                        id: "amongUs",
-                        text: "Among Us",
-                    },
-                    {
-                        id: "colors",
-                        text: "Colors",
-                    },
-                    {
-                        id: "confetti",
-                        text: "Confetti",
-                    },
-                    {
-                        id: "confettiExplosions",
-                        text: "Confetti Explosions",
-                    },
-                    {
-                        id: "fireworks",
-                        text: "Fireworks",
-                    },
-                    {
-                        id: "hexagonPath",
-                        text: "Hexagons",
-                    },
-                    {
-                        id: "light",
-                        text: "Light",
-                    },
-                    {
-                        id: "sideConfetti",
-                        text: "Side Confetti",
-                    },
-                    {
-                        id: "starry",
-                        text: "Starry",
-                    },
-                    {
-                        id: "tunnel",
-                        text: "Tunnel",
-                    },
-                ];
-
-                const randomIdx = Math.floor(Math.random() * configs.length),
-                    randomEl = configs[randomIdx],
-                    randomUrl = `${configsUrl}/${randomEl.id}.json`,
-                    container = await tsParticles.load({ id: "tsparticles", url: randomUrl }),
-                    editor = showEditor(container);
-
-                for (const config of configs) {
-                    editor.addPreset(config.text, `${configsUrl}/${config.id}.json`);
-                }
-
-                document.getElementById("input_m_Symbol(tsparticles)_editor_preset").value = randomUrl;
-
-                editor.top().right().theme("neu-dark");
-
-                const editorEl = document.getElementById("m_Symbol(tsparticles)_editor");
-
-                editorEl.classList.add("d-md-block");
-                editorEl.classList.add("d-none");
-            })();
-        </script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/tsparticles.all.bundle.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/object-gui@2.0.2/dist/js/object-gui.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tsparticles/editor@3.0.0/tsparticles.editor.min.js"></script>
+        <script defer src="/js/index.min.js"></script>
     </body>
 </html>

@@ -12,32 +12,35 @@ dependencies:
     specifier: ^11.0.4
     version: 11.0.4
   '@types/node':
-    specifier: ^20.10.3
-    version: 20.10.3
+    specifier: ^20.10.6
+    version: 20.10.6
   fs-extra:
     specifier: ^11.2.0
     version: 11.2.0
   gh-pages:
-    specifier: ^6.1.0
-    version: 6.1.0
+    specifier: ^6.1.1
+    version: 6.1.1
   minify:
-    specifier: ^11.0.0
-    version: 11.0.0
+    specifier: ^11.0.1
+    version: 11.0.1
   prettier:
-    specifier: ^3.1.0
-    version: 3.1.0
+    specifier: ^3.1.1
+    version: 3.1.1
   rimraf:
     specifier: ^5.0.5
     version: 5.0.5
   sass:
-    specifier: ^1.69.5
-    version: 1.69.5
+    specifier: ^1.69.7
+    version: 1.69.7
   simple-git:
-    specifier: ^3.21.0
-    version: 3.21.0
+    specifier: ^3.22.0
+    version: 3.22.0
+  terser:
+    specifier: ^5.26.0
+    version: 5.26.0
   typedoc:
     specifier: ^0.25.4
-    version: 0.25.4(typescript@5.3.2)
+    version: 0.25.4(typescript@5.3.3)
   typedoc-plugin-carbon-ads:
     specifier: ^1.6.0
     version: 1.6.0(typedoc@0.25.4)
@@ -54,8 +57,8 @@ dependencies:
     specifier: ^2.1.0
     version: 2.1.0(typedoc@0.25.4)
   typescript:
-    specifier: ^5.3.2
-    version: 5.3.2
+    specifier: ^5.3.3
+    version: 5.3.3
 
 devDependencies:
   '@tsparticles/editor':
@@ -591,17 +594,17 @@ packages:
     resolution: {integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==}
     dependencies:
       '@types/jsonfile': 6.1.1
-      '@types/node': 20.10.3
+      '@types/node': 20.10.6
     dev: false
 
   /@types/jsonfile@6.1.1:
     resolution: {integrity: sha512-GSgiRCVeapDN+3pqA35IkQwasaCh/0YFH5dEF6S88iDvEn901DjOeH3/QPY+XYP1DFzDZPvIvfeEgk+7br5png==}
     dependencies:
-      '@types/node': 20.10.3
+      '@types/node': 20.10.6
     dev: false
 
-  /@types/node@20.10.3:
-    resolution: {integrity: sha512-XJavIpZqiXID5Yxnxv3RUDKTN5b81ddNC3ecsA0SoFXz/QU8OGBwZGMomiq0zw+uuqbL/krztv/DINAQ/EV4gg==}
+  /@types/node@20.10.6:
+    resolution: {integrity: sha512-Vac8H+NlRNNlAmDfGUP7b5h/KA+AtWIzuXy0E6OyP8f1tCLYAtPvKRRDJjAPqhpCb0t6U2j7/xqAuLEebW2kiw==}
     dependencies:
       undici-types: 5.26.5
     dev: false
@@ -896,8 +899,8 @@ packages:
     dev: false
     optional: true
 
-  /gh-pages@6.1.0:
-    resolution: {integrity: sha512-MdXigvqN3I66Y+tAZsQJMzpBWQOI1snD6BYuECmP+GEdryYMMOQvzn4AConk/+qNg/XIuQhB1xNGrl3Rmj1iow==}
+  /gh-pages@6.1.1:
+    resolution: {integrity: sha512-upnohfjBwN5hBP9w2dPE7HO5JJTHzSGMV1JrLrHvNuqmjoYHg6TBrCcnEoorjG/e0ejbuvnwyKMdTyM40PEByw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -966,7 +969,7 @@ packages:
       entities: 4.5.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.17.7
+      terser: 5.26.0
     dev: false
 
   /immutable@4.3.0:
@@ -1084,9 +1087,9 @@ packages:
     hasBin: true
     dev: false
 
-  /minify@11.0.0:
-    resolution: {integrity: sha512-7DDQtq1B+ZEeXz7m+OK+EVQwWHaErAD4w0/sAbhn6cfriO5uaNOVucRJDSCMpMCq+GVm33vQijAWjNqQhI2mcA==}
-    engines: {node: '>=16'}
+  /minify@11.0.1:
+    resolution: {integrity: sha512-J2C0fR+1DE4zPKMpIuxnBkqIPrcEUADZK9sDaXnruOj268hilhbgQenfuGh9gGJ0rI3irZNPwgjWcBBBCYMXqA==}
+    engines: {node: '>=18'}
     hasBin: true
     dependencies:
       '@putout/minify': 3.0.0
@@ -1256,8 +1259,8 @@ packages:
       find-up: 4.1.0
     dev: false
 
-  /prettier@3.1.0:
-    resolution: {integrity: sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw==}
+  /prettier@3.1.1:
+    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
     engines: {node: '>=14'}
     hasBin: true
     dev: false
@@ -1290,8 +1293,8 @@ packages:
       glob: 10.3.10
     dev: false
 
-  /sass@1.69.5:
-    resolution: {integrity: sha512-qg2+UCJibLr2LCVOt3OlPhr/dqVHWOa9XtZf2OjbLs/T4VPSJ00udtgJxH3neXZm+QqX8B+3cU7RaLqp1iVfcQ==}
+  /sass@1.69.7:
+    resolution: {integrity: sha512-rzj2soDeZ8wtE2egyLXgOOHQvaC2iosZrkF6v3EUG+tBwEvhqUCzm0VP3k9gHF9LXbSrRhT5SksoI56Iw8NPnQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -1331,8 +1334,8 @@ packages:
     engines: {node: '>=14'}
     dev: false
 
-  /simple-git@3.21.0:
-    resolution: {integrity: sha512-oTzw9248AF5bDTMk9MrxsRzEzivMlY+DWH0yWS4VYpMhNLhDWnN06pCtaUyPnqv/FpsdeNmRqmZugMABHRPdDA==}
+  /simple-git@3.22.0:
+    resolution: {integrity: sha512-6JujwSs0ac82jkGjMHiCnTifvf1crOiY/+tfs/Pqih6iow7VrpNKRRNdWm6RtaXpvvv/JGNYhlUtLhGFqHF+Yw==}
     dependencies:
       '@kwsites/file-exists': 1.1.1
       '@kwsites/promise-deferred': 1.1.1
@@ -1405,8 +1408,8 @@ packages:
       escape-string-regexp: 1.0.5
     dev: false
 
-  /terser@5.17.7:
-    resolution: {integrity: sha512-/bi0Zm2C6VAexlGgLlVxA0P2lru/sdLyfCVaRMfKVo9nWxbmz7f/sD8VPybPeSUJaJcwmCJis9pBIhcVcG1QcQ==}
+  /terser@5.26.0:
+    resolution: {integrity: sha512-dytTGoE2oHgbNV9nTzgBEPaqAWvcJNl66VZ0BkJqlvp71IjO8CxdBx/ykCNb47cLnCmCvRZ6ZR0tLkqvZCdVBQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -1467,8 +1470,8 @@ packages:
     peerDependencies:
       typedoc: ^0.25.4
     dependencies:
-      typedoc: 0.25.4(typescript@5.3.2)
-      typescript: 5.3.2
+      typedoc: 0.25.4(typescript@5.3.3)
+      typescript: 5.3.3
     dev: false
 
   /typedoc-plugin-clarity@1.6.0(typedoc@0.25.4):
@@ -1476,8 +1479,8 @@ packages:
     peerDependencies:
       typedoc: ^0.25.4
     dependencies:
-      typedoc: 0.25.4(typescript@5.3.2)
-      typescript: 5.3.2
+      typedoc: 0.25.4(typescript@5.3.3)
+      typescript: 5.3.3
     dev: false
 
   /typedoc-plugin-coverage@2.2.0(typedoc@0.25.4):
@@ -1486,7 +1489,7 @@ packages:
     peerDependencies:
       typedoc: ^0.22.12 || 0.23.x || 0.24.x || 0.25.x
     dependencies:
-      typedoc: 0.25.4(typescript@5.3.2)
+      typedoc: 0.25.4(typescript@5.3.3)
     dev: false
 
   /typedoc-plugin-keywords@1.6.0(typedoc@0.25.4):
@@ -1494,8 +1497,8 @@ packages:
     peerDependencies:
       typedoc: ^0.25.4
     dependencies:
-      typedoc: 0.25.4(typescript@5.3.2)
-      typescript: 5.3.2
+      typedoc: 0.25.4(typescript@5.3.3)
+      typescript: 5.3.3
     dev: false
 
   /typedoc-plugin-missing-exports@2.1.0(typedoc@0.25.4):
@@ -1503,10 +1506,10 @@ packages:
     peerDependencies:
       typedoc: 0.24.x || 0.25.x
     dependencies:
-      typedoc: 0.25.4(typescript@5.3.2)
+      typedoc: 0.25.4(typescript@5.3.3)
     dev: false
 
-  /typedoc@0.25.4(typescript@5.3.2):
+  /typedoc@0.25.4(typescript@5.3.3):
     resolution: {integrity: sha512-Du9ImmpBCw54bX275yJrxPVnjdIyJO/84co0/L9mwe0R3G4FSR6rQ09AlXVRvZEGMUg09+z/usc8mgygQ1aidA==}
     engines: {node: '>= 16'}
     hasBin: true
@@ -1517,11 +1520,11 @@ packages:
       marked: 4.3.0
       minimatch: 9.0.3
       shiki: 0.14.2
-      typescript: 5.3.2
+      typescript: 5.3.3
     dev: false
 
-  /typescript@5.3.2:
-    resolution: {integrity: sha512-6l+RyNy7oAHDfxC4FzSJcz9vnjTKxrLpDG5M2Vu4SHRVNg6xzqZp6LYSR9zjqQTu8DU/f5xwxUdADOkbrIX2gQ==}
+  /typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: false
