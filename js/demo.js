@@ -11,6 +11,43 @@
         return changes(object, base);
     };
 
+    let fixOptions = function (options) {
+        if (!options) {
+            return;
+        }
+
+        if (options.particles) {
+            if (!(options.particles.groups instanceof Array) || !options.particles.groups) {
+                options.particles.groups = [];
+            }
+        }
+
+        if (options.interactivity) {
+            if (options.interactivity.modes) {
+                if (options.interactivity.modes.push) {
+                    if (
+                        !(options.interactivity.modes.push.groups instanceof Array) ||
+                        !options.interactivity.modes.push.groups
+                    ) {
+                        options.interactivity.modes.push.groups = [];
+                    }
+                }
+            }
+        }
+
+        if (!(options.manualParticles instanceof Array) || !options.manualParticles) {
+            options.manualParticles = [];
+        }
+
+        if (!(options.responsive instanceof Array) || !options.responsive) {
+            options.responsive = [];
+        }
+
+        if (!(options.themes instanceof Array) || !options.themes) {
+            options.themes = [];
+        }
+    };
+
     let editor;
     let schema = {};
     const stats = new Stats();
@@ -116,29 +153,33 @@
     };
 
     let updateParticles = function (editor) {
-        const presetItems = document.body.querySelectorAll(".preset-item");
-        const randomPreset = presetItems[Math.floor(Math.random() * presetItems.length)].dataset.preset;
-        const presetId = localStorage.presetId || randomPreset;
+        const presetItems = document.body.querySelectorAll(".preset-item"),
+            randomPreset = presetItems[Math.floor(Math.random() * presetItems.length)].dataset.preset,
+            presetId = localStorage.presetId || randomPreset,
+            options = tsParticles.configs[presetId];
 
-        console.log(presetId, tsParticles.configs);
+        fixOptions(options);
 
-        tsParticles.load({ id: "tsparticles", options: tsParticles.configs[presetId] }).then((particles) => {
+        tsParticles.load({ id: "tsparticles", options: options }).then((particles) => {
             localStorage.presetId = presetId;
             window.location.hash = presetId;
 
             const omit = (obj) => {
-                return _.omitBy(obj, (value, key) => {
-                    return _.startsWith(key, "_");
-                });
-            };
+                    return _.omitBy(obj, (value, key) => {
+                        return _.startsWith(key, "_");
+                    });
+                },
+                transform = (obj) => {
+                    return _.transform(omit(obj), function (result, value, key) {
+                        result[key] = _.isObject(value) ? transform(omit(value)) : value;
+                    });
+                };
 
-            const transform = (obj) => {
-                return _.transform(omit(obj), function (result, value, key) {
-                    result[key] = _.isObject(value) ? transform(omit(value)) : value;
-                });
-            };
+            const editorOptions = transform(particles.actualOptions);
 
-            editor.update(transform(particles.options));
+            fixOptions(editorOptions);
+
+            editor.update(editorOptions);
 
             editor.expandAll();
         });
@@ -495,14 +536,12 @@
             localStorage.presetId = presetItems[Math.floor(Math.random() * presetItems.length)].dataset.preset;
         }
 
-        changeGenericPreset(localStorage.presetId);
-
-        fetch("../schema/options.schema.json").then(function (response) {
+        /*fetch("../schema/options.schema.json").then(function (response) {
             response.json().then(function (data) {
                 schema = data;
                 editor.setSchema(schema);
             });
-        });
+        });*/
 
         document.getElementById("btnUpdate").addEventListener("click", btnParticlesUpdate);
         document.getElementById("btnNavUpdate").addEventListener("click", btnParticlesUpdate);
@@ -534,6 +573,8 @@
         initStats();
 
         await loadAll(tsParticles);
+
+        changeGenericPreset(localStorage.presetId);
     });
 }
 
