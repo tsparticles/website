@@ -23,12 +23,12 @@ jobs:
       #    echo GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} >> .env
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
       - uses: pnpm/action-setup@v4.0.0
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 8
+          version: 9
           run_install: false
       - name: Get pnpm version
         id: pnpm-version
