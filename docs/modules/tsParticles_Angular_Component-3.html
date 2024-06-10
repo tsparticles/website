@@ -1,0 +1,124 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta name="keywords" content="html, css, javascript, typescript, particles, js, ts, jsx, tsx, canvas, confetti, fireworks, animations, react, vue, angular, svelte, libraries, how, to, create, add"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>tsParticles Angular Component - v2.9.3 | tsParticles - v3.0.0</title><meta name="description" content="Documentation for tsParticles"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><style>#carbonads * {
+  margin: initial;
+  padding: initial;
+}
+#carbonads {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+}
+#carbonads {
+  display: flex;
+  max-width: 330px;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
+  z-index: 100;
+  margin: 0 0 0 40px;
+}
+#carbonads a {
+  color: inherit;
+  text-decoration: none;
+}
+#carbonads a:hover {
+  color: inherit;
+}
+#carbonads span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+#carbonads .carbon-wrap {
+  display: flex;
+}
+#carbonads .carbon-img {
+  display: block;
+  margin: 0;
+  line-height: 1;
+}
+#carbonads .carbon-img img {
+  display: block;
+}
+#carbonads .carbon-text {
+  font-size: 13px;
+  padding: 10px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+#carbonads .carbon-poweredby {
+  display: block;
+  padding: 6px 8px;
+  background: #f1f1f2;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 1;
+  border-top-left-radius: 3px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}</style></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">tsParticles - v3.0.0</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">tsParticles</a></li><li><a href="tsParticles_Angular_Component-3.html">tsParticles Angular Component</a></li></ul><h1>Module tsParticles Angular Component - v2.9.3</h1></div><section class="tsd-panel tsd-typography"><a id="md:litelement-typescript-starter" class="tsd-anchor"></a><h1><a href="#md:litelement-typescript-starter">LitElement TypeScript starter</a></h1><p>This project includes a sample component using LitElement with TypeScript.</p>
+<a id="md:setup" class="tsd-anchor"></a><h2><a href="#md:setup">Setup</a></h2><p>Install dependencies:</p>
+<pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">i</span>
+</code><button>Copy</button></pre>
+<a id="md:build" class="tsd-anchor"></a><h2><a href="#md:build">Build</a></h2><p>This sample uses the TypeScript compiler to produce JavaScript that runs in modern browsers.</p>
+<p>To build the JavaScript version of your component:</p>
+<pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">build</span>
+</code><button>Copy</button></pre>
+<p>To watch files and rebuild when the files are modified, run the following command in a separate shell:</p>
+<pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">build:watch</span>
+</code><button>Copy</button></pre>
+<p>Both the TypeScript compiler and lit-analyzer are configured to be very strict. You may want to change <code>tsconfig.json</code> to make them less strict.</p>
+<a id="md:testing" class="tsd-anchor"></a><h2><a href="#md:testing">Testing</a></h2><p>This sample uses Karma, Chai, Mocha, and the open-wc test helpers for testing. See the <a href="https://open-wc.org/testing/testing.html">open-wc testing documentation</a> for more information.</p>
+<p>Tests can be run with the <code>test</code> script:</p>
+<pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">test</span>
+</code><button>Copy</button></pre>
+<a id="md:dev-server" class="tsd-anchor"></a><h2><a href="#md:dev-server">Dev Server</a></h2><p>This sample uses open-wc&#39;s <a href="https://github.com/open-wc/open-wc/tree/master/packages/es-dev-server">es-dev-server</a> for previewing the project without additional build steps. ES dev server handles resolving Node-style &quot;bare&quot; import specifiers, which aren&#39;t supported in browsers. It also automatically transpiles JavaScript and adds polyfills to support older browsers.</p>
+<p>To run the dev server and open the project in a new browser tab:</p>
+<pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">serve</span>
+</code><button>Copy</button></pre>
+<p>There is a development HTML file located at <code>/dev/index.html</code> that you can view at <a href="http://localhost:8000/dev/index.html">http://localhost:8000/dev/index.html</a>.</p>
+<a id="md:editing" class="tsd-anchor"></a><h2><a href="#md:editing">Editing</a></h2><p>If you use VS Code, we highly reccomend the <a href="https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin">lit-plugin extension</a>, which enables some extremely useful features for lit-html templates:</p>
+<ul>
+<li>Syntax highlighting</li>
+<li>Type-checking</li>
+<li>Code completion</li>
+<li>Hover-over docs</li>
+<li>Jump to definition</li>
+<li>Linting</li>
+<li>Quick Fixes</li>
+</ul>
+<p>  The project is setup to reccomend lit-plugin to VS Code users if they don&#39;t already have it installed.</p>
+<a id="md:linting" class="tsd-anchor"></a><h2><a href="#md:linting">Linting</a></h2><p>Linting of TypeScript files is provided by <a href="eslint.org">ESLint</a> and <a href="https://github.com/typescript-eslint/typescript-eslint">TypeScript ESLint</a>. In addition, <a href="https://www.npmjs.com/package/lit-analyzer">lit-analyzer</a> is used to type-check and lint lit-html templates with the same engine and rules as lit-plugin.</p>
+<p>The rules are mostly the recommended rules from each project, but some have been turned off to make LitElement usage easier. The recommended rules are pretty strict, so you may want to relax them by editing <code>.eslintrc.json</code> and <code>tsconfig.json</code>.</p>
+<p>To lint the project run:</p>
+<pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">lint</span>
+</code><button>Copy</button></pre>
+<a id="md:formatting" class="tsd-anchor"></a><h2><a href="#md:formatting">Formatting</a></h2><p><a href="https://prettier.io/">Prettier</a> is used for code formatting. It has been pre-configured according to the Polymer Project&#39;s style. You can change this in <code>.prettierrc.json</code>.</p>
+<p>Prettier has not been configured to run when commiting files, but this can be added with Husky and and <code>pretty-quick</code>. See the <a href="https://prettier.io/">prettier.io</a> site for instructions.</p>
+<a id="md:static-site" class="tsd-anchor"></a><h2><a href="#md:static-site">Static Site</a></h2><p>This project includes a simple website generated with the <a href="11ty.dev">eleventy</a> static site generator and the templates and pages in <code>/docs-src</code>. The site is generated to <code>/docs</code> and intended to be checked in so that GitHub pages can serve the site <a href="https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">from <code>/docs</code> on the master branch</a>.</p>
+<p>To enable the site go to the GitHub settings and change the GitHub Pages &quot;Source&quot; setting to &quot;master branch /docs folder&quot;.</p></p>
+<p>To build the site, run:</p>
+<pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">docs</span>
+</code><button>Copy</button></pre>
+<p>To serve the site locally, run:</p>
+<pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">docs:serve</span>
+</code><button>Copy</button></pre>
+<p>To watch the site files, and re-build automatically, run:</p>
+<pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">docs:watch</span>
+</code><button>Copy</button></pre>
+<p>The site will usually be served at <a href="http://localhost:8000">http://localhost:8000</a>.</p>
+<a id="md:bundling-and-minification" class="tsd-anchor"></a><h2><a href="#md:bundling-and-minification">Bundling and minification</a></h2><p>This starter project doesn&#39;t include any build-time optimizations like bundling or minification. We recommend publishing components as unoptimized JavaScript modules, and performing build-time optimizations at the application level. This gives build tools the best chance to deduplicate code, remove dead code, and so on.</p>
+<p>For information on building application projects that include LitElement components, see <a href="https://lit.dev/docs/tools/production/">Build for production</a> on the Lit site.</p>
+<a id="md:more-information" class="tsd-anchor"></a><h2><a href="#md:more-information">More information</a></h2><p>See <a href="https://lit.dev/docs/getting-started/">Get started</a> on the Lit site for more information.</p>
+</section><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><h3 class="tsd-index-heading uppercase">Index</h3><section class="tsd-index-section"><h3 class="tsd-index-heading">Classes</h3><div class="tsd-index-list"><a href="../classes/tsParticles_Angular_Component-3.LitParticles.html" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-128"></use></svg><span>Lit<wbr/>Particles</span></a>
+</div></section></section></section></div><div class="col-sidebar"><div class="page-menu"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI6KJL&placement=particlesjsorg" id="_carbonads_js"></script><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:litelement-typescript-starter"><span>Lit<wbr/>Element <wbr/>Type<wbr/>Script starter</span></a><ul><li><a href="#md:setup"><span>Setup</span></a></li><li><a href="#md:build"><span>Build</span></a></li><li><a href="#md:testing"><span>Testing</span></a></li><li><a href="#md:dev-server"><span>Dev <wbr/>Server</span></a></li><li><a href="#md:editing"><span>Editing</span></a></li><li><a href="#md:linting"><span>Linting</span></a></li><li><a href="#md:formatting"><span>Formatting</span></a></li><li><a href="#md:static-site"><span>Static <wbr/>Site</span></a></li><li><a href="#md:bundling-and-minification"><span>Bundling and minification</span></a></li><li><a href="#md:more-information"><span>More information</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>tsParticles - v3.0.0</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div><script async src="https://www.googletagmanager.com/gtag/js?id=UA-161253125-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-161253125-1');</script><script html="(function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src=&quot;https://www.clarity.ms/tag/&quot;+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, &quot;clarity&quot;, &quot;script&quot;, &quot;8q4bxin4tm&quot;);" type="text/javascript"></script></body></html>

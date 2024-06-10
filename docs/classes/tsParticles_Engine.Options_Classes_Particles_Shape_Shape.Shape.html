@@ -1,0 +1,152 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta name="keywords" content="html, css, javascript, typescript, particles, js, ts, jsx, tsx, canvas, confetti, fireworks, animations, react, vue, angular, svelte, libraries, how, to, create, add"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Shape | tsParticles - v3.0.0</title><meta name="description" content="Documentation for tsParticles"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><style>#carbonads * {
+  margin: initial;
+  padding: initial;
+}
+#carbonads {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+}
+#carbonads {
+  display: flex;
+  max-width: 330px;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
+  z-index: 100;
+  margin: 0 0 0 40px;
+}
+#carbonads a {
+  color: inherit;
+  text-decoration: none;
+}
+#carbonads a:hover {
+  color: inherit;
+}
+#carbonads span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+#carbonads .carbon-wrap {
+  display: flex;
+}
+#carbonads .carbon-img {
+  display: block;
+  margin: 0;
+  line-height: 1;
+}
+#carbonads .carbon-img img {
+  display: block;
+}
+#carbonads .carbon-text {
+  font-size: 13px;
+  padding: 10px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+#carbonads .carbon-poweredby {
+  display: block;
+  padding: 6px 8px;
+  background: #f1f1f2;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 1;
+  border-top-left-radius: 3px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}</style></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">tsParticles - v3.0.0</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">tsParticles</a></li><li><a href="../modules/tsParticles_Engine.html">tsParticles Engine</a></li><li><a href="../modules/tsParticles_Engine.Options_Classes_Particles_Shape_Shape.html">Options/Classes/Particles/Shape/Shape</a></li><li><a href="tsParticles_Engine.Options_Classes_Particles_Shape_Shape.Shape.html">Shape</a></li></ul><h1>Class Shape</h1></div><section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography"><a id="md:shape" class="tsd-anchor"></a><h1><a href="#md:shape">Shape</a></h1><p>The Shape section of Particles options has been reworked a lot but for now it&#39;s still compatible with all your old
+configurations.</p>
+<p>If you want to customize more you particles you should use the new syntax</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>type</code></td>
+<td><code>string</code> <br /> <code>array</code></td>
+<td><code>&quot;circle&quot;</code> <br /> <code>&quot;line&quot;</code> <br /> <code>&quot;edge&quot;</code> <br /> <code>&quot;triangle&quot;</code> <br /> <code>&quot;polygon&quot;</code> <br /> <code>&quot;star&quot;</code> <br /> <code>&quot;image&quot;</code> <br /> <code>[&quot;circle&quot;, &quot;triangle&quot;, &quot;image&quot;]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>This object is where new implementations are placed</td>
+</tr>
+</tbody></table>
+<a id="md:shape-options" class="tsd-anchor"></a><h2><a href="#md:shape-options">Shape Options</a></h2><p>Shape <code>options</code> is a dynamic object, is properties are the shape types, even the custom one you created (as you can read
+above) and the values are objects or arrays that will be used to draw the particles.</p>
+<p>This will give us more customization, you can now specify a shape type with a <code>particles</code> property that lets you
+customize almost all the properties of the original object.</p>
+<p><code>shape</code> and <code>number</code> will be ignored for obvious reasons.</p>
+<p>The shape types you find described above are the only implemented here, if you use an external custom shape ask the
+creator.</p>
+<p>All the shapes have in common these properties</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>particles</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>See Particles options <a href="https://particles.js.org/docs/interfaces/_options_interfaces_ioptions_.ioptions.html-Particles">here</a></td>
+</tr>
+<tr>
+<td><code>fill</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td>Used to specify if its shape particles should be filled with color or not</td>
+</tr>
+<tr>
+<td><code>close</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td>Used to specify if its shape particles should have a closed shape</td>
+</tr>
+</tbody></table>
+<p>Below you&#39;ll find the options of some shape types that need additional properties, you can add to the object below the 3
+properties above.</p>
+<a id="md:polygon" class="tsd-anchor"></a><h3><a href="#md:polygon">Polygon</a></h3><pre><code class="language-javascript"><span class="hl-14">polygon</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-14">sides</span><span class="hl-1">: </span><span class="hl-13">5</span><span class="hl-1">; </span><span class="hl-5">// the number of sides of the polygon</span><br/><span class="hl-1">}</span>
+</code><button>Copy</button></pre>
+<a id="md:star" class="tsd-anchor"></a><h3><a href="#md:star">Star</a></h3><pre><code class="language-json"><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-16">&quot;star&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-16">&quot;sides&quot;</span><span class="hl-1">: </span><span class="hl-13">5</span><span class="hl-1">, </span><span class="hl-5">// the number of sides of the star</span><br/><span class="hl-1">        </span><span class="hl-16">&quot;inset&quot;</span><span class="hl-1">: </span><span class="hl-13">2</span><span class="hl-1"> </span><span class="hl-5">// the inset length, 2 is the default and an acceptable value</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
+</code><button>Copy</button></pre>
+<a id="md:character--char" class="tsd-anchor"></a><h3><a href="#md:character--char">Character / Char</a></h3><pre><code class="language-json"><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-16">&quot;character&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-16">&quot;value&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;*&quot;</span><span class="hl-1">, </span><span class="hl-5">// the text to use as particles, any string is valid, for escaping unicode char use the `\uXXXX` syntax</span><br/><span class="hl-1">        </span><span class="hl-16">&quot;font&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Verdana&quot;</span><span class="hl-1">, </span><span class="hl-5">// the font to use to draw the text. If the font needs an external css or javascript like FontAwesome you should include all the necessary files on your own</span><br/><span class="hl-1">        </span><span class="hl-16">&quot;style&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-1">, </span><span class="hl-5">// any additional css style to add to the text</span><br/><span class="hl-1">        </span><span class="hl-16">&quot;weight&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;&quot;</span><span class="hl-1"> </span><span class="hl-5">// the css weight property, some fonts like font awesome have a specified weight, check the documentation if needed</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
+</code><button>Copy</button></pre>
+<a id="md:image" class="tsd-anchor"></a><h3><a href="#md:image">Image</a></h3><pre><code class="language-json"><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-16">&quot;image&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-5">// any path or url to your image that will be used as a particle</span><br/><span class="hl-1">        </span><span class="hl-16">&quot;src&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;http://mywebsite.com/assets/img/image.png&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-5">// the pixel width of the image, you can use any value, the image will be scaled</span><br/><span class="hl-1">        </span><span class="hl-16">&quot;width&quot;</span><span class="hl-1">: </span><span class="hl-13">100</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-5">// the pixel height of the image, you can use any value, the image will be scaled</span><br/><span class="hl-1">        </span><span class="hl-16">&quot;height&quot;</span><span class="hl-1">: </span><span class="hl-13">100</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-5">// if true and the image type is SVG, it will replace all the colors with the particle color</span><br/><span class="hl-1">        </span><span class="hl-16">&quot;replaceColor&quot;</span><span class="hl-1">: </span><span class="hl-3">false</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
+</code><button>Copy</button></pre>
+</div><div class="tsd-comment tsd-typography"></div></section><section class="tsd-panel"><h4>Implements</h4><ul class="tsd-hierarchy"><li><a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html" class="tsd-signature-type tsd-kind-interface">IShape</a></li><li><a href="../interfaces/tsParticles_Engine.Options_Interfaces_IOptionLoader.IOptionLoader.html" class="tsd-signature-type tsd-kind-interface">IOptionLoader</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html" class="tsd-signature-type tsd-kind-interface">IShape</a><span class="tsd-signature-symbol">&gt;</span></li></ul></section><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7117014b04c659e24c34f7bce6f13547a7ea81ae/engine/src/Options/Classes/Particles/Shape/Shape.ts#L12">Options/Classes/Particles/Shape/Shape.ts:12</a></li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><h5 class="tsd-index-heading uppercase" role="button" aria-expanded="false" tabIndex="0"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-chevronSmall"></use></svg> Index</h5></summary><div class="tsd-accordion-details"><section class="tsd-index-section"><h3 class="tsd-index-heading">Constructors</h3><div class="tsd-index-list"><a href="tsParticles_Engine.Options_Classes_Particles_Shape_Shape.Shape.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a>
+</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Properties</h3><div class="tsd-index-list"><a href="tsParticles_Engine.Options_Classes_Particles_Shape_Shape.Shape.html#close" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>close</span></a>
+<a href="tsParticles_Engine.Options_Classes_Particles_Shape_Shape.Shape.html#fill" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>fill</span></a>
+<a href="tsParticles_Engine.Options_Classes_Particles_Shape_Shape.Shape.html#options" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>options</span></a>
+<a href="tsParticles_Engine.Options_Classes_Particles_Shape_Shape.Shape.html#type" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>type</span></a>
+</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Methods</h3><div class="tsd-index-list"><a href="tsParticles_Engine.Options_Classes_Particles_Shape_Shape.Shape.html#load" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>load</span></a>
+</div></section></div></details></section></section><section class="tsd-panel-group tsd-member-group"><h2>Constructors</h2><section class="tsd-panel tsd-member"><a id="constructor" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="constructor.new_Shape" class="tsd-anchor"></a><span class="tsd-kind-constructor-signature">new <wbr/>Shape</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="tsParticles_Engine.Options_Classes_Particles_Shape_Shape.Shape.html" class="tsd-signature-type tsd-kind-class">Shape</a><a href="#constructor.new_Shape" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><h4 class="tsd-returns-title">Returns <a href="tsParticles_Engine.Options_Classes_Particles_Shape_Shape.Shape.html" class="tsd-signature-type tsd-kind-class">Shape</a></h4><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7117014b04c659e24c34f7bce6f13547a7ea81ae/engine/src/Options/Classes/Particles/Shape/Shape.ts#L18">Options/Classes/Particles/Shape/Shape.ts:18</a></li></ul></aside></li></ul></section></section><section class="tsd-panel-group tsd-member-group"><h2>Properties</h2><section class="tsd-panel tsd-member"><a id="close" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>close</span><a href="#close" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">close</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><div class="tsd-comment tsd-typography"><p>Set this property to false for creating an open shape</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Implementation of <a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html">IShape</a>.<a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html#close">close</a></p><ul><li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7117014b04c659e24c34f7bce6f13547a7ea81ae/engine/src/Options/Classes/Particles/Shape/Shape.ts#L13">Options/Classes/Particles/Shape/Shape.ts:13</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="fill" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>fill</span><a href="#fill" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">fill</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><div class="tsd-comment tsd-typography"><p>Set this property to false for creating an empty shape</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Implementation of <a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html">IShape</a>.<a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html#fill">fill</a></p><ul><li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7117014b04c659e24c34f7bce6f13547a7ea81ae/engine/src/Options/Classes/Particles/Shape/Shape.ts#L14">Options/Classes/Particles/Shape/Shape.ts:14</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="options" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>options</span><a href="#options" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">options</span><span class="tsd-signature-symbol">:</span> <a href="../types/tsParticles_Engine.Types_ShapeData.ShapeData.html" class="tsd-signature-type tsd-kind-type-alias">ShapeData</a></div><div class="tsd-comment tsd-typography"><p>Shape options</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Implementation of <a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html">IShape</a>.<a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html#options">options</a></p><ul><li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7117014b04c659e24c34f7bce6f13547a7ea81ae/engine/src/Options/Classes/Particles/Shape/Shape.ts#L15">Options/Classes/Particles/Shape/Shape.ts:15</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="type" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">type</span><span class="tsd-signature-symbol">:</span> <a href="../types/tsParticles_Engine.Types_SingleOrMultiple.SingleOrMultiple.html" class="tsd-signature-type tsd-kind-type-alias">SingleOrMultiple</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div><div class="tsd-comment tsd-typography"><p>Shape type</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Implementation of <a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html">IShape</a>.<a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html#type">type</a></p><ul><li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7117014b04c659e24c34f7bce6f13547a7ea81ae/engine/src/Options/Classes/Particles/Shape/Shape.ts#L16">Options/Classes/Particles/Shape/Shape.ts:16</a></li></ul></aside></section></section><section class="tsd-panel-group tsd-member-group"><h2>Methods</h2><section class="tsd-panel tsd-member"><a id="load" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>load</span><a href="#load" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="load.load-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">load</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">data</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#load.load-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>This load method is used to load data in the classes used as generic</p>
+</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">data</span>: <a href="../types/tsParticles_Engine.Types_RecursivePartial.RecursivePartial.html" class="tsd-signature-type tsd-kind-type-alias">RecursivePartial</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/tsParticles_Engine.Options_Interfaces_Particles_Shape_IShape.IShape.html" class="tsd-signature-type tsd-kind-interface">IShape</a><span class="tsd-signature-symbol">&gt;</span></span><div class="tsd-comment tsd-typography"><p>the input options</p>
+</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Implementation of <a href="../interfaces/tsParticles_Engine.Options_Interfaces_IOptionLoader.IOptionLoader.html">IOptionLoader</a>.<a href="../interfaces/tsParticles_Engine.Options_Interfaces_IOptionLoader.IOptionLoader.html#load">load</a></p><ul><li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7117014b04c659e24c34f7bce6f13547a7ea81ae/engine/src/Options/Classes/Particles/Shape/Shape.ts#L25">Options/Classes/Particles/Shape/Shape.ts:25</a></li></ul></aside></li></ul></section></section></div><div class="col-sidebar"><div class="page-menu"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI6KJL&placement=particlesjsorg" id="_carbonads_js"></script><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><ul><li><a href="#md:shape"><span>Shape</span></a></li><li><ul><li><a href="#md:shape-options"><span>Shape <wbr/>Options</span></a></li><li><ul><li><a href="#md:polygon"><span>Polygon</span></a></li><li><a href="#md:star"><span>Star</span></a></li><li><a href="#md:character--char"><span>Character / <wbr/>Char</span></a></li><li><a href="#md:image"><span>Image</span></a></li></ul></li></ul></li></ul><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a><a href="#close" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>close</span></a><a href="#fill" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>fill</span></a><a href="#options" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>options</span></a><a href="#type" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>type</span></a><a href="#load" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>load</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>tsParticles - v3.0.0</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div><script async src="https://www.googletagmanager.com/gtag/js?id=UA-161253125-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-161253125-1');</script><script html="(function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src=&quot;https://www.clarity.ms/tag/&quot;+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, &quot;clarity&quot;, &quot;script&quot;, &quot;8q4bxin4tm&quot;);" type="text/javascript"></script></body></html>
