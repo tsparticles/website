@@ -68,7 +68,7 @@ importers:
         version: 3.0.0
       '@tsparticles/engine':
         specifier: ^3.4.0
-        version: 3.4.0
+        version: 3.5.0
       '@tsparticles/preset-links':
         specifier: ^3.1.0
         version: 3.1.0
@@ -359,9 +359,6 @@ packages:
 
   '@tsparticles/editor@3.0.0':
     resolution: {integrity: sha512-SMdTH9kBWaB6QZLzMMgP/GKxMXzWg4mnkDEf6/9jOFqP74oBOw+fNxSLoeNvX/m8ZmNbstK1nAgczmx7XBEdMA==}
-
-  '@tsparticles/engine@3.4.0':
-    resolution: {integrity: sha512-OqoMZYJCoiihNnexnnSmInEMNXr0Z8CmE1HSiFVeifgK1qUlonTFe2G09KdvNT8ZdvmIC513yTpFJNDbnMZYRQ==}
 
   '@tsparticles/engine@3.5.0':
     resolution: {integrity: sha512-RCwrJ2SvSYdhXJ24oUCjSUKEZQ9lXwObOWMvfMC9vS6/bk+Qo0N7Xx8AfumqzP/LebB1YJdlCvuoJMauAon0Pg==}
@@ -1342,7 +1339,7 @@ snapshots:
 
   '@tsparticles/basic@3.4.0':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
       '@tsparticles/move-base': 3.4.0
       '@tsparticles/shape-circle': 3.4.0
       '@tsparticles/updater-color': 3.4.0
@@ -1362,7 +1359,7 @@ snapshots:
 
   '@tsparticles/editor@3.0.0':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
       '@tsparticles/interaction-external-attract': 3.0.1
       '@tsparticles/interaction-external-bounce': 3.0.1
       '@tsparticles/interaction-external-bubble': 3.0.1
@@ -1380,13 +1377,11 @@ snapshots:
       '@tsparticles/plugin-infection': 3.0.1
       object-gui: 2.0.2
 
-  '@tsparticles/engine@3.4.0': {}
-
   '@tsparticles/engine@3.5.0': {}
 
   '@tsparticles/interaction-external-attract@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-external-attract@3.5.0':
     dependencies:
@@ -1394,7 +1389,7 @@ snapshots:
 
   '@tsparticles/interaction-external-bounce@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-external-bounce@3.5.0':
     dependencies:
@@ -1402,7 +1397,7 @@ snapshots:
 
   '@tsparticles/interaction-external-bubble@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-external-bubble@3.5.0':
     dependencies:
@@ -1410,7 +1405,7 @@ snapshots:
 
   '@tsparticles/interaction-external-connect@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-external-connect@3.5.0':
     dependencies:
@@ -1418,7 +1413,7 @@ snapshots:
 
   '@tsparticles/interaction-external-grab@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-external-grab@3.5.0':
     dependencies:
@@ -1426,7 +1421,7 @@ snapshots:
 
   '@tsparticles/interaction-external-pause@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-external-pause@3.5.0':
     dependencies:
@@ -1434,7 +1429,7 @@ snapshots:
 
   '@tsparticles/interaction-external-push@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-external-push@3.5.0':
     dependencies:
@@ -1442,7 +1437,7 @@ snapshots:
 
   '@tsparticles/interaction-external-remove@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-external-remove@3.5.0':
     dependencies:
@@ -1450,7 +1445,7 @@ snapshots:
 
   '@tsparticles/interaction-external-repulse@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-external-repulse@3.5.0':
     dependencies:
@@ -1466,7 +1461,7 @@ snapshots:
 
   '@tsparticles/interaction-light@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-particles-attract@3.5.0':
     dependencies:
@@ -1478,11 +1473,11 @@ snapshots:
 
   '@tsparticles/interaction-particles-links@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-particles-links@3.4.0':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/interaction-particles-links@3.5.0':
     dependencies:
@@ -1490,7 +1485,7 @@ snapshots:
 
   '@tsparticles/move-base@3.4.0':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/move-base@3.5.0':
     dependencies:
@@ -1502,7 +1497,7 @@ snapshots:
 
   '@tsparticles/plugin-absorbers@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/plugin-absorbers@3.5.0':
     dependencies:
@@ -1524,7 +1519,7 @@ snapshots:
 
   '@tsparticles/plugin-emitters@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/plugin-emitters@3.5.0':
     dependencies:
@@ -1532,21 +1527,21 @@ snapshots:
 
   '@tsparticles/plugin-export-json@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/plugin-infection@3.0.1':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/preset-links@3.1.0':
     dependencies:
       '@tsparticles/basic': 3.4.0
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
       '@tsparticles/interaction-particles-links': 3.4.0
 
   '@tsparticles/shape-circle@3.4.0':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/shape-circle@3.5.0':
     dependencies:
@@ -1611,7 +1606,7 @@ snapshots:
 
   '@tsparticles/updater-color@3.4.0':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/updater-color@3.5.0':
     dependencies:
@@ -1627,7 +1622,7 @@ snapshots:
 
   '@tsparticles/updater-opacity@3.4.0':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/updater-opacity@3.5.0':
     dependencies:
@@ -1635,7 +1630,7 @@ snapshots:
 
   '@tsparticles/updater-out-modes@3.4.0':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/updater-out-modes@3.5.0':
     dependencies:
@@ -1651,7 +1646,7 @@ snapshots:
 
   '@tsparticles/updater-size@3.4.0':
     dependencies:
-      '@tsparticles/engine': 3.4.0
+      '@tsparticles/engine': 3.5.0
 
   '@tsparticles/updater-size@3.5.0':
     dependencies:
