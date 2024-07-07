@@ -52,7 +52,7 @@ importers:
         version: 1.6.0(typedoc@0.26.3(typescript@5.5.3))
       typedoc-plugin-coverage:
         specifier: ^3.1.1
-        version: 3.1.1(typedoc@0.26.3(typescript@5.5.3))
+        version: 3.3.0(typedoc@0.26.3(typescript@5.5.3))
       typedoc-plugin-keywords:
         specifier: ^1.6.0
         version: 1.6.0(typedoc@0.26.3(typescript@5.5.3))
@@ -1090,11 +1090,11 @@ packages:
     peerDependencies:
       typedoc: ^0.25.4
 
-  typedoc-plugin-coverage@3.1.1:
-    resolution: {integrity: sha512-PAMYQ4fX7wJo6Y8mMzrISDNRurl5+xSNWEojrt6Yxofb/m7vWrgiP3bid2KXloMlPcSfCoBiJA6F2g3rmu8XTQ==}
+  typedoc-plugin-coverage@3.3.0:
+    resolution: {integrity: sha512-wpywQ95tqGSD6IbYUPMXSKiwnSWboSKdx2y9X6SJQKzQvBqZoz5iiUyDJFixtW8v7+xmrqXFR/B6Wy37FNhVqA==}
     engines: {node: '>= 18'}
     peerDependencies:
-      typedoc: 0.25.x
+      typedoc: 0.25.x || 0.26.x
 
   typedoc-plugin-keywords@1.6.0:
     resolution: {integrity: sha512-URyCIHw6+Lwil0ywy6lVb2TckfDVGjAWnRnTAiiSZaRaglI6vaaP1EhhwEipOIlHaJSnHZfdwpWe1t4mffTIpA==}
@@ -2239,7 +2239,7 @@ snapshots:
       typedoc: 0.26.3(typescript@5.5.3)
       typescript: 5.5.3
 
-  typedoc-plugin-coverage@3.1.1(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-coverage@3.3.0(typedoc@0.26.3(typescript@5.5.3)):
     dependencies:
       typedoc: 0.26.3(typescript@5.5.3)
 
