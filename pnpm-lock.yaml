@@ -43,22 +43,22 @@ importers:
         version: 5.31.1
       typedoc:
         specifier: ^0.26.0
-        version: 0.26.3(typescript@5.5.3)
+        version: 0.26.5(typescript@5.5.3)
       typedoc-plugin-carbon-ads:
         specifier: ^1.6.0
-        version: 1.6.0(typedoc@0.26.3(typescript@5.5.3))
+        version: 1.6.0(typedoc@0.26.5(typescript@5.5.3))
       typedoc-plugin-clarity:
         specifier: ^1.6.0
-        version: 1.6.0(typedoc@0.26.3(typescript@5.5.3))
+        version: 1.6.0(typedoc@0.26.5(typescript@5.5.3))
       typedoc-plugin-coverage:
         specifier: ^3.1.1
-        version: 3.3.0(typedoc@0.26.3(typescript@5.5.3))
+        version: 3.3.0(typedoc@0.26.5(typescript@5.5.3))
       typedoc-plugin-keywords:
         specifier: ^1.6.0
-        version: 1.6.0(typedoc@0.26.3(typescript@5.5.3))
+        version: 1.6.0(typedoc@0.26.5(typescript@5.5.3))
       typedoc-plugin-missing-exports:
         specifier: ^3.0.0
-        version: 3.0.0(typedoc@0.26.3(typescript@5.5.3))
+        version: 3.0.0(typedoc@0.26.5(typescript@5.5.3))
       typescript:
         specifier: ^5.4.5
         version: 5.5.3
@@ -273,8 +273,8 @@ packages:
     resolution: {integrity: sha512-XIkJx93TDReV+zYaCB+CnfASHm26vAOEpBmAKzcW/56/8LxU8TRoetUBelkACUab8GPGHjElp0n6a2cLI+ccnw==}
     engines: {node: '>=18'}
 
-  '@shikijs/core@1.10.3':
-    resolution: {integrity: sha512-D45PMaBaeDHxww+EkcDQtDAtzv00Gcsp72ukBtaLSmqRvh0WgGMq3Al0rl1QQBZfuneO75NXMIzEZGFitThWbg==}
+  '@shikijs/core@1.11.0':
+    resolution: {integrity: sha512-VbEhDAhT/2ozO0TPr5/ZQBO/NWLqtk4ZiBf6NplYpF38mKjNfMMied5fNEfIfYfN+cdKvhDB4VMcKvG/g9c3zg==}
 
   '@swc/core-darwin-arm64@1.6.13':
     resolution: {integrity: sha512-SOF4buAis72K22BGJ3N8y88mLNfxLNprTuJUpzikyMGrvkuBFNcxYtMhmomO0XHsgLDzOJ+hWzcgjRNzjMsUcQ==}
@@ -1008,8 +1008,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shiki@1.10.3:
-    resolution: {integrity: sha512-eneCLncGuvPdTutJuLyUGS8QNPAVFO5Trvld2wgEq1e002mwctAhJKeMGWtWVXOIEzmlcLRqcgPSorR6AVzOmQ==}
+  shiki@1.11.0:
+    resolution: {integrity: sha512-NqH/O1zRHvnuk/WfSL6b7+DtI7/kkMMSQGlZhm9DyzSU+SoIHhaw/fBZMr+zp9R8KjdIzkk3JKSC6hORuGDyng==}
 
   signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
@@ -1106,8 +1106,8 @@ packages:
     peerDependencies:
       typedoc: 0.26.x
 
-  typedoc@0.26.3:
-    resolution: {integrity: sha512-6d2Sw9disvvpdk4K7VNjKr5/3hzijtfQVHRthhDqJgnhMHy1wQz4yPMJVKXElvnZhFr0nkzo+GzjXDTRV5yLpg==}
+  typedoc@0.26.5:
+    resolution: {integrity: sha512-Vn9YKdjKtDZqSk+by7beZ+xzkkr8T8CYoiasqyt4TTRFy5+UHzL/mF/o4wGBjRF+rlWQHDb0t6xCpA3JNL5phg==}
     engines: {node: '>= 18'}
     hasBin: true
     peerDependencies:
@@ -1285,7 +1285,7 @@ snapshots:
 
   '@putout/minify@4.3.1': {}
 
-  '@shikijs/core@1.10.3':
+  '@shikijs/core@1.11.0':
     dependencies:
       '@types/hast': 3.0.4
 
@@ -2139,9 +2139,9 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@1.10.3:
+  shiki@1.11.0:
     dependencies:
-      '@shikijs/core': 1.10.3
+      '@shikijs/core': 1.11.0
       '@types/hast': 3.0.4
 
   signal-exit@4.1.0: {}
@@ -2229,35 +2229,35 @@ snapshots:
       '@tsparticles/updater-twinkle': 3.5.0
       '@tsparticles/updater-wobble': 3.5.0
 
-  typedoc-plugin-carbon-ads@1.6.0(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-carbon-ads@1.6.0(typedoc@0.26.5(typescript@5.5.3)):
     dependencies:
-      typedoc: 0.26.3(typescript@5.5.3)
+      typedoc: 0.26.5(typescript@5.5.3)
       typescript: 5.5.3
 
-  typedoc-plugin-clarity@1.6.0(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-clarity@1.6.0(typedoc@0.26.5(typescript@5.5.3)):
     dependencies:
-      typedoc: 0.26.3(typescript@5.5.3)
+      typedoc: 0.26.5(typescript@5.5.3)
       typescript: 5.5.3
 
-  typedoc-plugin-coverage@3.3.0(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-coverage@3.3.0(typedoc@0.26.5(typescript@5.5.3)):
     dependencies:
-      typedoc: 0.26.3(typescript@5.5.3)
+      typedoc: 0.26.5(typescript@5.5.3)
 
-  typedoc-plugin-keywords@1.6.0(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-keywords@1.6.0(typedoc@0.26.5(typescript@5.5.3)):
     dependencies:
-      typedoc: 0.26.3(typescript@5.5.3)
+      typedoc: 0.26.5(typescript@5.5.3)
       typescript: 5.5.3
 
-  typedoc-plugin-missing-exports@3.0.0(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-missing-exports@3.0.0(typedoc@0.26.5(typescript@5.5.3)):
     dependencies:
-      typedoc: 0.26.3(typescript@5.5.3)
+      typedoc: 0.26.5(typescript@5.5.3)
 
-  typedoc@0.26.3(typescript@5.5.3):
+  typedoc@0.26.5(typescript@5.5.3):
     dependencies:
       lunr: 2.3.9
       markdown-it: 14.1.0
       minimatch: 9.0.5
-      shiki: 1.10.3
+      shiki: 1.11.0
       typescript: 5.5.3
       yaml: 2.4.5
 
