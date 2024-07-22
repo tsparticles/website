@@ -34,7 +34,7 @@ importers:
         version: 5.0.8
       sass:
         specifier: ^1.77.4
-        version: 1.77.6
+        version: 1.77.8
       simple-git:
         specifier: ^3.24.0
         version: 3.25.0
@@ -991,8 +991,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  sass@1.77.6:
-    resolution: {integrity: sha512-ByXE1oLD79GVq9Ht1PeHWCPMPB8XHpBuz1r85oByKHjZY6qV6rWnQovQzXJXuQ/XyE1Oj3iPk3lo28uzaRA2/Q==}
+  sass@1.77.8:
+    resolution: {integrity: sha512-4UHg6prsrycW20fqLGPShtEvo/WyHRVRHwOP4DzkUrObWoWI05QBSfzU71TVB7PFaL104TwNaHpjlWXAZbQiNQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2125,7 +2125,7 @@ snapshots:
     dependencies:
       glob: 10.4.3
 
-  sass@1.77.6:
+  sass@1.77.8:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.6
