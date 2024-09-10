@@ -43,25 +43,25 @@ importers:
         version: 5.31.1
       typedoc:
         specifier: ^0.26.0
-        version: 0.26.3(typescript@5.5.3)
+        version: 0.26.3(typescript@5.6.2)
       typedoc-plugin-carbon-ads:
         specifier: ^1.6.0
-        version: 1.6.0(typedoc@0.26.3(typescript@5.5.3))
+        version: 1.6.0(typedoc@0.26.3(typescript@5.6.2))
       typedoc-plugin-clarity:
         specifier: ^1.6.0
-        version: 1.6.0(typedoc@0.26.3(typescript@5.5.3))
+        version: 1.6.0(typedoc@0.26.3(typescript@5.6.2))
       typedoc-plugin-coverage:
         specifier: ^3.1.1
-        version: 3.3.0(typedoc@0.26.3(typescript@5.5.3))
+        version: 3.3.0(typedoc@0.26.3(typescript@5.6.2))
       typedoc-plugin-keywords:
         specifier: ^1.6.0
-        version: 1.6.0(typedoc@0.26.3(typescript@5.5.3))
+        version: 1.6.0(typedoc@0.26.3(typescript@5.6.2))
       typedoc-plugin-missing-exports:
         specifier: ^3.0.0
-        version: 3.0.0(typedoc@0.26.3(typescript@5.5.3))
+        version: 3.0.0(typedoc@0.26.3(typescript@5.6.2))
       typescript:
         specifier: ^5.4.5
-        version: 5.5.3
+        version: 5.6.2
     devDependencies:
       '@tsparticles/editor':
         specifier: ^3.0.0
@@ -1122,8 +1122,8 @@ packages:
     peerDependencies:
       typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x
 
-  typescript@5.5.3:
-    resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
+  typescript@5.6.2:
+    resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2242,39 +2242,39 @@ snapshots:
       '@tsparticles/updater-twinkle': 3.5.0
       '@tsparticles/updater-wobble': 3.5.0
 
-  typedoc-plugin-carbon-ads@1.6.0(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-carbon-ads@1.6.0(typedoc@0.26.3(typescript@5.6.2)):
     dependencies:
-      typedoc: 0.26.3(typescript@5.5.3)
-      typescript: 5.5.3
+      typedoc: 0.26.3(typescript@5.6.2)
+      typescript: 5.6.2
 
-  typedoc-plugin-clarity@1.6.0(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-clarity@1.6.0(typedoc@0.26.3(typescript@5.6.2)):
     dependencies:
-      typedoc: 0.26.3(typescript@5.5.3)
-      typescript: 5.5.3
+      typedoc: 0.26.3(typescript@5.6.2)
+      typescript: 5.6.2
 
-  typedoc-plugin-coverage@3.3.0(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-coverage@3.3.0(typedoc@0.26.3(typescript@5.6.2)):
     dependencies:
-      typedoc: 0.26.3(typescript@5.5.3)
+      typedoc: 0.26.3(typescript@5.6.2)
 
-  typedoc-plugin-keywords@1.6.0(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-keywords@1.6.0(typedoc@0.26.3(typescript@5.6.2)):
     dependencies:
-      typedoc: 0.26.3(typescript@5.5.3)
-      typescript: 5.5.3
+      typedoc: 0.26.3(typescript@5.6.2)
+      typescript: 5.6.2
 
-  typedoc-plugin-missing-exports@3.0.0(typedoc@0.26.3(typescript@5.5.3)):
+  typedoc-plugin-missing-exports@3.0.0(typedoc@0.26.3(typescript@5.6.2)):
     dependencies:
-      typedoc: 0.26.3(typescript@5.5.3)
+      typedoc: 0.26.3(typescript@5.6.2)
 
-  typedoc@0.26.3(typescript@5.5.3):
+  typedoc@0.26.3(typescript@5.6.2):
     dependencies:
       lunr: 2.3.9
       markdown-it: 14.1.0
       minimatch: 9.0.5
       shiki: 1.10.3
-      typescript: 5.5.3
+      typescript: 5.6.2
       yaml: 2.4.5
 
-  typescript@5.5.3: {}
+  typescript@5.6.2: {}
 
   uc.micro@2.1.0: {}
 
