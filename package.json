@@ -36,7 +36,7 @@
     "gh-pages": "^6.1.1",
     "minify": "^11.2.0",
     "prettier": "^3.3.1",
-    "rimraf": "^5.0.7",
+    "rimraf": "^6.0.0",
     "sass": "^1.77.4",
     "simple-git": "^3.24.0",
     "terser": "^5.31.1",
