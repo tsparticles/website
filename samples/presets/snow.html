@@ -148,11 +148,13 @@
             src="//cdn.carbonads.com/carbon.js?serve=CEAI6KJL&placement=particlesjsorg"
             id="_carbonads_js"
         ></script>
-        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-snow@3.0.2/tsparticles.preset.snow.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-snow@3.2.0/tsparticles.preset.snow.bundle.min.js"></script>
         <script type="text/javascript">
-            (async () => {
-                await tsParticles.load({ id: "tsparticles", options: { preset: "snow" } });
-            })();
+            (async (engine) => {
+                await loadSnowPreset(engine);
+
+                await engine.load({ id: "tsparticles", options: { preset: "snow" } });
+            })(tsParticles);
         </script>
     </body>
 </html>

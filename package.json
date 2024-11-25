@@ -31,27 +31,27 @@
   "dependencies": {
     "@pnpm/exec": "^2.0.0",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.14.2",
+    "@types/node": "^22.9.3",
     "fs-extra": "^11.2.0",
-    "gh-pages": "^6.1.1",
-    "minify": "^11.2.0",
-    "prettier": "^3.3.1",
-    "rimraf": "^5.0.7",
-    "sass": "^1.77.4",
-    "simple-git": "^3.24.0",
-    "terser": "^5.31.1",
-    "typedoc": "^0.26.0",
+    "gh-pages": "^6.2.0",
+    "minify": "^12.0.0",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "sass": "^1.81.0",
+    "simple-git": "^3.27.0",
+    "terser": "^5.36.0",
+    "typedoc": "^0.26.11",
     "typedoc-plugin-carbon-ads": "^1.6.0",
     "typedoc-plugin-clarity": "^1.6.0",
-    "typedoc-plugin-coverage": "^3.1.1",
+    "typedoc-plugin-coverage": "^3.4.0",
     "typedoc-plugin-keywords": "^1.6.0",
-    "typedoc-plugin-missing-exports": "^3.0.0",
-    "typescript": "^5.4.5"
+    "typedoc-plugin-missing-exports": "^3.1.0",
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "tsparticles": "^3.4.0",
-    "@tsparticles/editor": "^3.0.0",
-    "@tsparticles/engine": "^3.4.0",
-    "@tsparticles/preset-links": "^3.1.0"
+    "tsparticles": "^3.7.1",
+    "@tsparticles/editor": "^3.1.1",
+    "@tsparticles/engine": "^3.7.1",
+    "@tsparticles/preset-links": "^3.2.0"
   }
 }

@@ -146,11 +146,13 @@
             src="//cdn.carbonads.com/carbon.js?serve=CEAI6KJL&placement=particlesjsorg"
             id="_carbonads_js"
         ></script>
-        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-fountain@3.0.2/tsparticles.preset.fountain.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-fountain@3.2.0/tsparticles.preset.fountain.bundle.min.js"></script>
         <script type="text/javascript">
-            (async () => {
-                await tsParticles.load({ id: "tsparticles", options: { preset: "fountain" } });
-            })();
+            (async (engine) => {
+                await loadFountainPreset(engine);
+
+                await engine.load({ id: "tsparticles", options: { preset: "fountain" } });
+            })(tsParticles);
         </script>
     </body>
 </html>
