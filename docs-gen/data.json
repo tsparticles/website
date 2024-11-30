@@ -4,28 +4,5 @@
     "folder": "tsparticles",
     "package": "tsparticles",
     "url": "https://github.com/matteobruni/tsparticles.git"
-  },
-  {
-    "buildCommand": "build",
-    "folder": "angular",
-    "package": "ng-particles",
-    "url": "https://github.com/tsparticles/angular.git"
-  },
-  {
-    "buildCommand": "build",
-    "folder": "editor",
-    "package": "tsparticles-editor",
-    "url": "https://github.com/tsparticles/editor.git"
-  },
-  {
-    "buildCommand": "build",
-    "folder": "presets",
-    "url": "https://github.com/tsparticles/presets.git"
-  },
-  {
-    "buildCommand": "build",
-    "folder": "react",
-    "package": "react-particles",
-    "url": "https://github.com/tsparticles/react.git"
   }
 ]
