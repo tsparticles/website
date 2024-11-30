@@ -19,30 +19,6 @@
   },
   {
     "buildCommand": "build",
-    "folder": "inferno",
-    "package": "inferno-particles",
-    "url": "https://github.com/tsparticles/inferno.git"
-  },
-  {
-    "buildCommand": "build",
-    "folder": "jquery",
-    "package": "jquery-particles",
-    "url": "https://github.com/tsparticles/jquery.git"
-  },
-  {
-    "buildCommand": "build",
-    "folder": "lit",
-    "package": "lit-particles",
-    "url": "https://github.com/tsparticles/lit.git"
-  },
-  {
-    "buildCommand": "build",
-    "folder": "preact",
-    "package": "preact-particles",
-    "url": "https://github.com/tsparticles/preact.git"
-  },
-  {
-    "buildCommand": "build",
     "folder": "presets",
     "url": "https://github.com/tsparticles/presets.git"
   },
@@ -51,11 +27,5 @@
     "folder": "react",
     "package": "react-particles",
     "url": "https://github.com/tsparticles/react.git"
-  },
-  {
-    "buildCommand": "build",
-    "folder": "stencil",
-    "package": "stencil-particles",
-    "url": "https://github.com/tsparticles/stencil.git"
   }
 ]
