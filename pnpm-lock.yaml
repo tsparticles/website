@@ -28,7 +28,7 @@ importers:
         version: 12.0.0
       prettier:
         specifier: ^3.3.3
-        version: 3.3.3
+        version: 3.4.1
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -1106,8 +1106,8 @@ packages:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
     engines: {node: '>=8'}
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.4.1:
+    resolution: {integrity: sha512-G+YdqtITVZmOJje6QkXQWzl3fSfMxFwm1tjTyo9exhkmWSqC4Yhd1+lug++IlR2mvRVAxEDDWYkQdeSztajqgg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2410,7 +2410,7 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  prettier@3.3.3: {}
+  prettier@3.4.1: {}
 
   property-information@6.5.0: {}
 
