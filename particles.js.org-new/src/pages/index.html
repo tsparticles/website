@@ -1,0 +1,378 @@
+---
+layout: default
+title: Landing Page
+---
+
+<section class="hero is-fullheight is-default is-bold">
+
+    {{> navbar}}
+
+    {{> navbar-clone}}
+
+    <div class="hero-body particles-container">
+        <div id="tsparticles"></div>
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-5 is-offset-1 landing-caption">
+                    <h1 class="title is-1 is-bold is-spaced">
+                        tsParticles
+                    </h1>
+                    <h2 class="subtitle is-5 is-muted">Easily create highly customizable JavaScript particles effects,
+                        confetti explosions and fireworks animations and use them as animated backgrounds for your
+                        website. Ready to use components available for React.js, Vue.js (2.x and 3.x), Angular, Svelte,
+                        jQuery, Preact, Inferno, Solid, Riot and Web Components.</h2>
+                    <div class="button-wrap">
+                        <a class="button cta is-rounded primary-btn raised"
+                           href="https://github.com/matteobruni/tsparticles#readme">
+                            GitHub Repository
+                        </a>
+                        <a class="button cta is-rounded" href="/docs">
+                            API Docs
+                        </a>
+                    </div>
+                </div>
+                <div class="column is-5">
+                    <figure class="image is-4by3">
+                        <!--<img src="/img/illustrations/worker.svg" alt="Description">-->
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-foot mb-20">
+        <div class="container">
+            <div class="tabs is-centered">
+                <ul>
+                    <li><a><img class="partner-logo" src="/img/logo/clients/systek.svg"></a></li>
+                    <li><a><img class="partner-logo" src="/img/logo/clients/tribe.svg"></a></li>
+                    <li><a><img class="partner-logo" src="/img/logo/clients/kromo.svg"></a></li>
+                    <li><a><img class="partner-logo" src="/img/logo/clients/infinite.svg"></a></li>
+                    <li><a><img class="partner-logo" src="/img/logo/clients/gutwork.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-feature-grey is-medium">
+    <div class="container">
+        <div class="title-wrapper has-text-centered">
+            <h2 class="title is-2">Great Power Comes </h2>
+            <h3 class="subtitle is-5 is-muted">With great Responsability</h3>
+            <div class="divider is-centered"></div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="feature-card is-bordered has-text-centered is-feature-reveal">
+                        <div class="card-title">
+                            <h4>App builder</h4>
+                        </div>
+                        <div class="card-icon">
+                            <img src="/img/icons/web.svg">
+                        </div>
+                        <div class="card-text">
+                            <p>This is some cool explanatory text that is on two rows</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="button btn-align-md primary-btn raised">Free Trial</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="feature-card is-bordered has-text-centered is-feature-reveal">
+                        <div class="card-title">
+                            <h4>Cloud integration</h4>
+                        </div>
+                        <div class="card-icon">
+                            <img src="/img/icons/rocket.svg">
+                        </div>
+                        <div class="card-text">
+                            <p>This is some explanatory text that is on two rows</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="button btn-align-md primary-btn raised">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="feature-card is-bordered has-text-centered is-feature-reveal">
+                        <div class="card-title">
+                            <h4>Addons & Plugins</h4>
+                        </div>
+                        <div class="card-icon">
+                            <img src="/img/icons/light-bulb.svg">
+                        </div>
+                        <div class="card-text">
+                            <p>This is some explanatory text that is on two rows</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="button btn-align-md primary-btn raised">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> features}}
+
+<section class="section section-feature-grey is-medium">
+    <div class="container">
+
+        <div class="columns is-vcentered app-side">
+            <div class="column is-6">
+                <h3 class="title is-3 is-spaced is-title-reveal">Demo</h3>
+                <p class="subtitle is-5 is-muted">
+                <pre><code class="language-javascript">tsParticles.load({
+    particles: {
+        number: {
+            value: 80,
+            density: {
+                enable: true,
+                area: 800
+            }
+        },
+        color: {
+            value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"]
+        },
+        shape: {
+            type: "circle",
+        },
+        opacity: {
+            value: 1,
+        },
+        size: {
+            value: { min: 1, max: 8 },
+        },
+        links: {
+            enable: true,
+            distance: 150,
+            color: "#808080",
+            opacity: 0.4,
+            width: 1
+        },
+        move: {
+            enable: true,
+            speed: 5,
+            direction: "none",
+            random: false,
+            straight: false,
+            outModes: "out",
+        }
+    },
+    interactivity: {
+        events: {
+            onHover: {
+                enable: true,
+                mode: "grab"
+            },
+            onClick: {
+                enable: true,
+                mode: "push"
+            }
+        },
+        modes: {
+            grab: {
+                distance: 140,
+                links: {
+                    opacity: 1
+                }
+            },
+            push: {
+                quantity: 4
+            },
+        }
+    }
+});</code></pre>
+                </p>
+            </div>
+            <div class="column is-7">
+                <div class="has-text-centered">
+                    <p class="codepen" data-height="1100" data-default-tab="result" data-slug-hash="ZExLYyg"
+                       data-preview="true" data-user="matteobruni"
+                       style="height: 1100px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/matteobruni/pen/ZExLYyg">
+  tsParticles - Slack Colored Particles</a> by Matteo Bruni (<a href="https://codepen.io/matteobruni">@matteobruni</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section is-medium">
+    <div class="container">
+        <div class="title-wrapper has-text-centered">
+            <h2 class="title is-2">JavaScript Frameworks</h2>
+            <h3 class="subtitle is-5 is-muted">Supported JavaScript Frameworks</h3>
+            <div class="divider is-centered"></div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="columns is-multiline icon-list">
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-brands fa-js fa-3x fa-fw"></i>
+                        </div>
+                        <h4>JavaScript</h4>
+                        <p>Vanilla JavaScript instructions <a href="https://github.com/matteobruni/tsparticles#readme">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-brands fa-react fa-3x fa-fw"></i>
+                        </div>
+                        <h4>React.js</h4>
+                        <p>React.js instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/react/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-brands fa-vuejs fa-3x fa-fw"></i>
+                        </div>
+                        <h4>Vue.js 3.x</h4>
+                        <p>Vue.js 3.x instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/vue3/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-brands fa-angular fa-3x fa-fw"></i>
+                        </div>
+                        <h4>Angular</h4>
+                        <p>Angular instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/angular/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-brands fa-vuejs fa-3x fa-fw"></i>
+                        </div>
+                        <h4>Vue.js 2.x</h4>
+                        <p>Vue.js 2.x instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/vue/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-solid fa-s fa-3x fa-fw"></i>
+                        </div>
+                        <h4>Svelte</h4>
+                        <p>Svelte instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/svelte/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-solid fa-wifi fa-3x fa-fw fa-rotate-by"
+                               style="--fa-rotate-angle: -135deg;"></i>
+                        </div>
+                        <h4>jQuery</h4>
+                        <p>jQuery instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/jquery/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-solid fa-atom fa-3x fa-fw"></i>
+                        </div>
+                        <h4>Preact</h4>
+                        <p>Preact instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/preact/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-solid fa-fire-flame-curved fa-3x fa-fw"></i>
+                        </div>
+                        <h4>Inferno</h4>
+                        <p>Inferno instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/inferno/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-solid fa-r fa-3x fa-fw"></i>
+                        </div>
+                        <h4>Riot</h4>
+                        <p>Riot instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/riot/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-solid fa-droplet fa-3x fa-fw"></i>
+                        </div>
+                        <h4>Solid</h4>
+                        <p>Solid instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/solid/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-solid fa-gear fa-3x fa-fw fa-rotate-by" style="--fa-rotate-angle: 30deg;"></i>
+                        </div>
+                        <h4>Web Components</h4>
+                        <p>Web Components instructions <a
+                                href="https://github.com/matteobruni/tsparticles/blob/main/components/web/README.md">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-brands fa-wordpress fa-3x fa-fw"></i>
+                        </div>
+                        <h4>WordPress</h4>
+                        <p>WordPress instructions <a
+                                href="https://wordpress.org/plugins/tsparticles-block/">here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <i class="fa-brands fa-elementor fa-3x fa-fw"></i>
+                        </div>
+                        <h4>Elementor</h4>
+                        <p>Elementor instructions <a
+                                href="https://premiumaddons.com/particles-section-addon-for-elementor-page-builder">here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
