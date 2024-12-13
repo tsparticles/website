@@ -3,7 +3,7 @@ import path from "path";
 import { simpleGit } from "simple-git";
 import pnpmExec from "@pnpm/exec";
 import typedoc, { Application } from "typedoc";
-import docsGenData from "./docs-gen/data.json" assert { type: "json" };
+import docsGenData from "./docs-gen/data.json" with { type: "json" };
 
 const pnpm = pnpmExec.default;
 
