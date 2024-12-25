@@ -1,0 +1,42 @@
+{
+    "fullScreen": {
+        "zIndex": -1
+    },
+    "particles": {
+        "number": {
+            "value": 50
+        },
+        "color": {
+            "value": ["#3998D0", "#2EB6AF", "#A9BD33", "#FEC73B", "#F89930", "#F45623", "#D62E32", "#EB586E", "#9952CF"]
+        },
+        "shape": {
+            "type": "circle"
+        },
+        "opacity": {
+            "value": {
+                "min": 0.4,
+                "max": 0.8
+            }
+        },
+        "size": {
+            "value": {
+                "min": 200,
+                "max": 400
+            },
+            "animation": {
+                "enable": true,
+                "speed": 100,
+                "sync": false
+            }
+        },
+        "move": {
+            "enable": true,
+            "speed": 10,
+            "direction": "top",
+            "outMode": "out"
+        }
+    },
+    "background": {
+        "color": "#ffffff"
+    }
+}
