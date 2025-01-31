@@ -68,7 +68,7 @@ importers:
         version: 3.1.1
       '@tsparticles/engine':
         specifier: ^3.7.1
-        version: 3.7.1
+        version: 3.8.1
       '@tsparticles/preset-links':
         specifier: ^3.2.0
         version: 3.2.0
@@ -467,6 +467,9 @@ packages:
 
   '@tsparticles/engine@3.7.1':
     resolution: {integrity: sha512-GYzBgq/oOE9YJdOL1++MoawWmYg4AvVct6CIrJGx84ZRb3U2owYmLsRGabYl0qX1CWWOvUG569043RJmyp/vQA==}
+
+  '@tsparticles/engine@3.8.1':
+    resolution: {integrity: sha512-S8h10nuZfElY7oih//NUHnT5qf4v3/dnsU8CMs7dz5lBEGr3amrYrXk0V+YKPTIQwfdmJHUaSBoAqFiv4aEGIA==}
 
   '@tsparticles/interaction-external-attract@3.7.1':
     resolution: {integrity: sha512-cpnMsFJ7ZJNKccpQvskKvSs1ofknByHE6FGqbEb17ij7HqvbECQOCOVKHPFnYipHe14cXor/Cd+nVisRcTASoQ==}
@@ -1667,7 +1670,7 @@ snapshots:
 
   '@tsparticles/editor@3.1.1':
     dependencies:
-      '@tsparticles/engine': 3.7.1
+      '@tsparticles/engine': 3.8.1
       '@tsparticles/interaction-external-attract': 3.7.1
       '@tsparticles/interaction-external-bounce': 3.7.1
       '@tsparticles/interaction-external-bubble': 3.7.1
@@ -1686,6 +1689,8 @@ snapshots:
       object-gui: 2.0.2
 
   '@tsparticles/engine@3.7.1': {}
+
+  '@tsparticles/engine@3.8.1': {}
 
   '@tsparticles/interaction-external-attract@3.7.1':
     dependencies:
@@ -1800,7 +1805,7 @@ snapshots:
   '@tsparticles/preset-links@3.2.0':
     dependencies:
       '@tsparticles/basic': 3.7.1
-      '@tsparticles/engine': 3.7.1
+      '@tsparticles/engine': 3.8.1
       '@tsparticles/interaction-particles-links': 3.7.1
 
   '@tsparticles/shape-circle@3.7.1':
