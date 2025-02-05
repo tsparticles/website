@@ -24,8 +24,8 @@ importers:
         specifier: ^6.2.0
         version: 6.3.0
       minify:
-        specifier: ^12.0.0
-        version: 12.0.1
+        specifier: ^13.0.0
+        version: 13.0.0
       prettier:
         specifier: ^3.3.3
         version: 3.4.2
@@ -1032,8 +1032,8 @@ packages:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
 
-  minify@12.0.1:
-    resolution: {integrity: sha512-9/QKcnvtpaGR8g4zaQTmha3pkIE1qfkEzistHFJjwXEDm8d0dpl6aDKUAuUVTnE6HisKhXY87mirO72zksMX/Q==}
+  minify@13.0.0:
+    resolution: {integrity: sha512-a8l1p6RWDDHjH9kAaSAapu2m20ozhJ+sfkY9GljvDVXDRSDQME+5zZPbooOC8e17ej95y5k8q47NfN/ceCkLqg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1048,6 +1048,9 @@ packages:
   minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
+
+  montag@1.2.1:
+    resolution: {integrity: sha512-YFuR6t5KhDlmAnUmVSxGzNcpWqSDqxbd95tvnEnn7X9yFv7g3kDFoRjwyGayVdF/NNoWk7YW7IxUjilnGnoC5Q==}
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -2339,7 +2342,7 @@ snapshots:
       braces: 3.0.3
       picomatch: 2.3.1
 
-  minify@12.0.1:
+  minify@13.0.0:
     dependencies:
       '@putout/minify': 4.9.0
       '@swc/core': 1.10.7
@@ -2350,6 +2353,7 @@ snapshots:
       find-up: 7.0.0
       html-minifier-terser: 7.2.0
       lightningcss: 1.29.1
+      montag: 1.2.1
       readjson: 2.2.2
       simport: 1.2.0
       terser: 5.38.0
@@ -2368,6 +2372,8 @@ snapshots:
       brace-expansion: 2.0.1
 
   minipass@7.1.2: {}
+
+  montag@1.2.1: {}
 
   ms@2.1.2: {}
 
