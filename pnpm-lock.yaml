@@ -34,7 +34,7 @@ importers:
         version: 6.0.1
       sass:
         specifier: ^1.81.0
-        version: 1.83.4
+        version: 1.85.0
       simple-git:
         specifier: ^3.27.0
         version: 3.27.0
@@ -1172,8 +1172,8 @@ packages:
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
 
-  sass@1.83.4:
-    resolution: {integrity: sha512-B1bozCeNQiOgDcLd33e2Cs2U60wZwjUUXzh900ZyQF5qUasvMdDZYbQ566LJu7cqR+sAHlAfO6RMkaID5s6qpA==}
+  sass@1.85.0:
+    resolution: {integrity: sha512-3ToiC1xZ1Y8aU7+CkgCI/tqyuPXEmYGJXO7H4uqp0xkLXUqp88rQQ4j1HmP37xSJLbCJPaIiv+cT1y+grssrww==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2476,7 +2476,7 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
-  sass@1.83.4:
+  sass@1.85.0:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.0.3
