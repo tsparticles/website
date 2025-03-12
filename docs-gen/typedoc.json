@@ -86,15 +86,13 @@
   "hideGenerator": true,
   "out": "./docs",
   "plugin": [
-    "typedoc-plugin-carbon-ads",
+    "typedoc-plugin-google-ads",
     "typedoc-plugin-clarity",
     //"typedoc-plugin-coverage",
     "typedoc-plugin-keywords"
     //"typedoc-plugin-missing-exports"
   ],
-  "clarityId": "8q4bxin4tm",
-  "carbonServe": "CEAI6KJL",
-  "carbonPlacement": "particlesjsorg",
+  "googleAdsId": "1784552607103901",
   "keywords": [
     "html",
     "css",

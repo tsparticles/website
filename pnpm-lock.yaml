@@ -44,15 +44,15 @@ importers:
       typedoc:
         specifier: ^0.26.11
         version: 0.26.11(typescript@5.7.3)
-      typedoc-plugin-carbon-ads:
-        specifier: ^1.6.0
-        version: 1.6.0(typedoc@0.26.11(typescript@5.7.3))
       typedoc-plugin-clarity:
         specifier: ^1.6.0
         version: 1.6.0(typedoc@0.26.11(typescript@5.7.3))
       typedoc-plugin-coverage:
         specifier: ^3.4.0
         version: 3.4.0(typedoc@0.26.11(typescript@5.7.3))
+      typedoc-plugin-google-ads:
+        specifier: ^1.6.0
+        version: 1.6.0(typedoc@0.26.11(typescript@5.7.3))
       typedoc-plugin-keywords:
         specifier: ^1.6.0
         version: 1.6.0(typedoc@0.26.11(typescript@5.7.3))
@@ -1274,11 +1274,6 @@ packages:
   tsparticles@3.7.1:
     resolution: {integrity: sha512-NNkOYIo01eHpDuaJxDCGgcLEMZKEJTCN/XPVCLg7VxgEWN19rjXpDnDguISxadS8GSFPws7hpGgbeDDAm3MX+Q==}
 
-  typedoc-plugin-carbon-ads@1.6.0:
-    resolution: {integrity: sha512-PzWe1iqnul+9DOZh3/OCcndjTstoxHET4XIXEMif1l/LbxpHdIBQ+h5HlcS6D2nW8HoiZqxMYjvWIqtaqPmRAQ==}
-    peerDependencies:
-      typedoc: ^0.25.4
-
   typedoc-plugin-clarity@1.6.0:
     resolution: {integrity: sha512-BvJj8ZvgCZzS2sLO7yIkRg9EWLPdll+xLyQekjMAtypHITOXSwCO9E9Ir77R2fctsVC9BVJiToGAYcsMtyuPdw==}
     peerDependencies:
@@ -1289,6 +1284,11 @@ packages:
     engines: {node: '>= 18'}
     peerDependencies:
       typedoc: 0.25.x || 0.26.x || 0.27.x
+
+  typedoc-plugin-google-ads@1.6.0:
+    resolution: {integrity: sha512-pFkPK9tjGc/0NWnJojh1wc/UZ/+cUJXe13ZbbUsQ0JUjkCSWRuOt1d9BGrmar7184fq0GBU8zByJ3ucG2wI/MA==}
+    peerDependencies:
+      typedoc: ^0.25.4
 
   typedoc-plugin-keywords@1.6.0:
     resolution: {integrity: sha512-URyCIHw6+Lwil0ywy6lVb2TckfDVGjAWnRnTAiiSZaRaglI6vaaP1EhhwEipOIlHaJSnHZfdwpWe1t4mffTIpA==}
@@ -2597,11 +2597,6 @@ snapshots:
       '@tsparticles/updater-twinkle': 3.7.1
       '@tsparticles/updater-wobble': 3.7.1
 
-  typedoc-plugin-carbon-ads@1.6.0(typedoc@0.26.11(typescript@5.7.3)):
-    dependencies:
-      typedoc: 0.26.11(typescript@5.7.3)
-      typescript: 5.7.3
-
   typedoc-plugin-clarity@1.6.0(typedoc@0.26.11(typescript@5.7.3)):
     dependencies:
       typedoc: 0.26.11(typescript@5.7.3)
@@ -2610,6 +2605,11 @@ snapshots:
   typedoc-plugin-coverage@3.4.0(typedoc@0.26.11(typescript@5.7.3)):
     dependencies:
       typedoc: 0.26.11(typescript@5.7.3)
+
+  typedoc-plugin-google-ads@1.6.0(typedoc@0.26.11(typescript@5.7.3)):
+    dependencies:
+      typedoc: 0.26.11(typescript@5.7.3)
+      typescript: 5.7.3
 
   typedoc-plugin-keywords@1.6.0(typedoc@0.26.11(typescript@5.7.3)):
     dependencies:
