@@ -8,3 +8,7 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
+canvas {
+  pointer-events: false;
+}
