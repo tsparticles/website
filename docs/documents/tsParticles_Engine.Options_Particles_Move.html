@@ -1,0 +1,353 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"/><meta name="keywords" content="html, css, javascript, typescript, particles, js, ts, jsx, tsx, canvas, confetti, fireworks, animations, react, vue, angular, svelte, libraries, how, to, create, add"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Options/Particles/Move | tsParticles - v3.0.0</title><meta name="description" content="Documentation for tsParticles"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">tsParticles - v3.0.0</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../modules.html">tsParticles</a></li><li><a href="../modules/tsParticles_Engine.html">tsParticles Engine</a></li><li><a href="tsParticles_Engine.Options_Particles_Move.html">Options/Particles/Move</a></li></ul></div><div class="tsd-panel tsd-typography"><a id="md:particles-move" class="tsd-anchor"></a><h1 class="tsd-anchor-link">Particles Move<a href="#md:particles-move" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1><table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>angle</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>See angle documentation below</td>
+</tr>
+<tr>
+<td><code>attract</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>See attract documentation below</td>
+</tr>
+<tr>
+<td><code>direction</code></td>
+<td><code>string</code></td>
+<td><code>&quot;none&quot;</code> <br /> <code>&quot;top&quot;</code> <br /> <code>&quot;top-right&quot;</code> <br /> <code>&quot;right&quot;</code> <br /> <code>&quot;bottom-right&quot;</code> <br /> <code>&quot;bottom&quot;</code> <br /> <code>&quot;bottom-left&quot;</code> <br /> <code>&quot;left&quot;</code> <br /> <code>&quot;top-left&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>distance</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>See distance documentation below</td>
+</tr>
+<tr>
+<td><code>enable</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>gravity</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>See gravity documentation below</td>
+</tr>
+<tr>
+<td><code>noise</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>See noise documentation below</td>
+</tr>
+<tr>
+<td><code>outModes</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>See out modes documentation below</td>
+</tr>
+<tr>
+<td><code>random</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>speed</code></td>
+<td><code>number</code></td>
+<td><code>4</code></td>
+<td>assuming a predefined distance for the particle to travel, <code>speed</code> is the amount of time takes to travel the predefined distance for any particle</td>
+</tr>
+<tr>
+<td><code>straight</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>trail</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>See trail documentation below</td>
+</tr>
+<tr>
+<td><code>vibrate</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>warp</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<a id="md:particles-move-angle" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Particles Move Angle<a href="#md:particles-move-angle" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>offset</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>number</code></td>
+<td><code>3000</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<a id="md:particles-move-attract" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Particles Move Attract<a href="#md:particles-move-attract" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>rotate.x</code></td>
+<td><code>number</code></td>
+<td><code>3000</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>rotate.y</code></td>
+<td><code>number</code></td>
+<td><code>1500</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<a id="md:particles-move-distance" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Particles Move Distance<a href="#md:particles-move-distance" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>horizontal</code></td>
+<td><code>number</code></td>
+<td><code>50</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>vertical</code></td>
+<td><code>number</code></td>
+<td><code>50</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<a id="md:particles-move-gravity" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Particles Move Gravity<a href="#md:particles-move-gravity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>acceleration</code></td>
+<td><code>number</code></td>
+<td><code>9.81</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>enable</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>maxSpeed</code></td>
+<td><code>number</code></td>
+<td><code>50</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<a id="md:particles-move-noise" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Particles Move Noise<a href="#md:particles-move-noise" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clamp</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>delay.value</code></td>
+<td><code>number</code> / <code>object</code></td>
+<td><code>1</code> / <code>{ min: 0.5, max: 1.5 }</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>enable</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>generator</code></td>
+<td><code>string</code></td>
+<td><code>&quot;generator name&quot;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<a id="md:particles-move-out-modes" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Particles Move Out Modes<a href="#md:particles-move-out-modes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default</code></td>
+<td><code>string</code></td>
+<td><code>&quot;out&quot;</code><br /> <code>&quot;destroy&quot;</code> <br /> <code>&quot;bounce&quot;</code> <br /> <code>&quot;none&quot;</code> <br /> <code>&quot;split&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>bottom</code></td>
+<td><code>string</code></td>
+<td><code>&quot;out&quot;</code><br /> <code>&quot;destroy&quot;</code> <br /> <code>&quot;bounce&quot;</code> <br /> <code>&quot;none&quot;</code> <br /> <code>&quot;split&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>left</code></td>
+<td><code>string</code></td>
+<td><code>&quot;out&quot;</code><br /> <code>&quot;destroy&quot;</code> <br /> <code>&quot;bounce&quot;</code> <br /> <code>&quot;none&quot;</code> <br /> <code>&quot;split&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>right</code></td>
+<td><code>string</code></td>
+<td><code>&quot;out&quot;</code><br /> <code>&quot;destroy&quot;</code> <br /> <code>&quot;bounce&quot;</code> <br /> <code>&quot;none&quot;</code> <br /> <code>&quot;split&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td><code>string</code></td>
+<td><code>&quot;out&quot;</code><br /> <code>&quot;destroy&quot;</code> <br /> <code>&quot;bounce&quot;</code> <br /> <code>&quot;none&quot;</code> <br /> <code>&quot;split&quot;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<a id="md:particles-move-spin" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Particles Move Spin<a href="#md:particles-move-spin" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>acceleration</code></td>
+<td><code>number</code></td>
+<td><code>2</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>enable</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td><code>object</code></td>
+<td><code>{ x: 50, y: 50 }</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<a id="md:particles-move-trail" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Particles Move Trail<a href="#md:particles-move-trail" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>key</th>
+<th>option type</th>
+<th>example</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>length</code></td>
+<td><code>number</code></td>
+<td><code>10</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fillColor</code></td>
+<td><code>color object</code></td>
+<td></td>
+<td>This <code>color</code> object is the same described here {@links  IColor}</td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:particles-move"><span>Particles <wbr/>Move</span></a><ul><li><a href="#md:particles-move-angle"><span>Particles <wbr/>Move <wbr/>Angle</span></a></li><li><a href="#md:particles-move-attract"><span>Particles <wbr/>Move <wbr/>Attract</span></a></li><li><a href="#md:particles-move-distance"><span>Particles <wbr/>Move <wbr/>Distance</span></a></li><li><a href="#md:particles-move-gravity"><span>Particles <wbr/>Move <wbr/>Gravity</span></a></li><li><a href="#md:particles-move-noise"><span>Particles <wbr/>Move <wbr/>Noise</span></a></li><li><a href="#md:particles-move-out-modes"><span>Particles <wbr/>Move <wbr/>Out <wbr/>Modes</span></a></li><li><a href="#md:particles-move-spin"><span>Particles <wbr/>Move <wbr/>Spin</span></a></li><li><a href="#md:particles-move-trail"><span>Particles <wbr/>Move <wbr/>Trail</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../modules.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>tsParticles - v3.0.0</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1784552607103901" crossOrigin="anonymous"></script><script html="(function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src=&quot;https://www.clarity.ms/tag/&quot;+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, &quot;clarity&quot;, &quot;script&quot;, &quot;&quot;);" type="text/javascript"></script></body></html>
