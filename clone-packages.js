@@ -1,14 +1,17 @@
 // @ts-check
-import fs from "fs-extra";
-import path from "path";
 import { simpleGit } from "simple-git";
 import pnpmExec from "@pnpm/exec";
-import docsGenData from "./docs-gen/data.json" assert { type: "json" };
-
-const pnpm = pnpmExec;
+import { fileURLToPath } from "url";
+import fs from "fs-extra";
+import path from "path";
 
 (async () => {
-    const docsGenPath = path.resolve(path.join(".", "docs-gen")),
+    const __filename = fileURLToPath(import.meta.url),
+        __dirname = path.dirname(__filename),
+        rootPkgPath = path.join(__dirname, "docs-gen", "data.json"),
+        docsGenData = (await fs.readJson(rootPkgPath)),
+        pnpm = pnpmExec,
+        docsGenPath = path.resolve(path.join(".", "docs-gen")),
         tmpDocsGenPath = path.resolve(path.join(docsGenPath, "tmp"));
 
     await fs.mkdir(tmpDocsGenPath);
