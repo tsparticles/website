@@ -49,7 +49,7 @@ importers:
         version: 1.6.0(typedoc@0.26.11(typescript@5.7.3))
       typedoc-plugin-coverage:
         specifier: ^3.4.0
-        version: 3.4.0(typedoc@0.26.11(typescript@5.7.3))
+        version: 3.4.1(typedoc@0.26.11(typescript@5.7.3))
       typedoc-plugin-google-ads:
         specifier: ^1.6.0
         version: 1.6.0(typedoc@0.26.11(typescript@5.7.3))
@@ -1279,8 +1279,8 @@ packages:
     peerDependencies:
       typedoc: ^0.25.4
 
-  typedoc-plugin-coverage@3.4.0:
-    resolution: {integrity: sha512-I8fLeQEERncGn4sUlGZ+B1ehx4L7VRwqa3i6AP+PFfvZK0ToXBGkh9sK7xs8l8FLPXq7Cv0yVy4YCEGgWNzDBw==}
+  typedoc-plugin-coverage@3.4.1:
+    resolution: {integrity: sha512-V23DAwinAMpGMGcL1R1s8Snr26hrjfIdwGf+4jR/65ZdmeAN+yRX0onfx5JlembTQhR6AePQ/parfQNS0AZ64A==}
     engines: {node: '>= 18'}
     peerDependencies:
       typedoc: 0.25.x || 0.26.x || 0.27.x
@@ -2602,7 +2602,7 @@ snapshots:
       typedoc: 0.26.11(typescript@5.7.3)
       typescript: 5.7.3
 
-  typedoc-plugin-coverage@3.4.0(typedoc@0.26.11(typescript@5.7.3)):
+  typedoc-plugin-coverage@3.4.1(typedoc@0.26.11(typescript@5.7.3)):
     dependencies:
       typedoc: 0.26.11(typescript@5.7.3)
 
