@@ -1,8 +1,8 @@
+import { Application, TSConfigReader, TypeDocReader } from "typedoc";
 import fs from "fs-extra";
 import path from "path";
 import { simpleGit } from "simple-git";
 import pnpmExec from "@pnpm/exec";
-import typedoc, { Application } from "typedoc";
 import docsGenData from "./docs-gen/data.json" with { type: "json" };
 
 const pnpm = pnpmExec.default;
@@ -46,7 +46,7 @@ const pnpm = pnpmExec.default;
                 options: path.join(docsGenPath, "typedoc.json"),
                 tsconfig: path.join(docsGenPath, "tsconfig.json"),
             },
-            [new typedoc.TSConfigReader(), new typedoc.TypeDocReader()],
+            [new TSConfigReader(), new TypeDocReader()],
         );
 
         const project = await typedocApp.convert();
