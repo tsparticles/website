@@ -41,17 +41,9 @@
             crossorigin="anonymous"
         />
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-922Z47NPS0"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-
-            gtag("config", "G-922Z47NPS0");
-        </script>
+        <!-- GDPR Consent Manager -->
+        <script defer src="/js/consent-manager.js"></script>
+        <script defer src="/js/cookie-banner.js"></script>
     </head>
 
     <body style="background-color: #000c66">
@@ -227,6 +219,23 @@
                 </div>
             </div>
         </div>
+
+        <footer
+            style="
+                margin-top: 40px;
+                padding: 20px;
+                text-align: center;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.9em;
+            "
+        >
+            <a href="/privacy.html" style="color: #66b3ff; text-decoration: none; margin: 0 15px">Privacy Policy</a>
+            <span>•</span>
+            <a href="/cookies.html" style="color: #66b3ff; text-decoration: none; margin: 0 15px">Cookie Policy</a>
+            <p style="margin: 10px 0 0 0">© 2026 tsParticles. All rights reserved.</p>
+        </footer>
+
         <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1784552607103901"

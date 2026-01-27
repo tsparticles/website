@@ -66,19 +66,9 @@
 
         <link href="css/main.min.css" rel="stylesheet" type="text/css" />
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-922Z47NPS0"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
-            gtag("js", new Date());
-
-            gtag("config", "G-922Z47NPS0");
-        </script>
+        <!-- GDPR Consent Manager - Must load before any tracking scripts -->
+        <script defer src="/js/consent-manager.js"></script>
+        <script defer src="/js/cookie-banner.js"></script>
     </head>
 
     <body>
@@ -561,6 +551,17 @@
                             </div>
                         </div>
                     </div>
+                    <hr style="margin-top: 40px; border-color: rgba(255, 255, 255, 0.2)" />
+                    <div style="text-align: center; padding: 20px 0; font-size: 0.9em; color: rgba(255, 255, 255, 0.7)">
+                        <a href="/privacy.html" style="color: #66b3ff; text-decoration: none; margin: 0 15px"
+                            >Privacy Policy</a
+                        >
+                        <span>•</span>
+                        <a href="/cookies.html" style="color: #66b3ff; text-decoration: none; margin: 0 15px"
+                            >Cookie Policy</a
+                        >
+                        <p style="margin: 10px 0 0 0">© 2026 tsParticles. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -591,40 +592,8 @@
             crossorigin="anonymous"
         ></script>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <script>
-            window.twttr = (function (d, s, id) {
-                var js,
-                    fjs = d.getElementsByTagName(s)[0],
-                    t = window.twttr || {};
-                if (d.getElementById(id)) return t;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "https://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-
-                t._e = [];
-                t.ready = function (f) {
-                    t._e.push(f);
-                };
-
-                return t;
-            })(document, "script", "twitter-wjs");
-        </script>
         <div id="fb-root"></div>
-        <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <script
-            async
-            defer
-            crossorigin="anonymous"
-            src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v10.0&appId=130672560341873&autoLogAppEvents=1"
-            nonce="jC6Fjy00"
-        ></script>
-        <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1784552607103901"
-            crossorigin="anonymous"
-        ></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.8.1/tsparticles.all.bundle.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.9.1/tsparticles.all.bundle.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/object-gui@2.0.2/dist/js/object-gui.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/@tsparticles/editor@3.1.1/tsparticles.editor.min.js"></script>
         <script defer src="/js/index.min.js"></script>

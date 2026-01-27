@@ -57,19 +57,9 @@
 
         <link href="../css/main.min.css" rel="stylesheet" type="text/css" />
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-922Z47NPS0"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
-            gtag("js", new Date());
-
-            gtag("config", "G-922Z47NPS0");
-        </script>
+        <!-- GDPR Consent Manager -->
+        <script defer src="/js/consent-manager.js"></script>
+        <script defer src="/js/cookie-banner.js"></script>
     </head>
 
     <body>
@@ -592,6 +582,22 @@
             </div>
         </div>
 
+        <footer
+            style="
+                margin-top: 40px;
+                padding: 20px;
+                text-align: center;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.9em;
+            "
+        >
+            <a href="/privacy.html" style="color: #66b3ff; text-decoration: none; margin: 0 15px">Privacy Policy</a>
+            <span>•</span>
+            <a href="/cookies.html" style="color: #66b3ff; text-decoration: none; margin: 0 15px">Cookie Policy</a>
+            <p style="margin: 10px 0 0 0">© 2026 tsParticles. All rights reserved.</p>
+        </footer>
+
         <form action="https://codepen.io/pen/define" method="POST" target="_blank" hidden id="code-pen-form">
             <input type="hidden" name="data" value="" id="code-pen-data" /><input type="submit" value="Create Pen" />
         </form>
@@ -645,8 +651,8 @@
         ></script>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-        <script defer src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.8.1/tsparticles.all.bundle.min.js"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/@tsparticles/configs@3.8.1/tsparticles.configs.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.9.1/tsparticles.all.bundle.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tsparticles/configs@3.9.1/tsparticles.configs.min.js"></script>
         <script defer src="../js/demo.min.js"></script>
     </body>
 </html>
