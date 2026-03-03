@@ -658,6 +658,58 @@
         }
     }
 
+    // Sync any controls annotated with data-patch to reflect the current
+    // editor state. Controls must use dot-notation paths in their metadata.
+    function syncControlsFromEditor() {
+        if (!editor) return;
+
+        let current;
+        try {
+            current = editor.get();
+        } catch (e) {
+            return;
+        }
+
+        const controls = document.querySelectorAll("[data-patch]");
+        for (const el of controls) {
+            try {
+                const meta = JSON.parse(el.getAttribute("data-patch"));
+                const pathParts = meta.path.split(".");
+                let cur = current;
+                for (let i = 0; i < pathParts.length; i++) {
+                    if (!cur) break;
+                    cur = cur[pathParts[i]];
+                }
+
+                if (cur === undefined) continue;
+
+                switch (meta.type) {
+                    case "number":
+                        el.value = cur;
+                        break;
+                    case "boolean":
+                        if (el.type === "checkbox") el.checked = !!cur;
+                        else el.value = cur ? "true" : "false";
+                        break;
+                    case "json":
+                        el.value = JSON.stringify(cur);
+                        break;
+                    default:
+                        el.value = cur;
+                }
+            } catch (e) {
+                // ignore malformed metadata
+            }
+        }
+    }
+
+    // Expose the sync helper so other modules (index.js) can call it after
+    // editor initialization. Keep the name on window to avoid changing many
+    // callers.
+    try {
+        window.syncControlsFromEditor = syncControlsFromEditor;
+    } catch (e) {}
+
     let changeGenericPreset = function (presetId) {
         const oldPreset = localStorage.presetId;
 

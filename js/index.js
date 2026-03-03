@@ -55,6 +55,14 @@ setTimeout(async () => {
         container = await tsParticles.load({ id: "tsparticles", url: randomUrl }),
         editor = showEditor(container);
 
+    // After the editor is created, request the demo to sync controls from it
+    // so the sidebar inputs reflect the current options.
+    try {
+        if (window && window.syncControlsFromEditor) {
+            window.syncControlsFromEditor();
+        }
+    } catch (e) {}
+
     // Wire simple control inputs to the new applyPartialConfig API with debounce
     // Prefer demo's debounce helper if available
     const debounce =
