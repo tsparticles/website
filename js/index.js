@@ -216,13 +216,17 @@ setTimeout(async () => {
         }
     }
 
+    const PLAYGROUND_STORAGE_VERSION = "1";
+    const PLAYGROUND_STORAGE_VERSION_KEY = "playground.storage.version";
+    const PLAYGROUND_STORAGE_PREFIX = `playground.v${PLAYGROUND_STORAGE_VERSION}.controls.`;
+
     // Expose a restore helper that demo can call after editor init
     window.restoreControlsFromStorage = function () {
         const controls = document.querySelectorAll("[data-patch]");
         for (const el of controls) {
             try {
                 const meta = JSON.parse(el.getAttribute("data-patch"));
-                const storageKey = `playground.v1.controls.${meta.path}`;
+                const storageKey = `${PLAYGROUND_STORAGE_PREFIX}${meta.path}`;
                 const raw = localStorage.getItem(storageKey);
                 if (raw === null) continue;
                 const val = JSON.parse(raw);
@@ -243,7 +247,7 @@ setTimeout(async () => {
     // Clear persisted controls under the playground namespace and reset UI
     window.clearPlaygroundControls = function () {
         try {
-            const prefix = "playground.v1.controls.";
+            const prefix = PLAYGROUND_STORAGE_PREFIX;
             for (let i = localStorage.length - 1; i >= 0; i--) {
                 const key = localStorage.key(i);
                 if (key && key.indexOf(prefix) === 0) {
@@ -257,6 +261,28 @@ setTimeout(async () => {
             } catch (e) {}
         } catch (e) {
             console.error("clearPlaygroundControls", e);
+        }
+    };
+
+    // Storage migration helper: handles version bump and clears old keys if needed
+    window.migratePlaygroundStorage = function () {
+        try {
+            const stored = localStorage.getItem(PLAYGROUND_STORAGE_VERSION_KEY);
+            if (stored === PLAYGROUND_STORAGE_VERSION) return; // nothing to do
+
+            // Remove any legacy playground.* keys that don't belong to current prefix
+            for (let i = localStorage.length - 1; i >= 0; i--) {
+                const key = localStorage.key(i);
+                if (!key) continue;
+                if (key.indexOf("playground.") === 0 && key.indexOf(PLAYGROUND_STORAGE_PREFIX) !== 0) {
+                    localStorage.removeItem(key);
+                }
+            }
+
+            // Mark current version
+            localStorage.setItem(PLAYGROUND_STORAGE_VERSION_KEY, PLAYGROUND_STORAGE_VERSION);
+        } catch (e) {
+            console.error("migratePlaygroundStorage", e);
         }
     };
 
