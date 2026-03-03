@@ -370,6 +370,9 @@
                                         Share
                                     </button>
                                     <div class="dropdown-menu">
+                                        <a class="dropdown-item" data-share="lz" id="share-compressed" href="#"
+                                            >Share Compressed</a
+                                        >
                                         <a
                                             class="dropdown-item"
                                             target="_blank"
@@ -493,6 +496,48 @@
                     </div>
                     <div class="row m-0">
                         <div class="col p-0">
+                            <!-- Playground controls (example) -->
+                            <div id="playground-controls-container">
+                                <!-- controls inserted from js/examples/playground-controls.html -->
+                                <div id="playground-controls" class="p-2">
+                                    <div class="form-group mb-2">
+                                        <label for="particles-number">Particle Count</label>
+                                        <input
+                                            id="particles-number"
+                                            class="form-control"
+                                            type="range"
+                                            min="0"
+                                            max="500"
+                                            value="100"
+                                            data-patch='{"path":"particles.number.value","type":"number"}'
+                                        />
+                                    </div>
+
+                                    <div class="form-group mb-2">
+                                        <label for="particles-color">Particle Color (hex)</label>
+                                        <input
+                                            id="particles-color"
+                                            class="form-control"
+                                            type="text"
+                                            value="#ffffff"
+                                            data-patch='{"path":"particles.color.value","type":"string"}'
+                                        />
+                                    </div>
+
+                                    <div class="form-group mb-2 form-check">
+                                        <input
+                                            id="particles-collide"
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            data-patch='{"path":"particles.collisions.enable","type":"boolean"}'
+                                        />
+                                        <label class="form-check-label" for="particles-collide"
+                                            >Enable collisions</label
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
                             <div id="editor"></div>
                         </div>
                     </div>
