@@ -135,6 +135,21 @@ setTimeout(async () => {
         });
     }
 
+    // Wire Reset Controls button if present
+    const btnReset = document.getElementById("btnResetControls");
+    if (btnReset) {
+        btnReset.addEventListener("click", function () {
+            // Clear persisted controls and sync UI
+            try {
+                if (window.clearPlaygroundControls) window.clearPlaygroundControls();
+            } catch (e) {}
+            // also re-sync controls from editor to reflect preset
+            try {
+                if (window.syncControlsFromEditor) window.syncControlsFromEditor();
+            } catch (e) {}
+        });
+    }
+
     // Wire additional simple controls (example sliders/inputs) to call applyPartialConfig.
     // We'll look for elements with data-patch attributes that contain a JSON Pointer
     // path and a value type. Example: <input data-patch='{"path":"particles.number.value","type":"number"}'>
@@ -184,8 +199,9 @@ setTimeout(async () => {
             // if checkbox
             if (el.type === "checkbox") el.addEventListener("change", applyControl);
 
-            // Persist control changes to localStorage for quick restore
-            const storageKey = `playground.control.${meta.path}`;
+            // Persist control changes to localStorage under a single namespace
+            // so we can clear/reset them easily between sessions/versions.
+            const storageKey = `playground.v1.controls.${meta.path}`;
             const persist = debounce(function () {
                 try {
                     const val = el.type === "checkbox" ? el.checked : el.value;
@@ -206,7 +222,7 @@ setTimeout(async () => {
         for (const el of controls) {
             try {
                 const meta = JSON.parse(el.getAttribute("data-patch"));
-                const storageKey = `playground.control.${meta.path}`;
+                const storageKey = `playground.v1.controls.${meta.path}`;
                 const raw = localStorage.getItem(storageKey);
                 if (raw === null) continue;
                 const val = JSON.parse(raw);
@@ -221,6 +237,26 @@ setTimeout(async () => {
                 const evt = new Event("input");
                 el.dispatchEvent(evt);
             } catch (e) {}
+        }
+    };
+
+    // Clear persisted controls under the playground namespace and reset UI
+    window.clearPlaygroundControls = function () {
+        try {
+            const prefix = "playground.v1.controls.";
+            for (let i = localStorage.length - 1; i >= 0; i--) {
+                const key = localStorage.key(i);
+                if (key && key.indexOf(prefix) === 0) {
+                    localStorage.removeItem(key);
+                }
+            }
+
+            // Sync controls from editor to reset UI
+            try {
+                if (window.syncControlsFromEditor) window.syncControlsFromEditor();
+            } catch (e) {}
+        } catch (e) {
+            console.error("clearPlaygroundControls", e);
         }
     };
 
