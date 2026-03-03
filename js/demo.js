@@ -791,6 +791,28 @@
 
         editor = new JSONEditor(element, options);
 
+        // Update controls whenever the editor changes so both UIs stay in sync
+        try {
+            editor.on(
+                "change",
+                debounce(function () {
+                    try {
+                        syncControlsFromEditor();
+                    } catch (e) {}
+                }, 200),
+            );
+        } catch (e) {
+            // JSONEditor may not support event API in this build; fallback to
+            // polling approach (run once per second) — kept minimal.
+            const poll = setInterval(() => {
+                try {
+                    syncControlsFromEditor();
+                } catch (e) {}
+            }, 1000);
+            // stop polling after 30s to avoid background churn
+            setTimeout(() => clearInterval(poll), 30000);
+        }
+
         const presetItems = document.body.querySelectorAll(".preset-item");
 
         if (window.location.hash) {
@@ -846,6 +868,21 @@
         await loadAll(tsParticles);
 
         changeGenericPreset(localStorage.presetId);
+
+        // After the preset and editor have had a moment to initialize, restore
+        // any persisted control values and sync controls with the editor state.
+        // Use a short timeout to wait for async editor updates to complete.
+        setTimeout(() => {
+            try {
+                if (window.restoreControlsFromStorage) {
+                    window.restoreControlsFromStorage();
+                }
+            } catch (e) {}
+
+            try {
+                syncControlsFromEditor();
+            } catch (e) {}
+        }, 250);
     });
 }
 

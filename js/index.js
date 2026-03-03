@@ -183,10 +183,46 @@ setTimeout(async () => {
             el.addEventListener("input", applyControl);
             // if checkbox
             if (el.type === "checkbox") el.addEventListener("change", applyControl);
+
+            // Persist control changes to localStorage for quick restore
+            const storageKey = `playground.control.${meta.path}`;
+            const persist = debounce(function () {
+                try {
+                    const val = el.type === "checkbox" ? el.checked : el.value;
+                    localStorage.setItem(storageKey, JSON.stringify(val));
+                } catch (e) {}
+            }, 200);
+
+            el.addEventListener("input", persist);
+            if (el.type === "checkbox") el.addEventListener("change", persist);
         } catch (e) {
             // ignore malformed metadata
         }
     }
+
+    // Expose a restore helper that demo can call after editor init
+    window.restoreControlsFromStorage = function () {
+        const controls = document.querySelectorAll("[data-patch]");
+        for (const el of controls) {
+            try {
+                const meta = JSON.parse(el.getAttribute("data-patch"));
+                const storageKey = `playground.control.${meta.path}`;
+                const raw = localStorage.getItem(storageKey);
+                if (raw === null) continue;
+                const val = JSON.parse(raw);
+
+                if (el.type === "checkbox") {
+                    el.checked = !!val;
+                } else {
+                    el.value = val;
+                }
+
+                // apply to editor on restore
+                const evt = new Event("input");
+                el.dispatchEvent(evt);
+            } catch (e) {}
+        }
+    };
 
     for (const config of configs) {
         editor.addPreset(config.text, `${configsUrl}/${config.id}.json`);
