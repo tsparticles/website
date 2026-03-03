@@ -226,6 +226,14 @@ canvas {
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
 }
 
+/* Apply playground modal theming only to modals that opt-in via .modal-playground */
+.modal-playground .modal-content {
+  background: linear-gradient(180deg, #0b0b0b, #0f0f0f);
+  color: #e6eef6;
+  border: none;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+}
+
 .modal-header,
 .modal-footer {
   border: none;
