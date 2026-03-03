@@ -122,6 +122,47 @@ body {
   margin-left: 8px;
 }
 
+/* Playground controls styling */
+#playground-controls-container {
+  padding: 12px;
+}
+
+#playground-controls {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+#playground-controls .form-group {
+  margin-bottom: 10px;
+}
+
+.playground-controls-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Export/Import controls */
+#playground-controls-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  #playground-controls {
+    padding: 10px;
+  }
+
+  .playground-controls-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 #pending-run-badge .pending-spinner {
   width: 14px;
   height: 14px;

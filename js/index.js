@@ -201,6 +201,77 @@ setTimeout(async () => {
         }
     }
 
+    // Export / Import persisted controls (JSON)
+    const exportBtn = document.getElementById("exportControlsBtn");
+    const importBtn = document.getElementById("importControlsBtn");
+    const importFile = document.getElementById("importControlsFile");
+
+    function gatherPersistedControls() {
+        const prefix = PLAYGROUND_STORAGE_PREFIX;
+        const res = {};
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (!key) continue;
+            if (key.indexOf(prefix) === 0) {
+                const sub = key.substring(prefix.length);
+                try {
+                    res[sub] = JSON.parse(localStorage.getItem(key));
+                } catch (e) {
+                    res[sub] = localStorage.getItem(key);
+                }
+            }
+        }
+        return res;
+    }
+
+    if (exportBtn) {
+        exportBtn.addEventListener("click", function () {
+            const data = gatherPersistedControls();
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "playground-controls.json";
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+    }
+
+    if (importBtn && importFile) {
+        importBtn.addEventListener("click", function () {
+            importFile.click();
+        });
+
+        importFile.addEventListener("change", function (ev) {
+            const f = ev.target.files && ev.target.files[0];
+            if (!f) return;
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const json = JSON.parse(e.target.result);
+                    // merge into localStorage under prefix
+                    for (const k in json) {
+                        try {
+                            localStorage.setItem(PLAYGROUND_STORAGE_PREFIX + k, JSON.stringify(json[k]));
+                        } catch (e) {}
+                    }
+
+                    // re-sync UI
+                    try {
+                        if (window.syncControlsFromEditor) window.syncControlsFromEditor();
+                    } catch (e) {}
+                    try {
+                        if (window.restoreControlsFromStorage) window.restoreControlsFromStorage();
+                    } catch (e) {}
+                    showResetToast();
+                } catch (e) {
+                    alert("Failed to import controls: invalid JSON");
+                }
+            };
+            reader.readAsText(f);
+        });
+    }
+
     // Wire additional simple controls (example sliders/inputs) to call applyPartialConfig.
     // We'll look for elements with data-patch attributes that contain a JSON Pointer
     // path and a value type. Example: <input data-patch='{"path":"particles.number.value","type":"number"}'>
