@@ -229,6 +229,7 @@ setTimeout(async () => {
             return window.LZString || null;
         }
 
+        // Hook share buttons to show a modal with the compressed link and copy action
         for (const btn of shareButtons) {
             btn.addEventListener("click", async function () {
                 const container = tsParticles.domItem(0);
@@ -252,10 +253,7 @@ setTimeout(async () => {
 
                 const compressed = lz.compressToEncodedURIComponent(json);
 
-                // If the compressed payload is too long for some browsers/servers,
-                // fall back to offering a download instead of a monstrous URL.
                 if (compressed.length > 1900) {
-                    // Offer download fallback
                     const b = new Blob([json], { type: "application/json" });
                     const url = URL.createObjectURL(b);
                     const a = document.createElement("a");
@@ -268,18 +266,49 @@ setTimeout(async () => {
 
                 const shareUrl = window.location.origin + window.location.pathname + "#preset=" + compressed;
 
-                // Try copy to clipboard first
-                if (navigator.clipboard) {
-                    try {
-                        await navigator.clipboard.writeText(shareUrl);
-                        alert("Shareable URL copied to clipboard");
-                        return;
-                    } catch (e) {
-                        // fall back to prompt
-                    }
-                }
+                // Fill modal and show
+                try {
+                    const shareModalEl = document.getElementById("shareModal");
+                    const shareInput = document.getElementById("shareLinkInput");
+                    const copyBtn = document.getElementById("shareCopyBtn");
 
-                prompt("Shareable URL:", shareUrl);
+                    if (shareInput) shareInput.value = shareUrl;
+
+                    if (copyBtn) {
+                        copyBtn.onclick = async function () {
+                            if (navigator.clipboard) {
+                                try {
+                                    await navigator.clipboard.writeText(shareUrl);
+                                    copyBtn.innerText = "Copied";
+                                    setTimeout(() => (copyBtn.innerText = "Copy"), 1500);
+                                    return;
+                                } catch (e) {}
+                            }
+
+                            // fallback: select & execCopy
+                            try {
+                                shareInput.select();
+                                document.execCommand("copy");
+                                copyBtn.innerText = "Copied";
+                                setTimeout(() => (copyBtn.innerText = "Copy"), 1500);
+                            } catch (e) {}
+                        };
+                    }
+
+                    const bsModal = new bootstrap.Modal(shareModalEl);
+                    bsModal.show();
+                } catch (e) {
+                    // fallback to prompt
+                    if (navigator.clipboard) {
+                        try {
+                            await navigator.clipboard.writeText(shareUrl);
+                            alert("Shareable URL copied to clipboard");
+                            return;
+                        } catch (e) {}
+                    }
+
+                    prompt("Shareable URL:", shareUrl);
+                }
             });
         }
     }

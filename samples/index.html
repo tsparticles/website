@@ -627,6 +627,37 @@
             </div>
         </div>
 
+        <!-- Share Modal (shows compressed share link) -->
+        <div
+            class="modal fade"
+            id="shareModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="shareModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="shareModalLabel">Share Link</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+                        <span aria-hidden="true">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-2">
+                            <label for="shareLinkInput" class="form-label">Shareable URL</label>
+                            <input id="shareLinkInput" type="text" class="form-control" readonly />
+                        </div>
+                        <div id="shareHint" class="text-muted small">You can copy the link or share it directly.</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" id="shareCopyBtn">Copy</button>
+                        <button class="btn btn-primary" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <footer
             style="
                 margin-top: 40px;
