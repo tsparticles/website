@@ -218,16 +218,32 @@ canvas {
   pointer-events: none;
 }
 
-/* Modal theming to match dark playground aesthetic */
-.modal-content {
+./* Playground modal theming (opt-in). Add `.modal-playground` to modals that should use the dark playground theme. */
+.modal-playground .modal-content {
   background: linear-gradient(180deg, #0b0b0b, #0f0f0f);
   color: #e6eef6;
   border: none;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
 }
 
-/* Modal theming now applies site-wide via the global .modal-content selector above */
+/* Light modal override: use this class on a modal to force a light theme that matches Bootstrap defaults. */
+.modal-light .modal-content {
+  background: #fff;
+  color: #212529;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
 
+/* Buttons inside a light modal should use default Bootstrap colors */
+.modal-light .modal-footer .btn-primary {
+  background: #0d6efd;
+  border-color: #0d6efd;
+}
+.modal-light .modal-footer .btn-secondary {
+  background: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
 .modal-header,
 .modal-footer {
   border: none;
