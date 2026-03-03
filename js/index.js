@@ -139,15 +139,66 @@ setTimeout(async () => {
     const btnReset = document.getElementById("btnResetControls");
     if (btnReset) {
         btnReset.addEventListener("click", function () {
-            // Clear persisted controls and sync UI
+            // show confirmation modal before clearing
             try {
+                const resetModalEl = document.getElementById("resetConfirmModal");
+                const confirmBtn = document.getElementById("confirmResetBtn");
+                if (resetModalEl && confirmBtn) {
+                    const bsModal = new bootstrap.Modal(resetModalEl);
+                    confirmBtn.onclick = function () {
+                        try {
+                            if (window.clearPlaygroundControls) window.clearPlaygroundControls();
+                        } catch (e) {}
+                        try {
+                            if (window.syncControlsFromEditor) window.syncControlsFromEditor();
+                        } catch (e) {}
+                        bsModal.hide();
+
+                        // show a small toast/alert to confirm
+                        try {
+                            showResetToast();
+                        } catch (e) {}
+                    };
+
+                    bsModal.show();
+                    return;
+                }
+
+                // fallback: immediate reset
                 if (window.clearPlaygroundControls) window.clearPlaygroundControls();
-            } catch (e) {}
-            // also re-sync controls from editor to reflect preset
-            try {
                 if (window.syncControlsFromEditor) window.syncControlsFromEditor();
             } catch (e) {}
         });
+    }
+
+    // Toast helper: create a temporary toast to confirm reset
+    function showResetToast() {
+        try {
+            const id = "playground-reset-toast";
+            let t = document.getElementById(id);
+            if (!t) {
+                t = document.createElement("div");
+                t.id = id;
+                t.className = "toast align-items-center text-white bg-dark border-0";
+                t.style.position = "fixed";
+                t.style.bottom = "16px";
+                t.style.right = "16px";
+                t.style.zIndex = 20000;
+                t.setAttribute("role", "status");
+                t.setAttribute("aria-live", "polite");
+
+                t.innerHTML = `<div class="d-flex"><div class="toast-body">Playground controls reset</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div>`;
+                document.body.appendChild(t);
+            }
+
+            const bs = new bootstrap.Toast(t, { delay: 2000 });
+            bs.show();
+        } catch (e) {
+            // fallback: alert
+            try {
+                alert("Playground controls reset");
+            } catch (e) {}
+        }
     }
 
     // Wire additional simple controls (example sliders/inputs) to call applyPartialConfig.
@@ -222,6 +273,10 @@ setTimeout(async () => {
 
     // Expose a restore helper that demo can call after editor init
     window.restoreControlsFromStorage = function () {
+        try {
+            // run storage migration before restoring any values
+            if (window.migratePlaygroundStorage) window.migratePlaygroundStorage();
+        } catch (e) {}
         const controls = document.querySelectorAll("[data-patch]");
         for (const el of controls) {
             try {

@@ -666,6 +666,36 @@
             </div>
         </div>
 
+        <!-- Reset Confirmation Modal -->
+        <div
+            class="modal fade"
+            id="resetConfirmModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="resetConfirmLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resetConfirmLabel">Reset Controls</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+                        <span aria-hidden="true">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Are you sure you want to reset playground controls to preset values? This will clear locally
+                            saved control values.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-danger" type="button" id="confirmResetBtn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <footer
             style="
                 margin-top: 40px;
