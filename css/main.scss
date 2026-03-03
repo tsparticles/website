@@ -128,10 +128,11 @@ body {
 }
 
 #playground-controls {
-  background: rgba(255, 255, 255, 0.03);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 8px;
   padding: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
 }
 
 #playground-controls .form-group {

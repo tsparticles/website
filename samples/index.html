@@ -558,6 +558,29 @@
                                             accept="application/json"
                                             style="display: none"
                                         />
+                                        <!-- Import preview modal trigger/inline preview -->
+                                        <!-- Modal placed near controls so markup is close to actions -->
+                                        <div
+                                            id="importPreviewInline"
+                                            style="
+                                                display: none;
+                                                white-space: pre-wrap;
+                                                background: #111;
+                                                color: #eee;
+                                                padding: 8px;
+                                                margin-top: 8px;
+                                                border-radius: 4px;
+                                                max-height: 240px;
+                                                overflow: auto;
+                                            "
+                                        ></div>
+                                        <button
+                                            class="btn btn-sm btn-outline-light"
+                                            id="inlineConfirmImportBtn"
+                                            style="display: none; margin-left: 8px"
+                                        >
+                                            Confirm Import
+                                        </button>
 
                                         <div style="margin-left: 8px; display: flex; align-items: center; gap: 8px">
                                             <span class="small text-muted">Storage v.</span>
@@ -689,6 +712,50 @@
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" id="shareCopyBtn">Copy</button>
                         <button class="btn btn-primary" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Import Preview Modal -->
+        <div
+            class="modal fade"
+            id="importPreviewModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="importPreviewLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="importPreviewLabel">Import Playground Controls</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+                        <span aria-hidden="true">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-2">
+                            <label for="importMode" class="form-label">Import Mode</label>
+                            <select id="importMode" class="form-select">
+                                <option value="merge">Merge (default)</option>
+                                <option value="replace">Replace (clear current)</option>
+                            </select>
+                        </div>
+                        <pre
+                            id="importPreview"
+                            style="
+                                max-height: 400px;
+                                overflow: auto;
+                                background: #111;
+                                color: #eee;
+                                padding: 12px;
+                                border-radius: 4px;
+                            "
+                        ></pre>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-primary" type="button" id="confirmImportBtn">Import</button>
                     </div>
                 </div>
             </div>

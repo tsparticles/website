@@ -245,13 +245,12 @@ setTimeout(async () => {
         importFile.addEventListener("change", function (ev) {
             const f = ev.target.files && ev.target.files[0];
             if (!f) return;
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                try {
-                    const json = JSON.parse(e.target.result);
-                    const modeEl = document.getElementById("importMode");
-                    const mode = modeEl ? modeEl.value : "merge";
 
+            const reader = new FileReader();
+
+            // Centralized import action used by modal confirm or inline fallback
+            function doImport(json, mode) {
+                try {
                     // if replace mode, clear current prefixed keys first
                     if (mode === "replace") {
                         for (let i = localStorage.length - 1; i >= 0; i--) {
@@ -279,9 +278,70 @@ setTimeout(async () => {
                     } catch (e) {}
                     showResetToast();
                 } catch (e) {
+                    console.error("doImport", e);
+                }
+            }
+
+            reader.onload = function (e) {
+                try {
+                    const json = JSON.parse(e.target.result);
+
+                    // Store preview globally so confirm handler can access it
+                    window.__importedControlsPreview = json;
+
+                    const previewModalEl = document.getElementById("importPreviewModal");
+                    const previewEl = document.getElementById("importPreview");
+                    const confirmBtn = document.getElementById("confirmImportBtn");
+                    const modeEl = document.getElementById("importMode");
+
+                    // If a modal exists, show preview there and wire confirm
+                    if (previewModalEl && previewEl && confirmBtn) {
+                        previewEl.textContent = JSON.stringify(json, null, 2);
+
+                        // detach previous handler then attach fresh one
+                        confirmBtn.onclick = function () {
+                            const mode = modeEl ? modeEl.value : "merge";
+                            doImport(window.__importedControlsPreview, mode);
+                            try {
+                                const bs = bootstrap.Modal.getInstance(previewModalEl);
+                                if (bs) bs.hide();
+                            } catch (e) {}
+                        };
+
+                        const bs = new bootstrap.Modal(previewModalEl);
+                        bs.show();
+                        return;
+                    }
+
+                    // Fallback: inline preview element if present
+                    const inlinePreview = document.getElementById("importPreviewInline");
+                    const inlineConfirm = document.getElementById("inlineConfirmImportBtn");
+                    if (inlinePreview) {
+                        inlinePreview.textContent = JSON.stringify(json, null, 2);
+                        inlinePreview.style.display = "block";
+                        if (inlineConfirm) {
+                            inlineConfirm.onclick = function () {
+                                const mode = modeEl ? modeEl.value : "merge";
+                                doImport(window.__importedControlsPreview, mode);
+                                inlinePreview.style.display = "none";
+                            };
+                        } else {
+                            // If no inline confirm, perform immediate import (legacy behavior)
+                            const mode = modeEl ? modeEl.value : "merge";
+                            doImport(json, mode);
+                        }
+
+                        return;
+                    }
+
+                    // Last fallback: immediate import (legacy)
+                    const mode = modeEl ? modeEl.value : "merge";
+                    doImport(json, mode);
+                } catch (e) {
                     alert("Failed to import controls: invalid JSON");
                 }
             };
+
             reader.readAsText(f);
         });
     }
