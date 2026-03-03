@@ -217,3 +217,59 @@ body {
 canvas {
   pointer-events: none;
 }
+
+/* Modal theming to match dark playground aesthetic */
+.modal-content {
+  background: linear-gradient(180deg, #0b0b0b, #0f0f0f);
+  color: #e6eef6;
+  border: none;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+  background: transparent;
+}
+
+.modal-title {
+  color: #dbe9ff;
+}
+
+.modal-body {
+  color: #cbd7e6;
+}
+
+/* Pre blocks inside modals (import/export previews) */
+.modal-body pre,
+pre#exportModalPre,
+pre#importPreview {
+  background: #071017;
+  color: #cfe8ff;
+  padding: 12px;
+  border-radius: 6px;
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Buttons inside modal: subtle accent for primary */
+.modal-footer .btn-primary {
+  background: linear-gradient(180deg, #2b6fb3, #1b4f8a);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.modal-footer .btn-secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.06);
+  color: #cbd7e6;
+}
+
+/* Inline preview (fallback) tweaks */
+#importPreviewInline {
+  background: #071017;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+#inlineConfirmImportBtn {
+  display: inline-block;
+}
