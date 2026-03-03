@@ -21,6 +21,7 @@ Make it effortless for developers to discover, evaluate, and integrate tsParticl
 - [ ] Improve documentation developer experience (clear docs generation and scripts)
 - [ ] Add CI linting and testing steps to prevent regressions
 - [ ] Consolidate build outputs and clarify distribution (`dist/` vs committed artifacts)
+- [x] Accessibility & modal UX improvements for playground import preview (font, focus rings, backdrop)
 
 ### Out of Scope
 
