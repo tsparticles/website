@@ -286,6 +286,19 @@ setTimeout(async () => {
         });
     }
 
+    // Populate storage version UI and changelog when available
+    try {
+        const verEl = document.getElementById("playgroundStorageVersion");
+        const changelogVersion = document.getElementById("changelogVersion");
+        const changelogContent = document.getElementById("changelogContent");
+
+        if (verEl) verEl.innerText = PLAYGROUND_STORAGE_VERSION;
+        if (changelogVersion) changelogVersion.innerText = PLAYGROUND_STORAGE_VERSION;
+        if (changelogContent)
+            changelogContent.innerHTML =
+                "<ul><li>v1 — initial namespaced storage for playground controls (playground.v1.controls.*)</li></ul>";
+    } catch (e) {}
+
     // Wire additional simple controls (example sliders/inputs) to call applyPartialConfig.
     // We'll look for elements with data-patch attributes that contain a JSON Pointer
     // path and a value type. Example: <input data-patch='{"path":"particles.number.value","type":"number"}'>
