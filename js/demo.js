@@ -50,6 +50,126 @@
 
     let editor;
     let schema = {};
+    // Debounce helper used for UI inputs and editor changes
+    const debounce = (fn, wait) => {
+        let t = null;
+        return function (...args) {
+            if (t) {
+                clearTimeout(t);
+            }
+
+            t = setTimeout(() => {
+                t = null;
+                try {
+                    fn.apply(this, args);
+                } catch (e) {
+                    console.error("debounced function error", e);
+                }
+            }, wait);
+        };
+    };
+
+    // Expose debounce globally so other scripts can reuse the same timing/guardrail.
+    try {
+        window.debounce = debounce;
+    } catch (e) {}
+
+    // Heuristic threshold for "heavy" configs where we avoid auto-run
+    const HEAVY_CONFIG_CHAR_THRESHOLD = 5000; // chars (approx) - tuneable per research
+    let lastEditorSnapshot = null;
+
+    // Make threshold available globally for other modules
+    try {
+        window.HEAVY_CONFIG_CHAR_THRESHOLD = HEAVY_CONFIG_CHAR_THRESHOLD;
+    } catch (e) {}
+
+    // Apply a partial config (merge patch into current editor config and update live preview)
+    window.applyPartialConfig = function (patch) {
+        try {
+            if (!editor) {
+                return;
+            }
+
+            const current = editor.get();
+            const merged = _.merge(_.cloneDeep(current), patch);
+
+            fixOptions(merged);
+
+            // Update editor UI
+            editor.update(merged);
+
+            // Apply to running particles instance if present, otherwise load fresh
+            const container = tsParticles.domItem(0);
+
+            if (container) {
+                container.options.load(merged);
+                refreshParticles();
+            } else {
+                tsParticles.load({ id: "tsparticles", options: merged });
+            }
+        } catch (e) {
+            // Fail silently — editor onError will surface issues when appropriate
+            console.error("applyPartialConfig", e);
+        }
+    };
+
+    // Apply a full config: teardown/reinitialize and replace editor contents
+    window.applyFullConfig = async function (config) {
+        try {
+            if (!config) {
+                return;
+            }
+
+            fixOptions(config);
+
+            // Load new particles instance
+            const particles = await tsParticles.load({ id: "tsparticles", options: config });
+
+            // Normalize options for editor (remove internal underscored fields)
+            const omit = (obj) => _.omitBy(obj, (value, key) => _.startsWith(key, "_"));
+            const transform = (obj) => {
+                return _.transform(omit(obj), function (result, value, key) {
+                    result[key] = _.isObject(value) ? transform(omit(value)) : value;
+                });
+            };
+
+            const editorOptions = transform(particles.actualOptions);
+
+            fixOptions(editorOptions);
+
+            if (editor) {
+                editor.update(editorOptions);
+                try {
+                    editor.expandAll();
+                } catch (e) {}
+            }
+
+            // Clear preset tracking since this is a full, ad-hoc config
+            localStorage.presetId = "";
+            window.location.hash = "";
+        } catch (e) {
+            console.error("applyFullConfig", e);
+        }
+    };
+
+    // Expose a small global helper so other scripts (e.g., index.js) can mark
+    // a heavy config as "pending" and ask the demo to show the pending badge.
+    // Uses the local showPendingRunBadge function (declared later) via closure.
+    window.markPendingHeavyConfig = function (cfg) {
+        try {
+            window.__pendingHeavyConfig = cfg;
+            // showPendingRunBadge is a local function; call it if available.
+            try {
+                showPendingRunBadge(true);
+            } catch (e) {
+                // If for some reason the function isn't available, fail silently
+                // — index.js will still be able to set the pending config.
+                console.warn("showPendingRunBadge not available", e);
+            }
+        } catch (e) {
+            console.error("markPendingHeavyConfig", e);
+        }
+    };
     const stats = new Stats();
 
     stats.addPanel("count", "#ff8", 0, () => {
@@ -434,10 +554,109 @@
     };
 
     let btnParticlesUpdate = function () {
+        // If a pending heavy config was loaded into the editor, apply it as a full config
+        if (window.__pendingHeavyConfig) {
+            const cfg = window.__pendingHeavyConfig;
+            window.__pendingHeavyConfig = null;
+            showPendingRunBadge(false);
+
+            // Use applyFullConfig to ensure proper teardown/init
+            window.applyFullConfig(cfg);
+            return;
+        }
+
         const particles = tsParticles.domItem(0);
         particles.options.load(editor.get());
         refreshParticles(() => {});
     };
+
+    // Show or hide a small accessible Run button next to the Reload/Run button
+    // when a heavy config is pending. The button becomes a spinner while running
+    // and will disable primary controls to avoid concurrent actions.
+    function showPendingRunBadge(show) {
+        const btn = document.getElementById("btnUpdate");
+        if (!btn) return;
+
+        let badge = document.getElementById("pending-run-badge");
+
+        if (show) {
+            if (!badge) {
+                badge = document.createElement("button");
+                badge.id = "pending-run-badge";
+                badge.type = "button";
+                badge.setAttribute("role", "button");
+                badge.setAttribute("aria-live", "polite");
+                badge.setAttribute("title", "Run heavy preset (may take a moment)");
+                badge.className = "btn btn-sm btn-danger";
+                badge.style.marginLeft = "8px";
+                badge.style.display = "inline-flex";
+                badge.style.alignItems = "center";
+                badge.style.gap = "6px";
+
+                const label = document.createElement("span");
+                label.innerText = "Run Heavy Preset";
+                label.style.fontSize = "12px";
+
+                const spinner = document.createElement("span");
+                spinner.className = "pending-spinner";
+                badge.appendChild(spinner);
+                badge.appendChild(label);
+
+                badge.onclick = async function () {
+                    // If there's a pending config, run it via the centralized runner.
+                    if (window.__pendingHeavyConfig) {
+                        runPendingConfig(window.__pendingHeavyConfig);
+                    }
+                };
+
+                btn.parentNode && btn.parentNode.insertBefore(badge, btn.nextSibling);
+            }
+        } else {
+            if (badge && badge.parentNode) {
+                badge.parentNode.removeChild(badge);
+            }
+        }
+    }
+
+    // Run a pending heavy config with UI state (spinner, disabled controls).
+    async function runPendingConfig(cfg) {
+        if (!cfg) return;
+
+        const btn = document.getElementById("btnUpdate");
+        const navBtn = document.getElementById("btnNavUpdate");
+        const presetInput = document.getElementById("input_m_Symbol(tsparticles)_editor_preset");
+        const badge = document.getElementById("pending-run-badge");
+
+        try {
+            // Show spinner and disable controls
+            if (badge) {
+                const spinner = badge.querySelector(".pending-spinner");
+                if (spinner) spinner.style.display = "inline-block";
+            }
+
+            if (btn) btn.disabled = true;
+            if (navBtn) navBtn.disabled = true;
+            if (presetInput) presetInput.disabled = true;
+
+            // Ensure the pending config is cleared early to avoid reentrancy
+            window.__pendingHeavyConfig = null;
+
+            await window.applyFullConfig(cfg);
+        } catch (e) {
+            console.error("runPendingConfig", e);
+        } finally {
+            // Re-enable controls and hide badge
+            if (badge) {
+                const spinner = badge.querySelector(".pending-spinner");
+                if (spinner) spinner.style.display = "none";
+            }
+            if (btn) btn.disabled = false;
+            if (navBtn) navBtn.disabled = false;
+            if (presetInput) presetInput.disabled = false;
+
+            showPendingRunBadge(false);
+        }
+    }
 
     let changeGenericPreset = function (presetId) {
         const oldPreset = localStorage.presetId;
