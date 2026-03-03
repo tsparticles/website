@@ -252,6 +252,23 @@ pre#importPreview {
   border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
+/* Improve readability and accessibility of preview blocks */
+pre#exportModalPre,
+pre#importPreview,
+#importPreviewInline {
+  font-family:
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    "Segoe UI Mono",
+    Roboto Mono,
+    monospace;
+  font-size: 13px;
+  line-height: 1.4;
+  tab-size: 2;
+  color: #cfe8ff;
+}
+
 /* Buttons inside modal: subtle accent for primary */
 .modal-footer .btn-primary {
   background: linear-gradient(180deg, #2b6fb3, #1b4f8a);
@@ -259,9 +276,23 @@ pre#importPreview {
 }
 
 .modal-footer .btn-secondary {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.02);
   border-color: rgba(255, 255, 255, 0.06);
-  color: #cbd7e6;
+  color: #e1edf8;
+  backdrop-filter: blur(2px);
+}
+
+/* Focus rings for keyboard users */
+.modal-footer .btn-primary:focus,
+.modal-footer .btn-secondary:focus,
+.modal .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(75, 150, 255, 0.14);
+}
+
+/* Darken modal backdrop slightly to aid contrast */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
 /* Inline preview (fallback) tweaks */
