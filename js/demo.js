@@ -451,7 +451,8 @@
                 blob = await container.export("json"),
                 json = await blob.text();
 
-            modalBody.innerHTML = `<pre>${json}</pre>`;
+            // Add an id so modal preview styling applies consistently across modals
+            modalBody.innerHTML = `<pre id="exportModalPre">${json}</pre>`;
 
             const copyBtn = document.querySelector("#exportConfigCopy");
             const downloadBtn = document.querySelector("#exportConfigDownload");
