@@ -249,6 +249,20 @@ setTimeout(async () => {
             reader.onload = function (e) {
                 try {
                     const json = JSON.parse(e.target.result);
+                    const modeEl = document.getElementById("importMode");
+                    const mode = modeEl ? modeEl.value : "merge";
+
+                    // if replace mode, clear current prefixed keys first
+                    if (mode === "replace") {
+                        for (let i = localStorage.length - 1; i >= 0; i--) {
+                            const key = localStorage.key(i);
+                            if (!key) continue;
+                            if (key.indexOf(PLAYGROUND_STORAGE_PREFIX) === 0) {
+                                localStorage.removeItem(key);
+                            }
+                        }
+                    }
+
                     // merge into localStorage under prefix
                     for (const k in json) {
                         try {

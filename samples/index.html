@@ -547,15 +547,37 @@
                                         <button class="btn btn-sm btn-outline-light" id="exportControlsBtn">
                                             Export Controls
                                         </button>
-                                        <button class="btn btn-sm btn-outline-light" id="importControlsBtn">
-                                            Import Controls
-                                        </button>
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-outline-light" id="importControlsBtn">
+                                                Import Controls
+                                            </button>
+                                            <select
+                                                id="importMode"
+                                                class="form-select form-select-sm"
+                                                style="width: auto"
+                                            >
+                                                <option value="merge" selected>Merge</option>
+                                                <option value="replace">Replace</option>
+                                            </select>
+                                        </div>
                                         <input
                                             type="file"
                                             id="importControlsFile"
                                             accept="application/json"
                                             style="display: none"
                                         />
+
+                                        <div style="margin-left: 8px; display: flex; align-items: center; gap: 8px">
+                                            <span class="small text-muted">Storage v.</span>
+                                            <button
+                                                class="btn btn-sm btn-outline-secondary"
+                                                id="showChangelogBtn"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#changelogModal"
+                                            >
+                                                <span id="playgroundStorageVersion">?</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
