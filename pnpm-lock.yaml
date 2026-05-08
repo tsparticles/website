@@ -43,25 +43,25 @@ importers:
         version: 5.46.0
       typedoc:
         specifier: ^0.28.16
-        version: 0.28.16(typescript@5.9.3)
+        version: 0.28.16(typescript@6.0.3)
       typedoc-plugin-clarity:
         specifier: ^1.6.0
-        version: 1.6.0(typedoc@0.28.16(typescript@5.9.3))
+        version: 1.6.0(typedoc@0.28.16(typescript@6.0.3))
       typedoc-plugin-coverage:
         specifier: ^4.0.2
-        version: 4.0.2(typedoc@0.28.16(typescript@5.9.3))
+        version: 4.0.2(typedoc@0.28.16(typescript@6.0.3))
       typedoc-plugin-google-ads:
         specifier: ^1.6.0
-        version: 1.6.0(typedoc@0.28.16(typescript@5.9.3))
+        version: 1.6.0(typedoc@0.28.16(typescript@6.0.3))
       typedoc-plugin-keywords:
         specifier: ^1.6.0
-        version: 1.6.0(typedoc@0.28.16(typescript@5.9.3))
+        version: 1.6.0(typedoc@0.28.16(typescript@6.0.3))
       typedoc-plugin-missing-exports:
         specifier: ^4.1.2
-        version: 4.1.2(typedoc@0.28.16(typescript@5.9.3))
+        version: 4.1.2(typedoc@0.28.16(typescript@6.0.3))
       typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
+        specifier: ^6.0.0
+        version: 6.0.3
     devDependencies:
       '@tsparticles/editor':
         specifier: ^3.1.1
@@ -405,6 +405,7 @@ packages:
 
   '@simple-git/argv-parser@1.1.0':
     resolution: {integrity: sha512-sUKOu2lb5vGIWADNNLpscyj07DAeQZU3KLbnE2Tj53tW6BbDQKMly2CCfnR4oYzqtRELCPWfwaPg+Q0T8qfKBg==}
+    deprecated: Contains a breaking change that should be a major version bump
 
   '@swc/core-darwin-arm64@1.10.7':
     resolution: {integrity: sha512-SI0OFg987P6hcyT0Dbng3YRISPS9uhLX1dzW4qRrfqQdb0i75lPJ2YWe9CN47HBazrIA5COuTzrD2Dc0TcVsSQ==}
@@ -1291,6 +1292,11 @@ packages:
 
   typescript@5.9.3:
     resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2543,39 +2549,41 @@ snapshots:
       '@tsparticles/updater-twinkle': 3.9.1
       '@tsparticles/updater-wobble': 3.9.1
 
-  typedoc-plugin-clarity@1.6.0(typedoc@0.28.16(typescript@5.9.3)):
+  typedoc-plugin-clarity@1.6.0(typedoc@0.28.16(typescript@6.0.3)):
     dependencies:
-      typedoc: 0.28.16(typescript@5.9.3)
+      typedoc: 0.28.16(typescript@6.0.3)
       typescript: 5.9.3
 
-  typedoc-plugin-coverage@4.0.2(typedoc@0.28.16(typescript@5.9.3)):
+  typedoc-plugin-coverage@4.0.2(typedoc@0.28.16(typescript@6.0.3)):
     dependencies:
-      typedoc: 0.28.16(typescript@5.9.3)
+      typedoc: 0.28.16(typescript@6.0.3)
 
-  typedoc-plugin-google-ads@1.6.0(typedoc@0.28.16(typescript@5.9.3)):
+  typedoc-plugin-google-ads@1.6.0(typedoc@0.28.16(typescript@6.0.3)):
     dependencies:
-      typedoc: 0.28.16(typescript@5.9.3)
+      typedoc: 0.28.16(typescript@6.0.3)
       typescript: 5.9.3
 
-  typedoc-plugin-keywords@1.6.0(typedoc@0.28.16(typescript@5.9.3)):
+  typedoc-plugin-keywords@1.6.0(typedoc@0.28.16(typescript@6.0.3)):
     dependencies:
-      typedoc: 0.28.16(typescript@5.9.3)
+      typedoc: 0.28.16(typescript@6.0.3)
       typescript: 5.9.3
 
-  typedoc-plugin-missing-exports@4.1.2(typedoc@0.28.16(typescript@5.9.3)):
+  typedoc-plugin-missing-exports@4.1.2(typedoc@0.28.16(typescript@6.0.3)):
     dependencies:
-      typedoc: 0.28.16(typescript@5.9.3)
+      typedoc: 0.28.16(typescript@6.0.3)
 
-  typedoc@0.28.16(typescript@5.9.3):
+  typedoc@0.28.16(typescript@6.0.3):
     dependencies:
       '@gerrit0/mini-shiki': 3.21.0
       lunr: 2.3.9
       markdown-it: 14.1.0
       minimatch: 9.0.5
-      typescript: 5.9.3
+      typescript: 6.0.3
       yaml: 2.8.2
 
   typescript@5.9.3: {}
+
+  typescript@6.0.3: {}
 
   uc.micro@2.1.0: {}
 

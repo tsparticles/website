@@ -46,7 +46,7 @@
     "typedoc-plugin-coverage": "^4.0.2",
     "typedoc-plugin-keywords": "^1.6.0",
     "typedoc-plugin-missing-exports": "^4.1.2",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.0"
   },
   "devDependencies": {
     "tsparticles": "^3.9.1",
