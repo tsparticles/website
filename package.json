@@ -29,7 +29,7 @@
   },
   "homepage": "https://particles.js.org",
   "dependencies": {
-    "@pnpm/exec": "^2.0.0",
+    "@pnpm/exec": "^4.0.0",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^25.0.10",
     "fs-extra": "^11.3.3",
