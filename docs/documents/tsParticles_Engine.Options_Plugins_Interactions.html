@@ -1,0 +1,163 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta name="keywords" content="html, css, javascript, typescript, particles, js, ts, jsx, tsx, canvas, confetti, fireworks, animations, react, vue, angular, svelte, libraries, how, to, create, add"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Options/Plugins/Interactions | tsParticles - v4.3.0</title><meta name="description" content="Documentation for tsParticles"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">tsParticles - v4.3.0</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="../modules/tsParticles_Engine.html">tsParticles Engine</a></li><li><a href="" aria-current="page">Options/Plugins/Interactions</a></li></ul></div><div class="tsd-panel tsd-typography"><h1 id="interaction-plugins" class="tsd-anchor-link">Interaction Plugins<a href="#interaction-plugins" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p>The <code>interactions/</code> directory contains interaction packages that extend the interactivity system. They are configured via <code>interactivity.modes</code> and activated through <code>interactivity.events</code>.</p>
+<h2 id="external-interaction-modes" class="tsd-anchor-link">External interaction modes<a href="#external-interaction-modes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>These modes are triggered by mouse/touch events (hover, click, etc.):</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Mode name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@tsparticles/interaction-external-attract</code></td>
+<td><code>attract</code></td>
+<td>Attracts particles toward cursor</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-bounce</code></td>
+<td><code>bounce</code></td>
+<td>Bounces particles away from cursor</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-bubble</code></td>
+<td><code>bubble</code></td>
+<td>Enlarges/changes opacity near cursor</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-cannon</code></td>
+<td><code>cannon</code></td>
+<td>Fires particles from cursor</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-connect</code></td>
+<td><code>connect</code></td>
+<td>Draws lines between nearby particles</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-destroy</code></td>
+<td><code>destroy</code></td>
+<td>Destroys particles under cursor</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-drag</code></td>
+<td><code>drag</code></td>
+<td>Drags particles with cursor</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-grab</code></td>
+<td><code>grab</code></td>
+<td>Draws line from cursor to particles</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-parallax</code></td>
+<td><code>parallax</code></td>
+<td>Parallax movement on mouse move</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-particle</code></td>
+<td><code>particle</code></td>
+<td>Spawns a particle on click</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-pause</code></td>
+<td><code>pause</code></td>
+<td>Pauses animation on click</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-pop</code></td>
+<td><code>pop</code></td>
+<td>Pops (removes) particles near cursor</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-push</code></td>
+<td><code>push</code></td>
+<td>Adds particles on click</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-remove</code></td>
+<td><code>remove</code></td>
+<td>Removes particles on click</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-repulse</code></td>
+<td><code>repulse</code></td>
+<td>Pushes particles away from cursor</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-slow</code></td>
+<td><code>slow</code></td>
+<td>Slows particles near cursor</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-external-trail</code></td>
+<td><code>trail</code></td>
+<td>Particle trail following cursor</td>
+</tr>
+</tbody>
+</table>
+<h2 id="particle-to-particle-interactions" class="tsd-anchor-link">Particle-to-particle interactions<a href="#particle-to-particle-interactions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>These modes affect how particles interact with each other:</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Mode name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@tsparticles/interaction-particles-attract</code></td>
+<td><code>attract</code> (particles)</td>
+<td>Particles attract each other</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-particles-collisions</code></td>
+<td><code>collisions</code></td>
+<td>Particles collide with each other</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-particles-links</code></td>
+<td><code>links</code></td>
+<td>Draws lines between connected particles</td>
+</tr>
+<tr>
+<td><code>@tsparticles/interaction-particles-repulse</code></td>
+<td><code>repulse</code> (particles)</td>
+<td>Particles repel each other</td>
+</tr>
+</tbody>
+</table>
+<h2 id="light-interaction" class="tsd-anchor-link">Light interaction<a href="#light-interaction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@tsparticles/interaction-light</code></td>
+<td>Adds lighting/shadows to particles</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage" class="tsd-anchor-link">Usage<a href="#usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-14">&quot;interactivity&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-14">&quot;events&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">      </span><span class="hl-14">&quot;onClick&quot;</span><span class="hl-1">: { </span><span class="hl-14">&quot;enable&quot;</span><span class="hl-1">: </span><span class="hl-5">true</span><span class="hl-1">, </span><span class="hl-14">&quot;mode&quot;</span><span class="hl-1">: </span><span class="hl-3">&quot;push&quot;</span><span class="hl-1"> },</span><br/><span class="hl-1">      </span><span class="hl-14">&quot;onHover&quot;</span><span class="hl-1">: { </span><span class="hl-14">&quot;enable&quot;</span><span class="hl-1">: </span><span class="hl-5">true</span><span class="hl-1">, </span><span class="hl-14">&quot;mode&quot;</span><span class="hl-1">: </span><span class="hl-3">&quot;repulse&quot;</span><span class="hl-1"> }</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">    </span><span class="hl-14">&quot;modes&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">      </span><span class="hl-14">&quot;push&quot;</span><span class="hl-1">: { </span><span class="hl-14">&quot;quantity&quot;</span><span class="hl-1">: </span><span class="hl-6">4</span><span class="hl-1"> },</span><br/><span class="hl-1">      </span><span class="hl-14">&quot;repulse&quot;</span><span class="hl-1">: { </span><span class="hl-14">&quot;distance&quot;</span><span class="hl-1">: </span><span class="hl-6">150</span><span class="hl-1"> }</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+<h2 id="related-docs" class="tsd-anchor-link">Related docs<a href="#related-docs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li>Interactivity: <a href="tsParticles_Engine.Options_Interactivity.html">Interactivity</a></li>
+<li>Modes: <a href="tsParticles_Engine.Options_Interactivity_Modes.html">Modes</a></li>
+<li>Options root: <a href="tsParticles_Engine.Options.html">Options</a></li>
+</ul>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#interaction-plugins"><span>Interaction <wbr/>Plugins</span></a><ul><li><a href="#external-interaction-modes"><span>External interaction modes</span></a></li><li><a href="#particle-to-particle-interactions"><span>Particle-<wbr/>to-<wbr/>particle interactions</span></a></li><li><a href="#light-interaction"><span>Light interaction</span></a></li><li><a href="#usage"><span>Usage</span></a></li><li><a href="#related-docs"><span>Related docs</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../modules.html">tsParticles - v4.3.0</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-ca-pub-6401284988946422" crossOrigin="anonymous"></script><script html="(function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src=&quot;https://www.clarity.ms/tag/&quot;+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, &quot;clarity&quot;, &quot;script&quot;, &quot;8q4bxin4tm&quot;);" type="text/javascript"></script></body></html>
