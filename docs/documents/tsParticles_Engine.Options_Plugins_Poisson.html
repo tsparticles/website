@@ -1,0 +1,62 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta name="keywords" content="html, css, javascript, typescript, particles, js, ts, jsx, tsx, canvas, confetti, fireworks, animations, react, vue, angular, svelte, libraries, how, to, create, add"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Options/Plugins/Poisson | tsParticles - v4.3.1</title><meta name="description" content="Documentation for tsParticles"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">tsParticles - v4.3.1</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="../modules/tsParticles_Engine.html">tsParticles Engine</a></li><li><a href="" aria-current="page">Options/Plugins/Poisson</a></li></ul></div><div class="tsd-panel tsd-typography"><h1 id="poisson-plugin-options" class="tsd-anchor-link">Poisson Plugin Options<a href="#poisson-plugin-options" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p>Options for the <code>poisson</code> plugin control Poisson-disc (blue-noise) sampling used by the plugin to place particles with a minimum separation.</p>
+<p>Properties (summary)</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th style="text-align:right">Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable</code></td>
+<td style="text-align:right"><code>boolean</code></td>
+<td><code>false</code></td>
+<td>Enable the Poisson sampling plugin.</td>
+</tr>
+<tr>
+<td><code>dimensions</code></td>
+<td style="text-align:right"><code>number</code></td>
+<td><code>2</code></td>
+<td>Sampling dimensionality (usually <code>2</code> for canvas).</td>
+</tr>
+<tr>
+<td><code>radius</code></td>
+<td style="text-align:right"><code>number</code></td>
+<td><code>0</code></td>
+<td>Minimum allowed distance between points (sampling radius).</td>
+</tr>
+<tr>
+<td><code>retries</code></td>
+<td style="text-align:right"><code>number</code></td>
+<td><code>30</code></td>
+<td>Number of attempts to place a sample before giving up for a cell.</td>
+</tr>
+<tr>
+<td><code>steps</code></td>
+<td style="text-align:right"><code>number</code></td>
+<td><code>0</code></td>
+<td>Additional algorithm parameter; plugin default is <code>0</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Notes</p>
+<ul>
+<li><code>radius</code> controls how far apart generated points will be. A value of <code>0</code> effectively disables spacing and yields denser placement (depending on how the plugin uses the sampling results).</li>
+<li><code>dimensions</code> is typically <code>2</code> for 2D canvas sampling. Some algorithms support <code>1</code> (line) sampling but the plugin's implementation uses <code>2</code> by default.</li>
+<li><code>retries</code> sets how many candidate points the algorithm will try per active sample before removing it from the active list — higher values can produce a more uniform distribution at the cost of runtime.</li>
+<li><code>steps</code> is present on the interface and has a default of <code>0</code> in the <code>Poisson</code> class. Consult the plugin source for any advanced uses of <code>steps</code> — it may be reserved for implementation details or future features.</li>
+</ul>
+<p>Example</p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-14">&quot;poisson&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-14">&quot;enable&quot;</span><span class="hl-1">: </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-14">&quot;dimensions&quot;</span><span class="hl-1">: </span><span class="hl-6">2</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-14">&quot;radius&quot;</span><span class="hl-1">: </span><span class="hl-6">20</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-14">&quot;retries&quot;</span><span class="hl-1">: </span><span class="hl-6">30</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-14">&quot;steps&quot;</span><span class="hl-1">: </span><span class="hl-6">0</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+<p>For implementation details and the class defaults see <code>plugins/poisson/src/Options/Classes/Poisson.ts</code> and the interface <code>plugins/poisson/src/Options/Interfaces/IPoisson.ts</code>.</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#poisson-plugin-options"><span>Poisson <wbr/>Plugin <wbr/>Options</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../modules.html">tsParticles - v4.3.1</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-ca-pub-6401284988946422" crossOrigin="anonymous"></script><script html="(function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src=&quot;https://www.clarity.ms/tag/&quot;+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, &quot;clarity&quot;, &quot;script&quot;, &quot;8q4bxin4tm&quot;);" type="text/javascript"></script></body></html>

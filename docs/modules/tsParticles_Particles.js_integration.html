@@ -1,0 +1,254 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta name="keywords" content="html, css, javascript, typescript, particles, js, ts, jsx, tsx, canvas, confetti, fireworks, animations, react, vue, angular, svelte, libraries, how, to, create, add"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>tsParticles Particles.js integration - v4.3.1 | tsParticles - v4.3.1</title><meta name="description" content="Documentation for tsParticles"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">tsParticles - v4.3.1</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="" aria-current="page">tsParticles Particles.js integration</a></li></ul><h1>Module tsParticles Particles.js integration - v4.3.1</h1></div><section class="tsd-panel tsd-typography"><p><a href="https://particles.js.org" target="_blank" class="external"><img src="https://particles.js.org/images/banner2.png" alt="banner"></a></p>
+<h1 id="tsparticles-particlesjs-compatibility-package" class="tsd-anchor-link">tsParticles Particles.js Compatibility Package<a href="#tsparticles-particlesjs-compatibility-package" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/pjs" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/pjs/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/pjs" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/pjs.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/pjs" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/pjs" alt="npmjs"></a> <a href="https://github.com/sponsors/matteobruni" target="_blank" class="external"><img src="https://img.shields.io/github/sponsors/matteobruni" alt="GitHub Sponsors"></a></p>
+<p><a href="https://github.com/tsparticles/tsparticles" target="_blank" class="external">tsParticles</a> particles.js compatibility library.</p>
+<div class="tsd-alert tsd-alert-warning"><div class="tsd-alert-title"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><use href="../assets/icons.svg#icon-alertWarning"></use></svg><span>Warning</span></div><p>
+This package is legacy compatibility glue for particles.js-style APIs.
+It is considered obsolete, and it may be removed in v5.
+Prefer direct <code>tsParticles</code> APIs for new code.</p>
+</div>
+<p><strong>Included Packages</strong></p>
+<ul>
+<li><a href="https://github.com/tsparticles/tsparticles/tree/main/bundles/full" target="_blank" class="external">tsparticles (and all its dependencies)</a></li>
+<li><a href="https://github.com/tsparticles/tsparticles/tree/main/engine" target="_blank" class="external">@tsparticles/engine</a></li>
+<li><a href="https://github.com/tsparticles/tsparticles/tree/main/plugins/responsive" target="_blank" class="external">@tsparticles/plugin-responsive</a></li>
+</ul>
+<h2 id="dependency-graph" class="tsd-anchor-link">Dependency Graph<a href="#dependency-graph" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<pre><code class="mermaid">flowchart TD
+
+subgraph b [Bundle]
+  bp[tsparticles/pjs]
+  bf[tsparticles]
+end
+
+subgraph c [Core]
+  ce[tsparticles/engine]
+end
+
+subgraph p [Plugins]
+  pr[tsparticles/plugin-responsive]
+end
+
+bp --> bf
+bp --> ce
+bp --> p
+</code><button type="button">Copy</button></pre>
+
+<h2 id="exposed-api" class="tsd-anchor-link">Exposed API<a href="#exposed-api" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>The package exports only one API from its main entrypoint:</p>
+<pre><code class="ts"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">initPjs</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@tsparticles/pjs&quot;</span><span class="hl-1">;</span>
+</code><button type="button">Copy</button></pre>
+
+<p>Signature:</p>
+<pre><code class="ts"><span class="hl-4">initPjs</span><span class="hl-1">(</span><span class="hl-2">engine</span><span class="hl-1">: </span><span class="hl-2">Engine</span><span class="hl-1">): </span><span class="hl-15">Promise</span><span class="hl-1">&lt;</span><span class="hl-5">void</span><span class="hl-1">&gt;</span>
+</code><button type="button">Copy</button></pre>
+
+<p><code>initPjs</code> does not return compatibility objects directly.
+It initializes compatibility and populates global objects.</p>
+<h2 id="installation" class="tsd-anchor-link">Installation<a href="#installation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<pre><code class="bash"><span class="hl-4">pnpm</span><span class="hl-1"> </span><span class="hl-3">add</span><span class="hl-1"> </span><span class="hl-3">@tsparticles/pjs</span><span class="hl-1"> </span><span class="hl-3">@tsparticles/engine</span>
+</code><button type="button">Copy</button></pre>
+
+<h2 id="how-it-works" class="tsd-anchor-link">How it works<a href="#how-it-works" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>Calling <code>initPjs(engine)</code> performs these steps:</p>
+<ol>
+<li>Checks runtime version compatibility.</li>
+<li>Registers required plugins (<code>tsparticles</code> full bundle + responsive plugin).</li>
+<li>Creates and exposes legacy globals:
+<ul>
+<li><code>globalThis.particlesJS</code></li>
+<li><code>globalThis.pJSDom</code></li>
+<li><code>globalThis.Particles</code></li>
+</ul>
+</li>
+</ol>
+<p>After initialization, you can use particles.js-compatible APIs.</p>
+<h2 id="how-to-use-it" class="tsd-anchor-link">How to use it<a href="#how-to-use-it" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h3 id="esm-typescript" class="tsd-anchor-link">ESM / TypeScript<a href="#esm-typescript" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code class="ts"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">tsParticles</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@tsparticles/engine&quot;</span><span class="hl-1">;</span><br/><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">initPjs</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@tsparticles/pjs&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">await</span><span class="hl-1"> </span><span class="hl-4">initPjs</span><span class="hl-1">(</span><span class="hl-2">tsParticles</span><span class="hl-1">);</span><br/><br/><span class="hl-0">await</span><span class="hl-1"> </span><span class="hl-2">globalThis</span><span class="hl-1">.</span><span class="hl-4">particlesJS</span><span class="hl-1">(</span><span class="hl-3">&quot;tsparticles&quot;</span><span class="hl-1">, {</span><span class="hl-8">/* particles.js-style options */</span><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="cdn-vanilla-js--jquery" class="tsd-anchor-link">CDN / Vanilla JS / jQuery<a href="#cdn-vanilla-js--jquery" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p>The CDN/Vanilla JS version has two files:</p>
+<ul>
+<li>One is a bundle file with all the scripts included in a single file</li>
+<li>One includes only <code>initPjs</code>, where dependencies must be loaded manually</li>
+</ul>
+<p>After loading the bundle, call <code>initPjs(tsParticles)</code> once, then use legacy globals.</p>
+<h4 id="bundle" class="tsd-anchor-link">Bundle<a href="#bundle" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p>Use the bundle when you want a single script with all required dependencies.</p>
+<h4 id="not-bundle" class="tsd-anchor-link">Not Bundle<a href="#not-bundle" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p>This installation requires more work since all dependencies must be included in the page. Some lines above are all
+specified in the <strong>Included Packages</strong> section.</p>
+<h3 id="usage" class="tsd-anchor-link">Usage<a href="#usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p>Using <code>particlesJS</code> compatibility:</p>
+<pre><code class="javascript"><span class="hl-1">(</span><span class="hl-5">async</span><span class="hl-1"> </span><span class="hl-2">engine</span><span class="hl-1"> </span><span class="hl-5">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-0">await</span><span class="hl-1"> </span><span class="hl-4">initPjs</span><span class="hl-1">(</span><span class="hl-2">engine</span><span class="hl-1">);</span><br/><br/><span class="hl-1">  </span><span class="hl-4">particlesJS</span><span class="hl-1">(</span><span class="hl-3">&quot;tsparticles&quot;</span><span class="hl-1">, {</span><span class="hl-8">/* options */</span><span class="hl-1">});</span><br/><span class="hl-1">})(</span><span class="hl-2">tsParticles</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+<p>Using <code>Particles</code> compatibility:</p>
+<pre><code class="javascript"><span class="hl-1">(</span><span class="hl-5">async</span><span class="hl-1"> </span><span class="hl-2">engine</span><span class="hl-1"> </span><span class="hl-5">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-0">await</span><span class="hl-1"> </span><span class="hl-4">initPjs</span><span class="hl-1">(</span><span class="hl-2">engine</span><span class="hl-1">);</span><br/><br/><span class="hl-1">  </span><span class="hl-2">Particles</span><span class="hl-1">.</span><span class="hl-4">init</span><span class="hl-1">({</span><span class="hl-8">/* options */</span><span class="hl-1">});</span><br/><span class="hl-1">})(</span><span class="hl-2">tsParticles</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+<h2 id="compatibility-globals-after-" class="tsd-anchor-link">Compatibility globals (after <code>initPjs</code>)<a href="#compatibility-globals-after-" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<table>
+<thead>
+<tr>
+<th>Global</th>
+<th>Description</th>
+<th>Modern equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>particlesJS</code></td>
+<td>particles.js-compatible loader function (plus <code>.load</code> and <code>.setOnClickHandler</code>)</td>
+<td><code>tsParticles.load</code>, <code>tsParticles.loadJSON</code>, <code>tsParticles.setOnClickHandler</code></td>
+</tr>
+<tr>
+<td><code>pJSDom</code></td>
+<td>array of loaded containers</td>
+<td><code>tsParticles.dom</code></td>
+</tr>
+<tr>
+<td><code>Particles</code></td>
+<td><code>marcbruederlin/particles.js</code> style wrapper (<code>init</code>, <code>pauseAnimation</code>, <code>resumeAnimation</code>, <code>destroy</code>)</td>
+<td>direct <code>tsParticles.load</code> + container methods</td>
+</tr>
+</tbody>
+</table>
+<p>If you need explicit references in TS/JS code:</p>
+<pre><code class="ts"><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-7">particlesJSCompat</span><span class="hl-1"> = </span><span class="hl-2">globalThis</span><span class="hl-1">.</span><span class="hl-2">particlesJS</span><span class="hl-1">;</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-7">pJSDomCompat</span><span class="hl-1"> = </span><span class="hl-2">globalThis</span><span class="hl-1">.</span><span class="hl-2">pJSDom</span><span class="hl-1">;</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-7">particlesCompat</span><span class="hl-1"> = </span><span class="hl-2">globalThis</span><span class="hl-1">.</span><span class="hl-2">Particles</span><span class="hl-1">;</span>
+</code><button type="button">Copy</button></pre>
+
+<h4 id="particles-options-only-for-particlesinit" class="tsd-anchor-link">Particles Options (only for Particles.init)<a href="#particles-options-only-for-particlesinit" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>selector</code></td>
+<td>string</td>
+<td>-</td>
+<td><em>Required:</em> The CSS selector of your canvas element</td>
+</tr>
+<tr>
+<td><code>maxParticles</code></td>
+<td>integer</td>
+<td><code>100</code></td>
+<td><em>Optional:</em> Maximum amount of particles</td>
+</tr>
+<tr>
+<td><code>sizeVariations</code></td>
+<td>integer</td>
+<td><code>3</code></td>
+<td><em>Optional:</em> Amount of size variations</td>
+</tr>
+<tr>
+<td><code>speed</code></td>
+<td>integer</td>
+<td><code>0.5</code></td>
+<td><em>Optional:</em> Movement speed of the particles</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>string or string[]</td>
+<td><code>#000000</code></td>
+<td><em>Optional:</em> Color(s) of the particles and connecting lines</td>
+</tr>
+<tr>
+<td><code>minDistance</code></td>
+<td>integer</td>
+<td><code>120</code></td>
+<td><em>Optional:</em> Distance in <code>px</code> for connecting lines</td>
+</tr>
+<tr>
+<td><code>connectParticles</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td><em>Optional:</em> <code>true</code>/<code>false</code> if connecting lines should be drawn or not</td>
+</tr>
+<tr>
+<td><code>responsive</code></td>
+<td>array</td>
+<td><code>null</code></td>
+<td><em>Optional:</em> Array of objects containing breakpoints and options</td>
+</tr>
+</tbody>
+</table>
+<h5 id="responsive-options" class="tsd-anchor-link">Responsive Options<a href="#responsive-options" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h5>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>breakpoint</code></td>
+<td>integer</td>
+<td>-</td>
+<td><em>Required:</em> Breakpoint in <code>px</code></td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>object</td>
+<td>-</td>
+<td><em>Required:</em> Options object, that overrides default values</td>
+</tr>
+</tbody>
+</table>
+<h4 id="methods" class="tsd-anchor-link">Methods<a href="#methods" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pauseAnimation</code></td>
+<td>Pauses/stops the particle animation</td>
+</tr>
+<tr>
+<td><code>resumeAnimation</code></td>
+<td>Continues the particle animation</td>
+</tr>
+<tr>
+<td><code>destroy</code></td>
+<td>Destroys the plugin</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deprecation-status" class="tsd-anchor-link">Deprecation status<a href="#deprecation-status" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li><code>particlesJS</code>, <code>pJSDom</code>, and <code>Particles</code> are deprecated compatibility APIs.</li>
+<li>This package is obsolete and maintained for legacy integration only.</li>
+<li>It may be removed in v5, so migration to direct <code>tsParticles</code> APIs is strongly recommended.</li>
+</ul>
+<p>See migration guide: <a href="../documents/tsParticles_Engine.pjsMigration.html"><code>markdown/pjsMigration.md</code></a></p>
+<h2 id="common-pitfalls" class="tsd-anchor-link">Common pitfalls<a href="#common-pitfalls" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li>Calling legacy globals before awaiting <code>initPjs(...)</code></li>
+<li>Expecting <code>initPjs</code> to return <code>particlesJS</code>/<code>Particles</code> directly</li>
+<li>Mixing new <code>tsParticles</code> and legacy particles.js options in one config object</li>
+</ul>
+<h2 id="related-docs" class="tsd-anchor-link">Related docs<a href="#related-docs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li>All packages catalog: <a href="https://github.com/tsparticles/tsparticles" target="_blank" class="external">https://github.com/tsparticles/tsparticles</a></li>
+<li>Main docs: <a href="https://particles.js.org/docs/">https://particles.js.org/docs/</a></li>
+</ul>
+</section><details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Modules"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h2>Modules</h2></summary><dl class="tsd-member-summaries"><dt class="tsd-member-summary" id="browser"><span class="tsd-member-summary-name"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><a href="tsParticles_Particles.js_integration.browser.html">browser</a><a href="#browser" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></span></dt><dd class="tsd-member-summary"></dd><dt class="tsd-member-summary" id="bundle-1"><span class="tsd-member-summary-name"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><a href="tsParticles_Particles.js_integration.bundle.html">bundle</a><a href="#bundle-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></span></dt><dd class="tsd-member-summary"></dd><dt class="tsd-member-summary" id="index"><span class="tsd-member-summary-name"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><a href="tsParticles_Particles.js_integration.index.html">index</a><a href="#index" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></span></dt><dd class="tsd-member-summary"></dd><dt class="tsd-member-summary" id="indexlazy"><span class="tsd-member-summary-name"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><a href="tsParticles_Particles.js_integration.index.lazy.html">index.lazy</a><a href="#indexlazy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></span></dt><dd class="tsd-member-summary"></dd><dt class="tsd-member-summary" id="marcbruederlinparticles"><span class="tsd-member-summary-name"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><a href="tsParticles_Particles.js_integration.marcbruederlin_Particles.html">marcbruederlin/Particles</a><a href="#marcbruederlinparticles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></span></dt><dd class="tsd-member-summary"></dd><dt class="tsd-member-summary" id="vincentgarreauiparticlesjs"><span class="tsd-member-summary-name"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><a href="tsParticles_Particles.js_integration.VincentGarreau_IParticlesJS.html">VincentGarreau/IParticlesJS</a><a href="#vincentgarreauiparticlesjs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></span></dt><dd class="tsd-member-summary"></dd><dt class="tsd-member-summary" id="vincentgarreauparticles"><span class="tsd-member-summary-name"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><a href="tsParticles_Particles.js_integration.VincentGarreau_particles.html">VincentGarreau/particles</a><a href="#vincentgarreauparticles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></span></dt><dd class="tsd-member-summary"></dd></dl></details></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#tsparticles-particlesjs-compatibility-package"><span>ts<wbr/>Particles <wbr/>Particles.js <wbr/>Compatibility <wbr/>Package</span></a><ul><li><a href="#dependency-graph"><span>Dependency <wbr/>Graph</span></a></li><li><a href="#exposed-api"><span>Exposed <wbr/>API</span></a></li><li><a href="#installation"><span>Installation</span></a></li><li><a href="#how-it-works"><span>How it works</span></a></li><li><a href="#how-to-use-it"><span>How to use it</span></a></li><li><ul><li><a href="#esm-typescript"><span>ESM / <wbr/>Type<wbr/>Script</span></a></li><li><a href="#cdn-vanilla-js--jquery"><span>CDN / <wbr/>Vanilla <wbr/>JS / j<wbr/>Query</span></a></li><li><ul><li><a href="#bundle"><span>Bundle</span></a></li><li><a href="#not-bundle"><span>Not <wbr/>Bundle</span></a></li></ul></li><li><a href="#usage"><span>Usage</span></a></li></ul></li><li><a href="#compatibility-globals-after-"><span>Compatibility globals (after )</span></a></li><li><ul><li><ul><li><a href="#particles-options-only-for-particlesinit"><span>Particles <wbr/>Options (only for <wbr/>Particles.init)</span></a></li><li><ul><li><a href="#responsive-options"><span>Responsive <wbr/>Options</span></a></li></ul></li><li><a href="#methods"><span>Methods</span></a></li></ul></li></ul></li><li><a href="#deprecation-status"><span>Deprecation status</span></a></li><li><a href="#common-pitfalls"><span>Common pitfalls</span></a></li><li><a href="#related-docs"><span>Related docs</span></a></li></ul><details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Modules"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Modules</summary><div><a href="#browser"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><span>browser</span></a><a href="#bundle-1"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><span>bundle</span></a><a href="#index"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><span>index</span></a><a href="#indexlazy"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><span>index.lazy</span></a><a href="#marcbruederlinparticles"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><span>marcbruederlin/<wbr/>Particles</span></a><a href="#vincentgarreauiparticlesjs"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><span>Vincent<wbr/>Garreau/<wbr/>I<wbr/>Particles<wbr/>JS</span></a><a href="#vincentgarreauparticles"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Module"><use href="../assets/icons.svg#icon-2"></use></svg><span>Vincent<wbr/>Garreau/particles</span></a></div></details></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../modules.html">tsParticles - v4.3.1</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-ca-pub-6401284988946422" crossOrigin="anonymous"></script><script html="(function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src=&quot;https://www.clarity.ms/tag/&quot;+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, &quot;clarity&quot;, &quot;script&quot;, &quot;8q4bxin4tm&quot;);" type="text/javascript"></script></body></html>

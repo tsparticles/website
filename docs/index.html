@@ -1,0 +1,872 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta name="keywords" content="html, css, javascript, typescript, particles, js, ts, jsx, tsx, canvas, confetti, fireworks, animations, react, vue, angular, svelte, libraries, how, to, create, add"/><link rel="canonical" href="https://particles.js.org/docs/"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>tsParticles - v4.3.1</title><meta name="description" content="Documentation for tsParticles"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script><script async src="assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">tsParticles - v4.3.1</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>tsParticles - v4.3.1</h1></div><div class="tsd-panel tsd-typography"><p><a href="https://particles.js.org" target="_blank" class="external"><img src="https://particles.js.org/images/banner3.png" alt="banner"></a></p>
+<h1 id="tsparticles-typescript-particles" class="tsd-anchor-link">tsParticles - TypeScript Particles<a href="#tsparticles-typescript-particles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p><strong>A lightweight TypeScript library for creating particles. Dependency free (*), browser ready and compatible with
+React.js, Vue.js (2.x and 3.x), Angular, Svelte, jQuery, Preact, Inferno, Riot.js, Solid.js, and Web Components</strong></p>
+<p><a href="https://github.com/sponsors/matteobruni" target="_blank" class="external"><img src="https://img.shields.io/github/sponsors/matteobruni?style=for-the-badge" alt="GitHub Sponsors"></a>
+<a href="https://www.jsdelivr.com/package/npm/tsparticles" target="_blank" class="external"><img src="https://img.shields.io/jsdelivr/npm/hm/tsparticles?style=for-the-badge" alt="jsDelivr hits (npm)"></a>
+<a href="https://cdnjs.com/libraries/tsparticles" target="_blank" class="external"><img src="https://img.shields.io/cdnjs/v/@tsparticles/engine?style=for-the-badge" alt="Cdnjs"></a>
+<a href="https://www.npmjs.com/package/tsparticles" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/engine?style=for-the-badge" alt="npm"></a>
+<a href="https://www.npmjs.com/package/tsparticles" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/tsparticles?style=for-the-badge" alt="npm"></a>
+<a href="https://www.codefactor.io/repository/github/tsparticles/tsparticles" target="_blank" class="external"><img src="https://www.codefactor.io/repository/github/tsparticles/tsparticles/badge" alt="CodeFactor"></a>
+<a href="https://www.codacy.com/manual/ar3s/tsparticles?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tsparticles/tsparticles&amp;utm_campaign=Badge_Grade" target="_blank" class="external"><img src="https://api.codacy.com/project/badge/Grade/b983aaf3461a4c48b1e2eecce1ff1d74" alt="Codacy Badge"></a>
+<a href="https://openbase.com/js/tsparticles?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rating-badge&amp;utm_term=js/tsparticles" target="_blank" class="external"><img src="https://badges.openbase.com/js/rating/tsparticles.svg?style=openbase&amp;token=A9jHQ1nkb6fnCndKM7O2w4hx3OD8PVCuqHtSpw8mMOg=" alt="Rate this package"></a>
+<a href="https://gitpod.io/#https://github.com/tsparticles/tsparticles" target="_blank" class="external"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod" alt="Gitpod Ready-to-Code"></a>
+<a href="https://repl.it/github/tsparticles/tsparticles" target="_blank" class="external"><img src="https://repl.it/badge/github/tsparticles/tsparticles" alt="Run on Repl.it"></a></p>
+<p><a href="https://discord.gg/hACwv45Hme" target="_blank" class="external"><img src="https://img.shields.io/discord/872061157379301416?label=discord&amp;logo=discord&amp;logoColor=white&amp;style=for-the-badge" alt="Discord"></a>
+<a href="https://t.me/tsparticles" target="_blank" class="external"><img src="https://particles.js.org/images/telegram.png" alt="Telegram"></a>
+<a href="https://www.reddit.com/r/tsParticles/" target="_blank" class="external"><img src="https://img.shields.io/reddit/subreddit-subscribers/tsParticles?style=for-the-badge" alt="Reddit"></a></p>
+<p><a href="https://www.producthunt.com/posts/tsparticles?utm_source=badge-featured&amp;utm_medium=badge&amp;utm_source=badge-tsparticles" target="_blank" class="external"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=186113&amp;theme=light" alt="tsParticles Product Hunt"></a>
+<a href="https://www.buymeacoffee.com/matteobruni" target="_blank" class="external"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20beer&amp;emoji=%F0%9F%8D%BA&amp;slug=matteobruni&amp;button_colour=5F7FFF&amp;font_colour=ffffff&amp;font_family=Arial&amp;outline_colour=000000&amp;coffee_colour=FFDD00" alt="Buy Me A Coffee"></a></p>
+<hr>
+<h2 id="table-of-contents" class="tsd-anchor-link">Table of Contents<a href="#table-of-contents" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li><a href="#tsparticles---typescript-particles">tsParticles - TypeScript Particles</a>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#do-you-want-to-use-it-on-your-website">Do you want to use it on your website?</a></li>
+<li><a href="#start-here-in-2-minutes">Start here in 2 minutes</a></li>
+<li><a href="#library-installation"><strong><em>Library installation</em></strong></a>
+<ul>
+<li><a href="#hosting--cdn"><strong><em>Hosting / CDN</em></strong></a>
+<ul>
+<li><a href="#jsdelivr">jsDelivr</a></li>
+<li><a href="#cdnjs">cdnjs</a></li>
+<li><a href="#unpkg">unpkg</a></li>
+</ul>
+</li>
+<li><a href="#npm"><strong><em>npm</em></strong></a></li>
+<li><a href="#yarn"><strong><em>yarn</em></strong></a></li>
+<li><a href="#pnpm"><strong><em>pnpm</em></strong></a>
+<ul>
+<li><a href="#import-and-require">Import and require</a></li>
+</ul>
+</li>
+<li><a href="#usage"><strong><em>Usage</em></strong></a></li>
+</ul>
+</li>
+<li><a href="#official-components-for-some-of-the-most-used-frameworks">Official components for some of the most used frameworks</a>
+<ul>
+<li><a href="#angular">Angular</a>
+<ul>
+<li><a href="#tsparticlesangular"><code>@tsparticles/angular</code></a></li>
+</ul>
+</li>
+<li><a href="#astro">Astro</a>
+<ul>
+<li><a href="#tsparticlesastro"><code>@tsparticles/astro</code></a></li>
+</ul>
+</li>
+<li><a href="#emberjs">Ember.js</a>
+<ul>
+<li><a href="#tsparticlesember"><code>@tsparticles/ember</code></a></li>
+</ul>
+</li>
+<li><a href="#inferno">Inferno</a>
+<ul>
+<li><a href="#tsparticlesinferno"><code>@tsparticles/inferno</code></a></li>
+</ul>
+</li>
+<li><a href="#jquery">jQuery</a>
+<ul>
+<li><a href="#tsparticlesjquery"><code>@tsparticles/jquery</code></a></li>
+</ul>
+</li>
+<li><a href="#preact">Preact</a>
+<ul>
+<li><a href="#tsparticlespreact"><code>@tsparticles/preact</code></a></li>
+</ul>
+</li>
+<li><a href="#qwik">Qwik</a>
+<ul>
+<li><a href="#tsparticlesqwik"><code>@tsparticles/qwik</code></a></li>
+</ul>
+</li>
+<li><a href="#reactjs">ReactJS</a>
+<ul>
+<li><a href="#tsparticlesnextjs"><code>@tsparticles/nextjs</code></a></li>
+<li><a href="#tsparticlesreact"><code>@tsparticles/react</code></a></li>
+</ul>
+</li>
+<li><a href="#riotjs">RiotJS</a>
+<ul>
+<li><a href="#tsparticlesriot"><code>@tsparticles/riot</code></a></li>
+</ul>
+</li>
+<li><a href="#solidjs">SolidJS</a>
+<ul>
+<li><a href="#tsparticlessolid"><code>@tsparticles/solid</code></a></li>
+</ul>
+</li>
+<li><a href="#svelte">Svelte</a>
+<ul>
+<li><a href="#tsparticlessvelte"><code>@tsparticles/svelte</code></a></li>
+</ul>
+</li>
+<li><a href="#vuejs-2x">VueJS 2.x</a>
+<ul>
+<li><a href="#tsparticlesnuxt2"><code>@tsparticles/nuxt2</code></a></li>
+<li><a href="#tsparticlesvue2"><code>@tsparticles/vue2</code></a></li>
+</ul>
+</li>
+<li><a href="#vuejs-3x">VueJS 3.x</a>
+<ul>
+<li><a href="#tsparticlesnuxt3"><code>@tsparticles/nuxt3</code></a></li>
+<li><a href="#tsparticlesnuxt4"><code>@tsparticles/nuxt4</code></a></li>
+<li><a href="#tsparticlesvue3"><code>@tsparticles/vue3</code></a></li>
+</ul>
+</li>
+<li><a href="#web-components">Web Components</a>
+<ul>
+<li><a href="#tsparticleswebcomponents"><code>@tsparticles/webcomponents</code></a></li>
+</ul>
+</li>
+<li><a href="#wordpress">WordPress</a>
+<ul>
+<li><a href="#tsparticleswordpress"><code>@tsparticles/wordpress</code></a></li>
+</ul>
+</li>
+<li><a href="#elementor">Elementor</a></li>
+</ul>
+</li>
+<li><a href="#presets">Presets</a>
+<ul>
+<li><a href="#ambient">Ambient</a></li>
+<li><a href="#big-circles">Big Circles</a></li>
+<li><a href="#bubbles">Bubbles</a></li>
+<li><a href="#confetti">Confetti</a></li>
+<li><a href="#confetti-cannon">Confetti Cannon</a></li>
+<li><a href="#confetti-explosions">Confetti Explosions</a></li>
+<li><a href="#confetti-falling">Confetti Falling</a></li>
+<li><a href="#confetti-parade">Confetti Parade</a></li>
+<li><a href="#party">Party</a></li>
+<li><a href="#fire">Fire</a></li>
+<li><a href="#firefly">Firefly</a></li>
+<li><a href="#fireworks">Fireworks</a></li>
+<li><a href="#fountain">Fountain</a></li>
+<li><a href="#hyperspace">Hyperspace</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#sea-anemone">Sea Anemone</a></li>
+<li><a href="#snow">Snow</a></li>
+<li><a href="#squares">Squares</a></li>
+<li><a href="#stars">Stars</a></li>
+<li><a href="#triangles">Triangles</a></li>
+</ul>
+</li>
+<li><a href="#templates-and-resources">Templates and Resources</a></li>
+<li><a href="#demo--generator"><strong><em>Demo / Generator</em></strong></a></li>
+<li><a href="#video-tutorials"><strong><em>Video Tutorials</em></strong></a>
+<ul>
+<li><a href="#characters-as-particles">Characters as particles</a></li>
+<li><a href="#polygon-mask">Polygon mask</a></li>
+<li><a href="#animated-stars">Animated stars</a></li>
+<li><a href="#nyan-cat-flying-on-scrolling-stars">Nyan cat flying on scrolling stars</a></li>
+<li><a href="#snow-particles">Snow particles</a></li>
+<li><a href="#background-mask-particles">Background Mask particles</a></li>
+</ul>
+</li>
+<li><a href="#options"><strong><em>Options</em></strong></a></li>
+<li><a href="#want-to-see-it-in-action-and-try-it">Want to see it in action and try it?</a></li>
+<li><a href="#migrating-from-particlesjs">Migrating from Particles.js</a></li>
+<li><a href="#pluginscustomizations">Plugins/Customizations</a></li>
+<li><a href="#dependency-graph">Dependency Graph</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="do-you-want-to-use-it-on-your-website" class="tsd-anchor-link">Do you want to use it on your website?<a href="#do-you-want-to-use-it-on-your-website" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><em>Documentation and Development references <a href="https://particles.js.org/docs/">here</a> 📖</em></p>
+<p><strong>This library is available on two of the most popular CDNs and it's easy and ready to use, if you were using
+particles.js
+it's even easier</strong>.</p>
+<p>You'll find the
+instructions <a href="https://github.com/tsparticles/tsparticles/blob/main/README.md#library-installation" target="_blank" class="external">below</a>, with all the
+links you need, and <em>don't be scared by <strong>TypeScript</strong>, it's just the source language</em>.</p>
+<p><strong>The output files are just JavaScript</strong>. 🤩</p>
+<p>CDNs and <code>npm</code> have all the sources you need in <strong>Javascript</strong>, a bundle browser ready (tsparticles.engine.min.js), and
+all
+files splitted for <code>import</code> syntax.</p>
+<p><strong>If you are interested</strong> there are some <em>simple instructions</em>
+just <a href="https://github.com/tsparticles/tsparticles/blob/main/README.md#library-installation" target="_blank" class="external">below</a> to guide you to
+migrate from the old particles.js library.</p>
+<h2 id="start-here-in-2-minutes" class="tsd-anchor-link">Start here in 2 minutes<a href="#start-here-in-2-minutes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>If you are new to tsParticles, this path is usually the fastest:</p>
+<ol>
+<li>Install <code>@tsparticles/engine</code> and <code>@tsparticles/slim</code></li>
+<li>Load the slim bundle once</li>
+<li>Start with a small config and iterate</li>
+</ol>
+<pre><code class="javascript"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">tsParticles</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@tsparticles/engine&quot;</span><span class="hl-1">;</span><br/><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">loadSlim</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@tsparticles/slim&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">await</span><span class="hl-1"> </span><span class="hl-4">loadSlim</span><span class="hl-1">(</span><span class="hl-2">tsParticles</span><span class="hl-1">);</span><br/><br/><span class="hl-0">await</span><span class="hl-1"> </span><span class="hl-2">tsParticles</span><span class="hl-1">.</span><span class="hl-4">load</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-2">id:</span><span class="hl-1"> </span><span class="hl-3">&quot;tsparticles&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">options:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">background:</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-2">color:</span><span class="hl-1"> </span><span class="hl-3">&quot;#0d1117&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">    </span><span class="hl-2">particles:</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-2">move:</span><span class="hl-1"> {</span><br/><span class="hl-1">        </span><span class="hl-2">enable:</span><span class="hl-1"> </span><span class="hl-5">true</span><span class="hl-1">,</span><br/><span class="hl-1">      },</span><br/><span class="hl-1">      </span><span class="hl-2">number:</span><span class="hl-1"> {</span><br/><span class="hl-1">        </span><span class="hl-2">value:</span><span class="hl-1"> </span><span class="hl-6">60</span><span class="hl-1">,</span><br/><span class="hl-1">      },</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+<p>Useful docs for the next step:</p>
+<ul>
+<li>Docs home: <a href="https://particles.js.org/docs/">https://particles.js.org/docs/</a></li>
+<li>Options guide: <a href="https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md" target="_blank" class="external">https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md</a></li>
+<li>Migration guide: <a href="https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md" target="_blank" class="external">https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md</a></li>
+<li>Presets catalog: <a href="https://github.com/tsparticles/presets" target="_blank" class="external">https://github.com/tsparticles/presets</a></li>
+</ul>
+<h2 id="quick-checklist" class="tsd-anchor-link">Quick checklist<a href="#quick-checklist" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li>Install <code>@tsparticles/engine</code> and one bundle (<code>@tsparticles/slim</code> is the common default)</li>
+<li>Load the bundle before calling <code>tsParticles.load(...)</code></li>
+<li>Start from a small config, then extend incrementally</li>
+</ul>
+<h2 id="choose-your-quick-start-path" class="tsd-anchor-link">Choose your quick-start path<a href="#choose-your-quick-start-path" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li><strong>I want fewer dependencies</strong>: use <code>@tsparticles/engine</code> + only needed feature packages</li>
+<li><strong>I want the easiest default</strong>: use <code>@tsparticles/slim</code></li>
+<li><strong>I need everything enabled</strong>: use <code>@tsparticles/all</code></li>
+</ul>
+<h2 id="common-pitfalls" class="tsd-anchor-link">Common pitfalls<a href="#common-pitfalls" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li>Loading options that require plugins before loading those plugin packages</li>
+<li>Starting with very high particle counts before checking FPS</li>
+<li>Mixing legacy snake_case keys with modern camelCase options</li>
+</ul>
+<h2 id="related-docs" class="tsd-anchor-link">Related docs<a href="#related-docs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li>Main docs: <a href="https://particles.js.org/docs/">https://particles.js.org/docs/</a></li>
+<li>Root options guide: <a href="https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md" target="_blank" class="external">https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md</a></li>
+<li>Migration guide: <a href="https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md" target="_blank" class="external">https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md</a></li>
+</ul>
+<h2 id="library-installation" class="tsd-anchor-link"><strong><em>Library installation</em></strong><a href="#library-installation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h3 id="hosting-cdn" class="tsd-anchor-link"><strong><em>Hosting / CDN</em></strong><a href="#hosting-cdn" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><strong><em>Please use these hosts or your own to load tsParticles on your projects</em></strong></p>
+<h4 id="jsdelivr" class="tsd-anchor-link">jsDelivr<a href="#jsdelivr" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/confetti" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/confetti/badge" alt="jsDelivr"></a>
+<a href="https://www.jsdelivr.com/package/npm/@tsparticles/particles" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/particles/badge" alt="jsDelivr"></a>
+<a href="https://www.jsdelivr.com/package/npm/@tsparticles/engine" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/engine/badge" alt="jsDelivr"></a>
+<a href="https://www.jsdelivr.com/package/npm/@tsparticles/fireworks" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/fireworks/badge" alt="jsDelivr"></a>
+<a href="https://www.jsdelivr.com/package/npm/@tsparticles/basic" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/basic/badge" alt="jsDelivr"></a>
+<a href="https://www.jsdelivr.com/package/npm/@tsparticles/slim" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/slim/badge" alt="jsDelivr"></a>
+<a href="https://www.jsdelivr.com/package/npm/tsparticles" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/tsparticles/badge" alt="jsDelivr"></a>
+<a href="https://www.jsdelivr.com/package/npm/@tsparticles/all" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/all/badge" alt="jsDelivr"></a></p>
+<h4 id="cdnjs" class="tsd-anchor-link">cdnjs<a href="#cdnjs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://cdnjs.com/libraries/tsparticles" target="_blank" class="external"><img src="https://img.shields.io/cdnjs/v/tsparticles" alt="Cdnjs"></a></p>
+<h4 id="unpkg" class="tsd-anchor-link">unpkg<a href="#unpkg" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://unpkg.com/@tsparticles/confetti/" target="_blank" class="external">https://unpkg.com/@tsparticles/confetti/</a> <a href="https://unpkg.com/@tsparticles/particles/" target="_blank" class="external">https://unpkg.com/@tsparticles/particles/</a> <a href="https://unpkg.com/@tsparticles/engine/" target="_blank" class="external">https://unpkg.com/@tsparticles/engine/</a> <a href="https://unpkg.com/@tsparticles/fireworks/" target="_blank" class="external">https://unpkg.com/@tsparticles/fireworks/</a> <a href="https://unpkg.com/@tsparticles/basic/" target="_blank" class="external">https://unpkg.com/@tsparticles/basic/</a> <a href="https://unpkg.com/@tsparticles/slim/" target="_blank" class="external">https://unpkg.com/@tsparticles/slim/</a> <a href="https://unpkg.com/tsparticles/" target="_blank" class="external">https://unpkg.com/tsparticles/</a> <a href="https://unpkg.com/@tsparticles/all/" target="_blank" class="external">https://unpkg.com/@tsparticles/all/</a></p>
+<hr>
+<h3 id="npm" class="tsd-anchor-link"><strong><em>npm</em></strong><a href="#npm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><em>tsParticles Confetti</em></p>
+<p><a href="https://www.npmjs.com/package/@tsparticles/confetti" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/confetti?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/confetti" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/confetti?style=for-the-badge" alt="npmjs"></a></p>
+<p><em>tsParticles Particles</em></p>
+<p><a href="https://www.npmjs.com/package/@tsparticles/particles" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/particles?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/particles" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/particles?style=for-the-badge" alt="npmjs"></a></p>
+<p><em>tsParticles Engine</em></p>
+<p><a href="https://www.npmjs.com/package/@tsparticles/engine" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/engine?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/engine" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/engine?style=for-the-badge" alt="npmjs"></a></p>
+<p><em>tsParticles Fireworks</em></p>
+<p><a href="https://www.npmjs.com/package/@tsparticles/fireworks" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/fireworks?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/fireworks" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/fireworks?style=for-the-badge" alt="npmjs"></a></p>
+<p><em>tsParticles Basic</em></p>
+<p><a href="https://www.npmjs.com/package/@tsparticles/basic" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/basic?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/basic" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/basic?style=for-the-badge" alt="npmjs"></a></p>
+<p><em>tsParticles Slim</em></p>
+<p><a href="https://www.npmjs.com/package/@tsparticles/slim" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/slim?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/slim" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/slim?style=for-the-badge" alt="npmjs"></a></p>
+<p><em>tsParticles</em></p>
+<p><a href="https://www.npmjs.com/package/tsparticles" target="_blank" class="external"><img src="https://img.shields.io/npm/v/tsparticles?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/tsparticles" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/tsparticles?style=for-the-badge" alt="npmjs"></a></p>
+<p><em>tsParticles All</em></p>
+<p><a href="https://www.npmjs.com/package/@tsparticles/all" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/all?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/all" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/all?style=for-the-badge" alt="npmjs"></a></p>
+<pre><code class="shell"><span class="hl-4">npm</span><span class="hl-1"> </span><span class="hl-3">install</span><span class="hl-1"> </span><span class="hl-3">@tsparticles/engine</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="yarn" class="tsd-anchor-link"><strong><em>yarn</em></strong><a href="#yarn" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code class="shell"><span class="hl-4">yarn</span><span class="hl-1"> </span><span class="hl-3">add</span><span class="hl-1"> </span><span class="hl-3">@tsparticles/engine</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="pnpm" class="tsd-anchor-link"><strong><em>pnpm</em></strong><a href="#pnpm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code class="shell"><span class="hl-4">pnpm</span><span class="hl-1"> </span><span class="hl-3">install</span><span class="hl-1"> </span><span class="hl-3">@tsparticles/engine</span>
+</code><button type="button">Copy</button></pre>
+
+<h4 id="import-and-require" class="tsd-anchor-link">Import and require<a href="#import-and-require" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<pre><code class="javascript"><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-7">tsParticles</span><span class="hl-1"> = </span><span class="hl-4">require</span><span class="hl-1">(</span><span class="hl-3">&quot;@tsparticles/engine&quot;</span><span class="hl-1">);</span><br/><br/><span class="hl-8">// or</span><br/><br/><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">tsParticles</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@tsparticles/engine&quot;</span><span class="hl-1">;</span>
+</code><button type="button">Copy</button></pre>
+
+<p>The imported <code>tsParticles</code> is the same instance you have when including the script in the page using the <code>&lt;script&gt;</code> tag.</p>
+<hr>
+<h3 id="usage" class="tsd-anchor-link"><strong><em>Usage</em></strong><a href="#usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p>Load tsParticles and configure the particles:</p>
+<p><a href="https://particles.js.org" target="_blank" class="external"><img src="https://media.giphy.com/media/ftHwBpp3b0qNyCXRuu/giphy.gif" alt="tsParticles demo"></a>
+<a href="https://confetti.js.org" target="_blank" class="external"><img src="https://media.giphy.com/media/ftHwBpp3b0qNyCXRuu/giphy.gif" alt="tsParticles Confetti demo"></a></p>
+<p><strong>index.html</strong></p>
+<pre><code class="html"><span class="hl-9">&lt;</span><span class="hl-10">div</span><span class="hl-1"> </span><span class="hl-11">id</span><span class="hl-1">=</span><span class="hl-12">&quot;tsparticles&quot;</span><span class="hl-9">&gt;&lt;/</span><span class="hl-10">div</span><span class="hl-9">&gt;</span><br/><br/><span class="hl-9">&lt;</span><span class="hl-10">script</span><span class="hl-13"> </span><span class="hl-11">src</span><span class="hl-13">=</span><span class="hl-12">&quot;tsparticles.engine.min.js&quot;</span><span class="hl-9">&gt;&lt;/</span><span class="hl-10">script</span><span class="hl-9">&gt;</span>
+</code><button type="button">Copy</button></pre>
+
+<p><strong>app.js</strong></p>
+<pre><code class="javascript"><span class="hl-8">// @path-json can be an object or an array, the first will be loaded directly, and the object from the array will be randomly selected</span><br/><span class="hl-8">/* tsParticles.load(@params); */</span><br/><br/><span class="hl-2">tsParticles</span><br/><span class="hl-1">  .</span><span class="hl-4">load</span><span class="hl-1">({</span><br/><span class="hl-1">    </span><span class="hl-2">id:</span><span class="hl-1"> </span><span class="hl-3">&quot;tsparticles&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">url:</span><span class="hl-1"> </span><span class="hl-3">&quot;presets/default.json&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  })</span><br/><span class="hl-1">  .</span><span class="hl-4">then</span><span class="hl-1">((</span><span class="hl-2">container</span><span class="hl-1">) </span><span class="hl-5">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">console</span><span class="hl-1">.</span><span class="hl-4">log</span><span class="hl-1">(</span><span class="hl-3">&quot;callback - tsparticles config loaded&quot;</span><span class="hl-1">);</span><br/><span class="hl-1">  })</span><br/><span class="hl-1">  .</span><span class="hl-4">catch</span><span class="hl-1">((</span><span class="hl-2">error</span><span class="hl-1">) </span><span class="hl-5">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">console</span><span class="hl-1">.</span><span class="hl-4">error</span><span class="hl-1">(</span><span class="hl-2">error</span><span class="hl-1">);</span><br/><span class="hl-1">  });</span><br/><br/><span class="hl-8">//or</span><br/><br/><span class="hl-2">tsParticles</span><span class="hl-1">.</span><span class="hl-4">load</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-2">id:</span><span class="hl-1"> </span><span class="hl-3">&quot;tsparticles&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">options:</span><span class="hl-1"> {</span><span class="hl-8">/* options here */</span><span class="hl-1">},</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-8">//or</span><br/><br/><span class="hl-2">tsParticles</span><span class="hl-1">.</span><span class="hl-4">load</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-2">id:</span><span class="hl-1"> </span><span class="hl-3">&quot;tsparticles&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">options:</span><span class="hl-1"> [{</span><span class="hl-8">/* options here */</span><span class="hl-1">}, {</span><span class="hl-8">/* other options here */</span><span class="hl-1">}],</span><br/><span class="hl-1">});</span><br/><span class="hl-8">//random object</span><br/><br/><span class="hl-2">tsParticles</span><span class="hl-1">.</span><span class="hl-4">load</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-2">id:</span><span class="hl-1"> </span><span class="hl-3">&quot;tsparticles&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">options:</span><span class="hl-1"> [{</span><span class="hl-8">/* options here */</span><span class="hl-1">}, {</span><span class="hl-8">/* other options here */</span><span class="hl-1">}],</span><br/><span class="hl-1">  </span><span class="hl-2">index:</span><span class="hl-1"> </span><span class="hl-6">1</span><span class="hl-1">,</span><br/><span class="hl-1">}); </span><span class="hl-8">//the second one</span><br/><span class="hl-8">// Important! If the index is not in range 0...&lt;array.length, the index will be ignored.</span><br/><br/><span class="hl-8">// after initialization this can be used.</span><br/><br/><span class="hl-8">/* tsParticles.setOnClickHandler(@callback); */</span><br/><br/><span class="hl-8">/* this will be fired from all particles loaded */</span><br/><br/><span class="hl-2">tsParticles</span><span class="hl-1">.</span><span class="hl-4">setOnClickHandler</span><span class="hl-1">((</span><span class="hl-2">event</span><span class="hl-1">, </span><span class="hl-2">particles</span><span class="hl-1">) </span><span class="hl-5">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-8">/* custom on click handler */</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-8">// now you can control the animations too, it&#39;s possible to pause and resume the animations</span><br/><span class="hl-8">// these methods don&#39;t change the config so you&#39;re safe with all your configurations</span><br/><span class="hl-8">// domItem(0) returns the first tsParticles instance loaded in the dom</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-7">particles</span><span class="hl-1"> = </span><span class="hl-2">tsParticles</span><span class="hl-1">.</span><span class="hl-4">item</span><span class="hl-1">(</span><span class="hl-6">0</span><span class="hl-1">);</span><br/><br/><span class="hl-8">// play will start the animations, if the move is not enabled it won&#39;t enable it, it just updates the frame</span><br/><span class="hl-2">particles</span><span class="hl-1">.</span><span class="hl-4">play</span><span class="hl-1">();</span><br/><br/><span class="hl-8">// pause will stop the animations</span><br/><span class="hl-2">particles</span><span class="hl-1">.</span><span class="hl-4">pause</span><span class="hl-1">();</span>
+</code><button type="button">Copy</button></pre>
+
+<hr>
+<h2 id="official-components-for-some-of-the-most-used-frameworks" class="tsd-anchor-link">Official components for some of the most used frameworks<a href="#official-components-for-some-of-the-most-used-frameworks" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h3 id="angular" class="tsd-anchor-link">Angular<a href="#angular" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_" class="tsd-anchor-link"><code>@tsparticles/angular</code><a href="#_" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/angular" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/angular?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/angular" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/angular?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/angular#readme" target="_blank" class="external">here</a></p>
+<h3 id="astro" class="tsd-anchor-link">Astro<a href="#astro" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-1" class="tsd-anchor-link"><code>@tsparticles/astro</code><a href="#_-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/astro" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/astro?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/astro" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/astro?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/astro#readme" target="_blank" class="external">here</a></p>
+<h3 id="emberjs" class="tsd-anchor-link">Ember.js<a href="#emberjs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-2" class="tsd-anchor-link"><code>@tsparticles/ember</code><a href="#_-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/ember" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/ember?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/ember" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/ember?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/ember#readme" target="_blank" class="external">here</a></p>
+<h3 id="inferno" class="tsd-anchor-link">Inferno<a href="#inferno" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-3" class="tsd-anchor-link"><code>@tsparticles/inferno</code><a href="#_-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/inferno" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/inferno?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/inferno" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/inferno?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/inferno#readme" target="_blank" class="external">here</a></p>
+<h3 id="jquery" class="tsd-anchor-link">jQuery<a href="#jquery" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-4" class="tsd-anchor-link"><code>@tsparticles/jquery</code><a href="#_-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/jquery" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/jquery?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/jquery" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/jquery?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/jquery#readme" target="_blank" class="external">here</a></p>
+<h3 id="preact" class="tsd-anchor-link">Preact<a href="#preact" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-5" class="tsd-anchor-link"><code>@tsparticles/preact</code><a href="#_-5" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/preact" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/preact?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/preact" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/preact?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/preact#readme" target="_blank" class="external">here</a></p>
+<h3 id="qwik" class="tsd-anchor-link">Qwik<a href="#qwik" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-6" class="tsd-anchor-link"><code>@tsparticles/qwik</code><a href="#_-6" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/qwik" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/qwik?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/qwik" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/qwik?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/qwik#readme" target="_blank" class="external">here</a></p>
+<h3 id="reactjs" class="tsd-anchor-link">ReactJS<a href="#reactjs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-7" class="tsd-anchor-link"><code>@tsparticles/nextjs</code><a href="#_-7" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/nextjs" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/nextjs?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/nextjs" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/nextjs?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/nextjs#readme" target="_blank" class="external">here</a></p>
+<h4 id="_-8" class="tsd-anchor-link"><code>@tsparticles/react</code><a href="#_-8" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/react" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/react?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/react" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/react?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/react#readme" target="_blank" class="external">here</a></p>
+<h3 id="riotjs" class="tsd-anchor-link">RiotJS<a href="#riotjs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-9" class="tsd-anchor-link"><code>@tsparticles/riot</code><a href="#_-9" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/riot" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/riot?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/riot" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/riot?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/riot#readme" target="_blank" class="external">here</a></p>
+<h3 id="solidjs" class="tsd-anchor-link">SolidJS<a href="#solidjs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-10" class="tsd-anchor-link"><code>@tsparticles/solid</code><a href="#_-10" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/solid" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/solid?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/solid" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/solid?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/solid#readme" target="_blank" class="external">here</a></p>
+<h3 id="svelte" class="tsd-anchor-link">Svelte<a href="#svelte" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-11" class="tsd-anchor-link"><code>@tsparticles/svelte</code><a href="#_-11" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/svelte" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/svelte?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/svelte" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/svelte?style=for-the-badge" alt="npm downloads"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/svelte#readme" target="_blank" class="external">here</a></p>
+<h3 id="vuejs-2x" class="tsd-anchor-link">VueJS 2.x<a href="#vuejs-2x" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-12" class="tsd-anchor-link"><code>@tsparticles/nuxt2</code><a href="#_-12" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/nuxt2" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/nuxt2?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/nuxt2" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/nuxt2?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/nuxt2#readme" target="_blank" class="external">here</a></p>
+<h4 id="_-13" class="tsd-anchor-link"><code>@tsparticles/vue2</code><a href="#_-13" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/vue2" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/vue2?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/vue2" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/vue2?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/vue2#readme" target="_blank" class="external">here</a></p>
+<h3 id="vuejs-3x" class="tsd-anchor-link">VueJS 3.x<a href="#vuejs-3x" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-14" class="tsd-anchor-link"><code>@tsparticles/nuxt3</code><a href="#_-14" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/nuxt3" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/nuxt3?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/nuxt3" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/nuxt3?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/nuxt3#readme" target="_blank" class="external">here</a></p>
+<h4 id="_-15" class="tsd-anchor-link"><code>@tsparticles/nuxt4</code><a href="#_-15" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/nuxt4" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/nuxt4?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/nuxt4" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/nuxt4?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/nuxt4#readme" target="_blank" class="external">here</a></p>
+<h4 id="_-16" class="tsd-anchor-link"><code>@tsparticles/vue3</code><a href="#_-16" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/vue3" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/vue3?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/vue3" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/vue3?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/vue3#readme" target="_blank" class="external">here</a></p>
+<h3 id="web-components" class="tsd-anchor-link">Web Components<a href="#web-components" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-17" class="tsd-anchor-link"><code>@tsparticles/webcomponents</code><a href="#_-17" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/webcomponents" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/webcomponents?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/webcomponents" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/webcomponents?style=for-the-badge" alt="npm"></a></p>
+<p>Instructions available <a href="https://github.com/tsparticles/tsparticles/tree/main/wrappers/webcomponents#readme" target="_blank" class="external">here</a></p>
+<h3 id="wordpress" class="tsd-anchor-link">WordPress<a href="#wordpress" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h4 id="_-18" class="tsd-anchor-link"><code>@tsparticles/wordpress</code><a href="#_-18" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p><a href="https://www.npmjs.com/package/@tsparticles/wordpress" target="_blank" class="external"><img src="https://img.shields.io/npm/v/@tsparticles/wordpress?style=for-the-badge" alt="npm"></a> <a href="https://www.npmjs.com/package/@tsparticles/wordpress" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/wordpress?style=for-the-badge" alt="npm"></a> <a href="https://wordpress.org/plugins/tsparticles-block/" target="_blank" class="external"><img src="https://img.shields.io/wordpress/plugin/dw/@tsparticles/block?style=for-the-badge" alt="WordPress Plugin Downloads"></a> <a href="https://wordpress.org/plugins/tsparticles-block/" target="_blank" class="external"><img src="https://img.shields.io/wordpress/plugin/installs/tsparticles-block?style=for-the-badge" alt="WordPress Plugin Active Installs"></a></p>
+<p>The plugin page hosted on <a href="http://WordPress.org" target="_blank" class="external">WordPress.org</a> can be
+found <a href="https://wordpress.org/plugins/tsparticles-block/#description" target="_blank" class="external">here</a></p>
+<h3 id="elementor" class="tsd-anchor-link">Elementor<a href="#elementor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p>Actually, an official tsParticles plugin isn't existing, but I have a collaboration with
+the <code>Premium Addons for Elementor</code> plugin collection.</p>
+<div style="float: left; margin-right: 10px;">
+    <img width="64" alt="Premium Addons for Elementor" src="https://particles.js.org/images/premium-addons-wordpress-plugin.png" />
+</div>
+<div>
+    Premium Addons for Elementor is one of the most common plugins for Elementor that offers more than 55 highly customizable Elementor Widgets and Section Add-ons. tsParticles is exclusively included in Premium Particles Section Add-on for Elementor Page Builder. <a href="https://premiumaddons.com/particles-section-addon-for-elementor-page-builder/" target="_blank">Check It Now</a>.<br />
+    Use Premium Addons for Elementor Page Builder and get the chance to include tsParticles in your next WordPress website without the need to write a single line of code. <a href="https://premiumaddons.com/particles-section-addon-for-elementor-page-builder/" target="_blank">See a Live Example</a>.
+</div>
+<div style="clear: both;"></div>
+<hr>
+<h2 id="presets" class="tsd-anchor-link">Presets<a href="#presets" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>There are some presets ready to be used in <a href="https://github.com/tsparticles/presets" target="_blank" class="external">this repository</a>, and they also have a bundle file that contains everything
+needed to run.</p>
+<h3 id="ambient" class="tsd-anchor-link">Ambient<a href="#ambient" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-ambient" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-ambient/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-ambient" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-ambient.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-ambient" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-ambient" alt="npmjs"></a></p>
+<p>This preset loads ambient circles on a dark background.</p>
+<p><a href="https://particles.js.org/samples/presets/ambient" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/ambient/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/ambient#readme" target="_blank" class="external">here</a></p>
+<h3 id="big-circles" class="tsd-anchor-link">Big Circles<a href="#big-circles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-big-circles" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-big-circles/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-big-circles" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-big-circles.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-big-circles" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-big-circles" alt="npmjs"></a></p>
+<p>This preset loads big colored circles moving upwards on a white background.</p>
+<p><a href="https://particles.js.org/samples/presets/bigCircles" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/bigCircles/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/bigCircles#readme" target="_blank" class="external">here</a></p>
+<h3 id="bubbles" class="tsd-anchor-link">Bubbles<a href="#bubbles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/tsparticles" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-bubbles/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-bubbles" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-bubbles.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-bubbles" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-bubbles" alt="npmjs"></a></p>
+<p>This preset loads colored bubbles coming from the bottom of the screen on a white background.</p>
+<p><a href="https://particles.js.org/samples/presets/bubbles" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/bubbles/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/bubbles#readme" target="_blank" class="external">here</a></p>
+<h3 id="confetti" class="tsd-anchor-link">Confetti<a href="#confetti" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-confetti" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-confetti/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-confetti" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-confetti.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-confetti" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-confetti" alt="npmjs"></a></p>
+<p>This preset loads white and red confetti launched from the screen center on a transparent background.</p>
+<p><a href="https://particles.js.org/samples/presets/confetti" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/confetti/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/confetti#readme" target="_blank" class="external">here</a></p>
+<h3 id="confetti-cannon" class="tsd-anchor-link">Confetti Cannon<a href="#confetti-cannon" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-confetti-cannon" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-confetti-cannon/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-confetti-cannon" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-confetti-cannon.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-confetti-cannon" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-confetti-cannon" alt="npmjs"></a></p>
+<p>This preset loads confetti launched from a draggable cannon.</p>
+<p><a href="https://particles.js.org/samples/presets/confettiCannon" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/confettiCannon/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/confettiCannon#readme" target="_blank" class="external">here</a></p>
+<h3 id="confetti-explosions" class="tsd-anchor-link">Confetti Explosions<a href="#confetti-explosions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-confetti-explosions" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-confetti-explosions/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-confetti-explosions" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-confetti-explosions.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-confetti-explosions" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-confetti-explosions" alt="npmjs"></a></p>
+<p>This preset loads confetti bursts at multiple points on the screen.</p>
+<p><a href="https://particles.js.org/samples/presets/confettiExplosions" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/confettiExplosions/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/confettiExplosions#readme" target="_blank" class="external">here</a></p>
+<h3 id="confetti-falling" class="tsd-anchor-link">Confetti Falling<a href="#confetti-falling" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-confetti-falling" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-confetti-falling/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-confetti-falling" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-confetti-falling.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-confetti-falling" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-confetti-falling" alt="npmjs"></a></p>
+<p>This preset loads slowly falling confetti particles.</p>
+<p><a href="https://particles.js.org/samples/presets/confettiFalling" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/confettiFalling/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/confettiFalling#readme" target="_blank" class="external">here</a></p>
+<h3 id="confetti-parade" class="tsd-anchor-link">Confetti Parade<a href="#confetti-parade" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-confetti-parade" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-confetti-parade/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-confetti-parade" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-confetti-parade.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-confetti-parade" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-confetti-parade" alt="npmjs"></a></p>
+<p>This preset loads confetti moving horizontally across the screen like a parade.</p>
+<p><a href="https://particles.js.org/samples/presets/confettiParade" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/confettiParade/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/confettiParade#readme" target="_blank" class="external">here</a></p>
+<h3 id="party" class="tsd-anchor-link">Party<a href="#party" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-party" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-party/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-party" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-party.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-party" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-party" alt="npmjs"></a></p>
+<p>This preset creates an animated confetti-like celebration effect.</p>
+<p><a href="https://particles.js.org/samples/presets/party" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/party/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/party#readme" target="_blank" class="external">here</a></p>
+<h3 id="fire" class="tsd-anchor-link">Fire<a href="#fire" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-fire" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-fire/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-fire" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-fire.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-fire" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-fire" alt="npmjs"></a></p>
+<p>This preset loads a faded red to a black background with particles colored like fire and ash sparks.</p>
+<p><a href="https://particles.js.org/samples/presets/fire" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/fire/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/fire#readme" target="_blank" class="external">here</a></p>
+<h3 id="firefly" class="tsd-anchor-link">Firefly<a href="#firefly" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-firefly" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-firefly/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-firefly" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-firefly.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-firefly" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-firefly" alt="npmjs"></a></p>
+<p>This preset loads a mouse trail made with small fading particles like little fireflies.</p>
+<p><a href="https://particles.js.org/samples/presets/firefly" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/firefly/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/firefly#readme" target="_blank" class="external">here</a></p>
+<h3 id="fireworks" class="tsd-anchor-link">Fireworks<a href="#fireworks" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-fireworks" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-fireworks/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-fireworks" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-fireworks.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-fireworks" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-fireworks" alt="npmjs"></a></p>
+<p>This preset loads a beautiful fireworks effect.</p>
+<p><a href="https://particles.js.org/samples/presets/fireworks" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/fireworks/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/fireworks#readme" target="_blank" class="external">here</a></p>
+<h3 id="hyperspace" class="tsd-anchor-link">Hyperspace<a href="#hyperspace" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-hyperspace" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-hyperspace/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-hyperspace" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-hyperspace.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-hyperspace" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-hyperspace" alt="npmjs"></a></p>
+<p>This preset loads a hyperspace tunnel effect with fast-moving particles.</p>
+<p><a href="https://particles.js.org/samples/presets/hyperspace" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/hyperspace/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/hyperspace#readme" target="_blank" class="external">here</a></p>
+<h3 id="fountain" class="tsd-anchor-link">Fountain<a href="#fountain" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-fountain" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-fountain/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-fountain" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-fountain.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-fountain" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-fountain" alt="npmjs"></a></p>
+<p><a href="https://particles.js.org/samples/presets/fountain" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/fountain/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/fountain#readme" target="_blank" class="external">here</a></p>
+<h3 id="links" class="tsd-anchor-link">Links<a href="#links" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-links" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-links/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-links" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-links.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-links" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-links" alt="npmjs"></a></p>
+<p><a href="https://particles.js.org/samples/presets/links" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/links/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/links#readme" target="_blank" class="external">here</a></p>
+<h3 id="sea-anemone" class="tsd-anchor-link">Sea Anemone<a href="#sea-anemone" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-sea-anemone" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-sea-anemone/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-sea-anemone" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-sea-anemone.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-sea-anemone" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-sea-anemone" alt="npmjs"></a></p>
+<p><a href="https://particles.js.org/samples/presets/seaAnemone" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/seaAnemone/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/seaAnemone#readme" target="_blank" class="external">here</a></p>
+<h3 id="snow" class="tsd-anchor-link">Snow<a href="#snow" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-snow" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-snow/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-snow" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-snow.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-snow" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-snow" alt="npmjs"></a></p>
+<p><a href="https://particles.js.org/samples/presets/snow" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/snow/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/snow#readme" target="_blank" class="external">here</a></p>
+<h3 id="squares" class="tsd-anchor-link">Squares<a href="#squares" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-squares" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-squares/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-squares" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-squares.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-squares" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-squares" alt="npmjs"></a></p>
+<p><a href="https://particles.js.org/samples/presets/squares" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/squares/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/squares#readme" target="_blank" class="external">here</a></p>
+<h3 id="stars" class="tsd-anchor-link">Stars<a href="#stars" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-stars" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-stars/badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-stars" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-stars.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-stars" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-stars" alt="npmjs"></a></p>
+<p><a href="https://particles.js.org/samples/presets/stars" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/stars/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/stars#readme" target="_blank" class="external">here</a></p>
+<h3 id="triangles" class="tsd-anchor-link">Triangles<a href="#triangles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/preset-triangles" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/preset-triangles/badge?style=for-the-badge" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-triangles" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/preset-triangles.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/preset-triangles" target="_blank" class="external"><img src="https://img.shields.io/npm/dt/@tsparticles/preset-triangles" alt="npmjs"></a></p>
+<p><a href="https://particles.js.org/samples/presets/triangles" target="_blank" class="external"><img src="https://github.com/tsparticles/presets/raw/main/presets/triangles/images/sample.png" alt="demo"></a></p>
+<p>You can find the instructions <a href="https://github.com/tsparticles/presets/tree/main/presets/triangles#readme" target="_blank" class="external">here</a></p>
+<hr>
+<h2 id="templates-and-resources" class="tsd-anchor-link">Templates and Resources<a href="#templates-and-resources" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>You can find some tsParticles related templates <a href="https://github.com/tsparticles/templates" target="_blank" class="external">here</a>. The templates are
+created for <em>Vanilla Javascript</em>, <em>ReactJS</em>, <em>VueJS</em>, <em>Angular</em>, <em>SvelteJS</em>, and other frameworks.</p>
+<p>The templates will vary, new ones can be created or older ones updated with the latest features or changed to a better
+style. Check them out once in a while.</p>
+<p>If you created some good design with <em>tsParticles</em> feel free to submit a pull request with your cool template, you'll be
+credited as the template author!</p>
+<p><a href="https://github.com/tsparticles/templates" target="_blank" class="external">https://github.com/tsparticles/templates</a></p>
+<hr>
+<h2 id="demo-generator" class="tsd-anchor-link"><strong><em>Demo / Generator</em></strong><a href="#demo-generator" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><a href="https://particles.js.org/samples" target="_blank" class="external">https://particles.js.org/samples</a></p>
+<p><a href="https://particles.js.org/samples" target="_blank" class="external"><img src="https://particles.js.org/images/demo2.png?v=1.39.1" alt="Particles demo"></a></p>
+<hr>
+<h2 id="video-tutorials" class="tsd-anchor-link"><strong><em>Video Tutorials</em></strong><a href="#video-tutorials" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>You can find all video tutorials on the website here: <a href="https://particles.js.org/video.html" target="_blank" class="external">https://particles.js.org/video.html</a></p>
+<p><em>More videos are coming soon! Check every day if there are some new contents.</em></p>
+<hr>
+<h3 id="characters-as-particles" class="tsd-anchor-link">Characters as particles<a href="#characters-as-particles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://particles.js.org/samples/#chars" target="_blank" class="external"><img src="https://media.giphy.com/media/JsssOXz72bM6jGEZ0s/giphy.gif" alt="Particles chars demo"></a></p>
+<hr>
+<h3 id="polygon-mask" class="tsd-anchor-link">Polygon mask<a href="#polygon-mask" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://particles.js.org/samples/#polygonMask" target="_blank" class="external"><img src="https://media.giphy.com/media/lNRfiSgaMFbL4FMhW6/giphy.gif" alt="tsParticles Polygon Mask demo"></a></p>
+<hr>
+<h3 id="animated-stars" class="tsd-anchor-link">Animated stars<a href="#animated-stars" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://particles.js.org/samples/#nasa" target="_blank" class="external"><img src="https://media.giphy.com/media/cLqGsnh7FKRVMgPIWE/giphy.gif" alt="Particles NASA demo"></a></p>
+<hr>
+<h3 id="nyan-cat-flying-on-scrolling-stars" class="tsd-anchor-link">Nyan cat flying on scrolling stars<a href="#nyan-cat-flying-on-scrolling-stars" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://particles.js.org/samples/#nyancat2" target="_blank" class="external"><img src="https://media.giphy.com/media/LpX2oNc9ZMgIhIXQL9/giphy.gif" alt="Particles Nyan Cat demo"></a></p>
+<hr>
+<h3 id="snow-particles" class="tsd-anchor-link">Snow particles<a href="#snow-particles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://particles.js.org/samples/#snow" target="_blank" class="external"><img src="https://media.giphy.com/media/gihwUFbmiubbkdzEMX/giphy.gif" alt="tsParticles Snow demo"></a></p>
+<hr>
+<h3 id="background-mask-particles" class="tsd-anchor-link">Background Mask particles<a href="#background-mask-particles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><a href="https://particles.js.org/samples/#background" target="_blank" class="external"><img src="https://media.giphy.com/media/dWraWgqInWFGWiOyRu/giphy.gif" alt="tsParticles Background Mask demo"></a></p>
+<hr>
+<p><strong>particles.json</strong></p>
+<p>You can find some config samples <a href="https://particles.js.org/demos/presets/" target="_blank" class="external">here</a> 📖</p>
+<hr>
+<h2 id="options" class="tsd-anchor-link"><strong><em>Options</em></strong><a href="#options" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>You can find all options
+available <a href="https://particles.js.org/docs/interfaces/tsParticles_Engine.Options_Interfaces_IOptions.IOptions.html">here</a>
+📖</p>
+<p>If you want a practical map with examples, check these markdown docs too:</p>
+<ul>
+<li>Root options: <a href="https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md" target="_blank" class="external">https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md</a></li>
+<li>Colors: <a href="https://github.com/tsparticles/tsparticles/blob/main/markdown/Color.md" target="_blank" class="external">https://github.com/tsparticles/tsparticles/blob/main/markdown/Color.md</a></li>
+<li>Container API: <a href="https://github.com/tsparticles/tsparticles/blob/main/markdown/Container.md" target="_blank" class="external">https://github.com/tsparticles/tsparticles/blob/main/markdown/Container.md</a></li>
+</ul>
+<h2 id="want-to-see-it-in-action-and-try-it" class="tsd-anchor-link">Want to see it in action and try it?<a href="#want-to-see-it-in-action-and-try-it" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>I've created a tsParticles collection on <a href="https://codepen.io/collection/DPOage" target="_blank" class="external">CodePen</a> 😮 or you can check out
+my <a href="https://codepen.io/matteobruni" target="_blank" class="external">profile</a></p>
+<p>Otherwise, there's the demo page link below.</p>
+<p><a href="https://particles.js.org/samples/" target="_blank" class="external"><img src="https://media.giphy.com/media/fsVN1ZHksgBIXNIbr1/giphy.gif" alt="tsParticles demo"></a></p>
+<p>Want to see even more demos? Clone the repository on your computer and follow these instructions</p>
+<pre><code class="shell"><span class="hl-4">$</span><span class="hl-1"> </span><span class="hl-3">pnpm</span><span class="hl-1"> </span><span class="hl-3">i</span><br/><span class="hl-4">$</span><span class="hl-1"> </span><span class="hl-3">pnpm</span><span class="hl-1"> </span><span class="hl-3">run</span><span class="hl-1"> </span><span class="hl-3">build</span><br/><span class="hl-4">$</span><span class="hl-1"> </span><span class="hl-3">cd</span><span class="hl-1"> </span><span class="hl-3">demo/vanilla</span><br/><span class="hl-4">$</span><span class="hl-1"> </span><span class="hl-3">pnpm</span><span class="hl-1"> </span><span class="hl-3">start</span>
+</code><button type="button">Copy</button></pre>
+
+<p><strong>Boom! 💥</strong> <a href="http://localhost:3000" target="_blank" class="external">http://localhost:3000</a> and you can check out other demos.</p>
+<p>Note: <code>demo/wordpress</code> contains documentation only. The WordPress wrapper runs as a plugin inside a WordPress installation, not as a standalone demo app.</p>
+<p><em>If you are brave enough</em> you can switch to the <code>dev</code> branch for trying the features under development.</p>
+<hr>
+<h2 id="migrating-from-particlesjs" class="tsd-anchor-link">Migrating from Particles.js<a href="#migrating-from-particlesjs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><strong>tsParticles</strong> has a package that makes this library 100% compatible with the <em>particles.js</em> configuration.</p>
+<p><a href="https://www.jsdelivr.com/package/npm/@tsparticles/pjs" target="_blank" class="external"><img src="https://data.jsdelivr.com/v1/package/npm/@tsparticles/pjs/badge?style=rounded" alt="jsDelivr"></a> <a href="https://www.npmjs.com/package/@tsparticles/pjs" target="_blank" class="external"><img src="https://badge.fury.io/js/@tsparticles/pjs.svg" alt="npmjs"></a> <a href="https://www.npmjs.com/package/@tsparticles/pjs" target="_blank" class="external"><img src="https://img.shields.io/npm/dm/@tsparticles/pjs" alt="npm"></a></p>
+<p>Seriously, you just need to change the script from particles.js to the bundled compatibility package, et-voilà, <strong>you're
+ready</strong> 🧙!</p>
+<p>You can read more <strong><a href="https://dev.to/matteobruni/migrating-from-particles-js-to-tsparticles-2a6m" target="_blank" class="external">here</a></strong></p>
+<p>Want to know 5 reasons to do the
+switch? <a href="https://dev.to/matteobruni/5-reasons-to-use-tsparticles-and-not-particles-js-1gbe" target="_blank" class="external">Read here</a></p>
+<p><em>Below you can find all the information you need to install tsParticles and its new syntax.</em></p>
+<p>Migration quick guide in this repository:</p>
+<ul>
+<li><a href="https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md" target="_blank" class="external">https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md</a></li>
+</ul>
+<hr>
+<h2 id="pluginscustomizations" class="tsd-anchor-link">Plugins/Customizations<a href="#pluginscustomizations" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>tsParticles now supports some customizations 🥳.</p>
+<p><strong>You can create your own plugins</strong></p>
+<p><em>Read more <a href="https://particles.js.org/docs/modules/Core_Interfaces_IPlugin.html">here</a>...</em></p>
+<p>Practical customization guide (shape + preset examples):</p>
+<ul>
+<li><a href="https://github.com/tsparticles/tsparticles/blob/main/markdown/Plugins.md" target="_blank" class="external">https://github.com/tsparticles/tsparticles/blob/main/markdown/Plugins.md</a></li>
+</ul>
+<hr>
+<h2 id="dependency-graph" class="tsd-anchor-link">Dependency Graph<a href="#dependency-graph" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<pre><code class="mermaid">flowchart TD
+
+  subgraph core [Core]
+    engine[tsParticles Engine]
+    perlin-noise[Perlin Noise Lib]
+    simplex-noise[Simplex Noise Lib]
+    configs[tsParticles Configs]
+  end
+
+  subgraph bundle-basic [tsParticles Basic]
+
+    subgraph basic-plugins [Plugins]
+      plugin-move[Move]
+
+      subgraph basic-plugins-colors [Colors]
+        plugin-hex-color[Hex Color]
+        plugin-hsl-color[HSL Color]
+        plugin-rgb-color[RGB Color]
+      end
+    end
+
+    subgraph basic-shapes [Shapes]
+      shape-circle[Circle]
+    end
+
+    subgraph basic-updates [Updaters]
+      updater-fill-color[Color]
+      updater-opacity[Opacity]
+      updater-out-modes[Out Modes]
+      updater-size[Size]
+    end
+
+  end
+
+  engine --> bundle-basic
+
+  subgraph bundle-confetti [tsParticles Confetti]
+
+    subgraph confetti-plugins [Plugins]
+      plugin-emitters
+      plugin-motion
+    end
+
+    subgraph confetti-shapes [Shapes]
+      shape-cards
+      shape-emoji
+      shape-heart
+      shape-image
+      shape-polygon
+      shape-square
+      shape-star
+    end
+
+    subgraph confetti-updaters [Updaters]
+      updater-life
+      updater-roll
+      updater-rotate
+      updater-tilt
+      updater-wobble
+    end
+
+  end
+
+  bundle-basic --> bundle-confetti
+
+  subgraph bundle-slim [tsParticles Slim]
+
+    subgraph slim-interactions [Interactions]
+
+      subgraph slim-interactions-external [Externals]
+        interaction-external-attract[Attract]
+        interaction-external-bounce[Bounce]
+        interaction-external-bubble[Bubble]
+        interaction-external-connect[Connect]
+        interaction-external-grab[Grab]
+        interaction-external-parallax[Parallax]
+        interaction-external-pause[Pause]
+        interaction-external-push[Push]
+        interaction-external-remove[Remove]
+        interaction-external-repulse[Repulse]
+        interaction-external-slow[Slow]
+      end
+
+      subgraph slim-interactions-particles [Particles]
+        interaction-particles-attract[Attract]
+        interaction-particles-collisions[Collisions]
+        interaction-particles-links[Links]
+      end
+
+    end
+
+    subgraph slim-plugins [Plugins]
+      plugin-interactivity[Interactivity]
+
+      subgraph slim-plugins-easings [Easings]
+        plugin-easing-quad[Quad]
+      end
+
+    end
+
+    subgraph slim-shapes [Shapes]
+      shape-emoji[Emoji]
+      shape-image[Image]
+      shape-line[Line]
+      shape-polygon[Polygon]
+      shape-square[Square]
+      shape-star[Star]
+    end
+
+    subgraph slim-updaters [Updaters]
+      updater-life[Life]
+      updater-rotate[Rotate]
+      updater-stroke-color[Stroke Color]
+    end
+
+  end
+
+  bundle-basic --> bundle-slim
+
+  subgraph bundle-fireworks [tsParticles Fireworks]
+
+    subgraph fireworks-effects [Effects]
+      effect-trail
+    end
+
+    subgraph fireworks-plugins [Plugins]
+      plugin-emitters
+
+      subgraph fireworks-plugin-emitters-shapes [Emitters Shapes]
+        plugin-emitters-shape-square
+      end
+
+      plugin-sounds
+    end
+
+    subgraph fireworks-updaters [Updaters]
+      updater-destroy
+      updater-life
+      updater-rotate
+    end
+
+  end
+
+  bundle-basic --> bundle-fireworks
+
+  subgraph bundle-full [tsParticles]
+
+    subgraph full-interactions [Interactions]
+
+      subgraph full-interactions-external [Externals]
+        interaction-external-trail[Trail]
+      end
+
+    end
+
+    subgraph full-plugins [Plugins]
+      plugin-absorbers[Absorbers]
+      plugin-emitters[Emitters]
+
+      subgraph full-plugin-emitters-shapes [Emitters Shapes]
+        plugin-emitters-shape-circle[Circle]
+        plugin-emitters-shape-square[Square]
+      end
+
+    end
+
+    subgraph full-shapes [Shapes]
+      shape-text[Text]
+    end
+
+    subgraph full-updaters [Updaters]
+      updater-destroy[Destroy]
+      updater-roll[Roll]
+      updater-tilt[Tilt]
+      updater-twinkle[Twinkle]
+      updater-wobble[Wobble]
+    end
+
+  end
+
+  bundle-slim --> bundle-full
+
+  subgraph bundle-all [tsParticles All]
+
+    subgraph all-effects [Effects]
+      effect-bubble[Bubble]
+      effect-particles[Particles]
+      effect-shadow[Shadow]
+      effect-trail[Trail]
+    end
+
+    subgraph all-interactions [Interactions]
+      subgraph all-interactions-external [External]
+        interaction-external-particle[Particle]
+        interaction-external-pop[Pop]
+      end
+
+      interaction-light[Light]
+
+      subgraph all-interactions-particles [Particles]
+        interaction-particles-repulse[Repulse]
+      end
+    end
+
+    subgraph all-paths [Paths]
+      path-branches[Branches]
+      path-brownian[Brownian]
+      path-curl-noise[Curl Noise]
+      path-curves[Curves]
+      path-fractal-noise[Fractal Noise]
+      path-grid[Grid]
+      path-levy[Levy]
+      path-perlin-noise[Perlin Noise]
+      path-polygon[Polygon]
+      path-random[Random]
+      path-simplex-noise[Simplex Noise]
+      path-spiral[Spiral]
+      path-svg[SVG]
+      path-zig-zag[Zig Zag]
+    end
+
+    subgraph all-plugins [Plugins]
+      plugin-background-mask[Background Mask]
+      plugin-blend[Blend]
+      plugin-canvas-mask[Canvas Mask]
+
+      subgraph all-plugins-colors [Colors]
+        plugin-hsv-color[HSV Color]
+        plugin-hwb-color[HWB Color]
+        plugin-lab-color[Lab Color]
+        plugin-lch-color[Lch Color]
+        plugin-named-color[Named Color]
+        plugin-oklab-color[Oklab Color]
+        plugin-oklch-color[Oklch Color]
+      end
+
+      subgraph all-plugins-easings [Easings]
+        plugin-easing-back[Back]
+        plugin-easing-bounce[Bounce]
+        plugin-easing-circ[Circ]
+        plugin-easing-cubic[Cubic]
+        plugin-easing-elastic[Elastic]
+        plugin-easing-expo[Expo]
+        plugin-easing-gaussian[Gaussian]
+        plugin-easing-linear[Linear]
+        plugin-easing-quart[Quart]
+        plugin-easing-quint[Quint]
+        plugin-easing-sigmoid[Sigmoid]
+        plugin-easing-sine[Sine]
+        plugin-easing-smoothstep[Smoothstep]
+      end
+
+      subgraph all-plugin-emitters-shapes [Emitters Shapes]
+        plugin-emitters-shape-canvas[Canvas]
+        plugin-emitters-shape-path[Path]
+        plugin-emitters-shape-polygon[Polygon]
+      end
+
+      subgraph all-plugins-exports [Exports]
+        plugin-export-image[Image]
+        plugin-export-json[JSON]
+        plugin-export-video[Video]
+      end
+
+      plugin-infection[Infection]
+      plugin-manual-particles[Manual Particles]
+      plugin-motion[Motion]
+      plugin-poisson-disc[Poisson Disc]
+      plugin-polygon-mask[Polygon Mask]
+      plugin-responsive[Responsive]
+      plugin-sounds[Sounds]
+      plugin-themes[Themes]
+      plugin-trail[Trail]
+      plugin-zoom[Zoom]
+    end
+
+    subgraph all-shapes [Shapes]
+      shape-arrow[Arrow]
+      shape-cards[Cards]
+      shape-cog[Cog]
+      shape-heart[Heart]
+      shape-infinity[Infinity]
+      shape-matrix[Matrix]
+      shape-path[Path]
+      shape-rounded-polygon[Rounded Polygon]
+      shape-rounded-rect[Rounded Rect]
+      shape-spiral[Spiral]
+      shape-squircle[Squircle]
+    end
+
+    subgraph all-updaters [Updaters]
+      updater-gradient[Gradient]
+      updater-orbit[Orbit]
+    end
+
+    simplex-noise --> path-curl-noise
+    perlin-noise --> path-perlin-noise
+    simplex-noise --> path-simplex-noise
+
+  end
+
+  bundle-full --> bundle-all
+</code><button type="button">Copy</button></pre>
+
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#tsparticles-typescript-particles"><span>ts<wbr/>Particles -<wbr/> <wbr/>Type<wbr/>Script <wbr/>Particles</span></a><ul><li><a href="#table-of-contents"><span>Table of <wbr/>Contents</span></a></li><li><a href="#do-you-want-to-use-it-on-your-website"><span>Do you want to use it on your website?</span></a></li><li><a href="#start-here-in-2-minutes"><span>Start here in 2 minutes</span></a></li><li><a href="#quick-checklist"><span>Quick checklist</span></a></li><li><a href="#choose-your-quick-start-path"><span>Choose your quick-<wbr/>start path</span></a></li><li><a href="#common-pitfalls"><span>Common pitfalls</span></a></li><li><a href="#related-docs"><span>Related docs</span></a></li><li><a href="#library-installation"><span>Library installation</span></a></li><li><ul><li><a href="#hosting-cdn"><span>Hosting / <wbr/>CDN</span></a></li><li><ul><li><a href="#jsdelivr"><span>js<wbr/>Delivr</span></a></li><li><a href="#cdnjs"><span>cdnjs</span></a></li><li><a href="#unpkg"><span>unpkg</span></a></li></ul></li><li><a href="#npm"><span>npm</span></a></li><li><a href="#yarn"><span>yarn</span></a></li><li><a href="#pnpm"><span>pnpm</span></a></li><li><ul><li><a href="#import-and-require"><span>Import and require</span></a></li></ul></li><li><a href="#usage"><span>Usage</span></a></li></ul></li><li><a href="#official-components-for-some-of-the-most-used-frameworks"><span>Official components for some of the most used frameworks</span></a></li><li><ul><li><a href="#angular"><span>Angular</span></a></li><li><ul><li><a href="#_"><span></span></a></li></ul></li><li><a href="#astro"><span>Astro</span></a></li><li><ul><li><a href="#_-1"><span></span></a></li></ul></li><li><a href="#emberjs"><span>Ember.js</span></a></li><li><ul><li><a href="#_-2"><span></span></a></li></ul></li><li><a href="#inferno"><span>Inferno</span></a></li><li><ul><li><a href="#_-3"><span></span></a></li></ul></li><li><a href="#jquery"><span>j<wbr/>Query</span></a></li><li><ul><li><a href="#_-4"><span></span></a></li></ul></li><li><a href="#preact"><span>Preact</span></a></li><li><ul><li><a href="#_-5"><span></span></a></li></ul></li><li><a href="#qwik"><span>Qwik</span></a></li><li><ul><li><a href="#_-6"><span></span></a></li></ul></li><li><a href="#reactjs"><span>React<wbr/>JS</span></a></li><li><ul><li><a href="#_-7"><span></span></a></li><li><a href="#_-8"><span></span></a></li></ul></li><li><a href="#riotjs"><span>Riot<wbr/>JS</span></a></li><li><ul><li><a href="#_-9"><span></span></a></li></ul></li><li><a href="#solidjs"><span>Solid<wbr/>JS</span></a></li><li><ul><li><a href="#_-10"><span></span></a></li></ul></li><li><a href="#svelte"><span>Svelte</span></a></li><li><ul><li><a href="#_-11"><span></span></a></li></ul></li><li><a href="#vuejs-2x"><span>Vue<wbr/>JS 2.x</span></a></li><li><ul><li><a href="#_-12"><span></span></a></li><li><a href="#_-13"><span></span></a></li></ul></li><li><a href="#vuejs-3x"><span>Vue<wbr/>JS 3.x</span></a></li><li><ul><li><a href="#_-14"><span></span></a></li><li><a href="#_-15"><span></span></a></li><li><a href="#_-16"><span></span></a></li></ul></li><li><a href="#web-components"><span>Web <wbr/>Components</span></a></li><li><ul><li><a href="#_-17"><span></span></a></li></ul></li><li><a href="#wordpress"><span>Word<wbr/>Press</span></a></li><li><ul><li><a href="#_-18"><span></span></a></li></ul></li><li><a href="#elementor"><span>Elementor</span></a></li></ul></li><li><a href="#presets"><span>Presets</span></a></li><li><ul><li><a href="#ambient"><span>Ambient</span></a></li><li><a href="#big-circles"><span>Big <wbr/>Circles</span></a></li><li><a href="#bubbles"><span>Bubbles</span></a></li><li><a href="#confetti"><span>Confetti</span></a></li><li><a href="#confetti-cannon"><span>Confetti <wbr/>Cannon</span></a></li><li><a href="#confetti-explosions"><span>Confetti <wbr/>Explosions</span></a></li><li><a href="#confetti-falling"><span>Confetti <wbr/>Falling</span></a></li><li><a href="#confetti-parade"><span>Confetti <wbr/>Parade</span></a></li><li><a href="#party"><span>Party</span></a></li><li><a href="#fire"><span>Fire</span></a></li><li><a href="#firefly"><span>Firefly</span></a></li><li><a href="#fireworks"><span>Fireworks</span></a></li><li><a href="#hyperspace"><span>Hyperspace</span></a></li><li><a href="#fountain"><span>Fountain</span></a></li><li><a href="#links"><span>Links</span></a></li><li><a href="#sea-anemone"><span>Sea <wbr/>Anemone</span></a></li><li><a href="#snow"><span>Snow</span></a></li><li><a href="#squares"><span>Squares</span></a></li><li><a href="#stars"><span>Stars</span></a></li><li><a href="#triangles"><span>Triangles</span></a></li></ul></li><li><a href="#templates-and-resources"><span>Templates and <wbr/>Resources</span></a></li><li><a href="#demo-generator"><span>Demo / <wbr/>Generator</span></a></li><li><a href="#video-tutorials"><span>Video <wbr/>Tutorials</span></a></li><li><ul><li><a href="#characters-as-particles"><span>Characters as particles</span></a></li><li><a href="#polygon-mask"><span>Polygon mask</span></a></li><li><a href="#animated-stars"><span>Animated stars</span></a></li><li><a href="#nyan-cat-flying-on-scrolling-stars"><span>Nyan cat flying on scrolling stars</span></a></li><li><a href="#snow-particles"><span>Snow particles</span></a></li><li><a href="#background-mask-particles"><span>Background <wbr/>Mask particles</span></a></li></ul></li><li><a href="#options"><span>Options</span></a></li><li><a href="#want-to-see-it-in-action-and-try-it"><span>Want to see it in action and try it?</span></a></li><li><a href="#migrating-from-particlesjs"><span>Migrating from <wbr/>Particles.js</span></a></li><li><a href="#pluginscustomizations"><span>Plugins/<wbr/>Customizations</span></a></li><li><a href="#dependency-graph"><span>Dependency <wbr/>Graph</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">tsParticles - v4.3.1</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-ca-pub-6401284988946422" crossOrigin="anonymous"></script><script html="(function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src=&quot;https://www.clarity.ms/tag/&quot;+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, &quot;clarity&quot;, &quot;script&quot;, &quot;8q4bxin4tm&quot;);" type="text/javascript"></script></body></html>
