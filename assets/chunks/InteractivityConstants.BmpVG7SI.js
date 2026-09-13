@@ -1,0 +1,1 @@
+const e="click",t="pointerdown",o="pointerup",n="pointerleave",c="pointermove",a="touchstart",s="touchend",v="touchmove",u="touchcancel";export{n as a,v as b,s as c,o as d,t as e,u as f,e as g,c as m,a as t};
